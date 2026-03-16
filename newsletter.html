@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Buzz Newsletter — BuzzRiding</title>
+  <meta name="description" content="One email every Tuesday. The best AI marketing insights of the week — curated for marketing professionals. Free, always." />
+  <meta property="og:title" content="The Buzz — Weekly AI Marketing Newsletter" />
+  <meta property="og:description" content="One email every Tuesday. The best AI marketing insights of the week. Free, always." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://buzzriding.github.io/newsletter.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --midnight:  #141418;
+      --surface:   #1C2128;
+      --teal-deep: #1A7A6E;
+      --teal:      #2AADA0;
+      --offwhite:  #FAFAF7;
+      --grey:      #8A8A8A;
+      --font-head: 'Poppins', sans-serif;
+      --font-body: 'DM Sans', sans-serif;
+      --max-w:     1120px;
+      --radius:    10px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--midnight);
+      color: var(--offwhite);
+      font-family: var(--font-body);
+      font-weight: 300;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: 100%; max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(20,20,24,0.85);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(42,173,160,0.12);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .logo { font-family: var(--font-head); font-size: 20px; letter-spacing: -0.02em; }
+    .logo span { color: var(--teal); }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a {
+      font-family: var(--font-head); font-size: 13px; font-weight: 700;
+      letter-spacing: 0.06em; text-transform: uppercase; color: var(--grey);
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--teal); }
+    .nav-cta {
+      font-family: var(--font-head); font-size: 13px; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      background: var(--teal); color: var(--midnight);
+      padding: 10px 20px; border-radius: var(--radius);
+      transition: background 0.2s, transform 0.15s;
+    }
+    .nav-cta:hover { background: #33c8b9; transform: translateY(-1px); }
+
+    /* HERO */
+    .hero {
+      padding: 88px 0 72px;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(42,173,160,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(42,173,160,0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute; top: -100px; left: 50%; transform: translateX(-50%);
+      width: 600px; height: 400px;
+      background: radial-gradient(ellipse, rgba(42,173,160,0.1) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      position: relative; z-index: 1;
+      text-align: center; max-width: 660px; margin: 0 auto;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(42,173,160,0.1);
+      border: 1px solid rgba(42,173,160,0.25);
+      border-radius: 100px; padding: 6px 18px;
+      font-size: 12px; color: var(--teal);
+      margin-bottom: 28px;
+      animation: fadeUp 0.5s ease both;
+    }
+    .hero-badge::before {
+      content: ''; width: 7px; height: 7px;
+      background: var(--teal); border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+    @keyframes fadeUp { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
+
+    .hero h1 {
+      font-family: var(--font-head);
+      font-size: clamp(36px, 6vw, 58px);
+      line-height: 1.1; letter-spacing: -0.02em;
+      color: var(--offwhite); margin-bottom: 20px;
+      animation: fadeUp 0.5s 0.1s ease both;
+    }
+    .hero h1 em { font-style: normal; color: var(--teal); }
+    .hero-sub {
+      font-size: 18px; color: var(--grey); line-height: 1.65;
+      margin-bottom: 40px;
+      animation: fadeUp 0.5s 0.2s ease both;
+    }
+
+    /* SIGNUP BOX */
+    .signup-box {
+      background: var(--surface);
+      border: 1px solid rgba(42,173,160,0.25);
+      border-radius: 14px;
+      padding: 36px;
+      max-width: 520px; margin: 0 auto 16px;
+      animation: fadeUp 0.5s 0.3s ease both;
+    }
+    /* Replace the placeholder below with your Beehiiv embed code */
+    .beehiiv-placeholder {
+      display: flex; flex-direction: column; gap: 12px;
+    }
+    .beehiiv-placeholder input {
+      width: 100%;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius);
+      padding: 15px 18px;
+      font-family: var(--font-body); font-size: 16px;
+      color: var(--offwhite); outline: none;
+      transition: border-color 0.2s;
+    }
+    .beehiiv-placeholder input::placeholder { color: var(--grey); }
+    .beehiiv-placeholder input:focus { border-color: var(--teal); }
+    .beehiiv-placeholder button {
+      width: 100%;
+      font-family: var(--font-head); font-size: 14px; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      background: var(--teal); color: var(--midnight);
+      border: none; border-radius: var(--radius);
+      padding: 16px 24px; cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .beehiiv-placeholder button:hover { background: #33c8b9; transform: translateY(-1px); }
+    .signup-note {
+      text-align: center; font-size: 12px; color: var(--grey);
+      animation: fadeUp 0.5s 0.4s ease both;
+    }
+
+    /* WHAT'S INSIDE */
+    .inside { padding: 88px 0; }
+    .section-label {
+      font-family: var(--font-head); font-size: 11px;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--teal); margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: var(--font-head);
+      font-size: clamp(24px, 3.5vw, 36px);
+      line-height: 1.15; letter-spacing: -0.02em;
+      color: var(--offwhite); margin-bottom: 12px;
+    }
+    .section-sub { font-size: 16px; color: var(--grey); max-width: 480px; margin-bottom: 48px; }
+
+    .inside-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .inside-card {
+      background: var(--surface);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .inside-card:hover { border-color: rgba(42,173,160,0.25); transform: translateY(-2px); }
+    .inside-icon { font-size: 26px; margin-bottom: 14px; }
+    .inside-title { font-family: var(--font-head); font-size: 15px; color: var(--offwhite); margin-bottom: 8px; }
+    .inside-desc { font-size: 14px; color: var(--grey); line-height: 1.6; }
+
+    /* PREVIEW */
+    .preview { padding: 0 0 88px; }
+    .preview-box {
+      background: var(--surface);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    .preview-header {
+      background: rgba(42,173,160,0.08);
+      border-bottom: 1px solid rgba(42,173,160,0.15);
+      padding: 20px 32px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .preview-header-left { display: flex; flex-direction: column; gap: 4px; }
+    .preview-from { font-size: 12px; color: var(--grey); }
+    .preview-subject { font-family: var(--font-head); font-size: 15px; color: var(--offwhite); }
+    .preview-badge {
+      font-family: var(--font-head); font-size: 11px; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      background: rgba(42,173,160,0.15); color: var(--teal);
+      border-radius: 4px; padding: 4px 10px;
+    }
+    .preview-body { padding: 36px 32px; }
+    .preview-body h3 {
+      font-family: var(--font-head); font-size: 18px;
+      color: var(--offwhite); margin-bottom: 12px;
+    }
+    .preview-body p { font-size: 15px; color: var(--grey); line-height: 1.7; margin-bottom: 20px; }
+    .preview-body p:last-child { margin-bottom: 0; }
+    .preview-highlight {
+      border-left: 3px solid var(--teal);
+      padding: 14px 20px;
+      background: rgba(42,173,160,0.05);
+      border-radius: 0 8px 8px 0;
+      margin: 24px 0;
+    }
+    .preview-highlight p { margin: 0; font-size: 15px; color: var(--offwhite); font-style: italic; }
+
+    /* PROOF */
+    .proof { padding: 0 0 88px; }
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .proof-card {
+      background: var(--surface);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+    }
+    .proof-stars { color: var(--teal); font-size: 14px; margin-bottom: 14px; }
+    .proof-quote { font-size: 15px; color: var(--offwhite); line-height: 1.65; margin-bottom: 20px; }
+    .proof-meta { font-size: 13px; color: var(--grey); }
+    .proof-meta strong { color: var(--offwhite); font-weight: 400; display: block; margin-bottom: 2px; }
+
+    /* BOTTOM CTA */
+    .bottom-cta {
+      padding: 0 0 96px;
+      text-align: center;
+    }
+    .bottom-cta h2 {
+      font-family: var(--font-head);
+      font-size: clamp(26px, 4vw, 42px);
+      line-height: 1.15; letter-spacing: -0.02em;
+      color: var(--offwhite); margin-bottom: 16px;
+    }
+    .bottom-cta h2 em { font-style: normal; color: var(--teal); }
+    .bottom-cta p { font-size: 17px; color: var(--grey); margin-bottom: 36px; }
+    .bottom-signup {
+      max-width: 480px; margin: 0 auto;
+      display: flex; gap: 12px; flex-wrap: wrap;
+    }
+    .bottom-signup input {
+      flex: 1; min-width: 200px;
+      background: var(--surface);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius);
+      padding: 14px 18px;
+      font-family: var(--font-body); font-size: 15px;
+      color: var(--offwhite); outline: none;
+      transition: border-color 0.2s;
+    }
+    .bottom-signup input::placeholder { color: var(--grey); }
+    .bottom-signup input:focus { border-color: var(--teal); }
+    .btn-primary {
+      font-family: var(--font-head); font-size: 13px; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      background: var(--teal); color: var(--midnight);
+      padding: 14px 24px; border-radius: var(--radius); border: none; cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-primary:hover { background: #33c8b9; transform: translateY(-1px); }
+
+    /* FOOTER */
+    footer { border-top: 1px solid rgba(255,255,255,0.06); padding: 40px 0; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .footer-logo { font-family: var(--font-head); font-size: 18px; letter-spacing: -0.02em; }
+    .footer-logo span { color: var(--teal); }
+    .footer-links { display: flex; gap: 24px; list-style: none; }
+    .footer-links a { font-size: 13px; color: var(--grey); transition: color 0.2s; }
+    .footer-links a:hover { color: var(--teal); }
+    .footer-copy { font-size: 12px; color: var(--grey); }
+    .footer-disclosure { width: 100%; font-size: 12px; color: var(--grey); border-top: 1px solid rgba(255,255,255,0.04); padding-top: 16px; margin-top: 8px; }
+
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .preview-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .signup-box { padding: 28px 20px; }
+      .preview-body { padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+      <a href="/" class="logo">Buzz<span>Riding</span></a>
+      <ul class="nav-links">
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/start-here.html">Start Here</a></li>
+        <li><a href="/about.html">About</a></li>
+      </ul>
+      <a href="/newsletter.html" class="nav-cta">Get The Buzz</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-badge">📬 The Buzz · Every Tuesday</div>
+        <h1>The AI marketing newsletter that <em>respects your time.</em></h1>
+        <p class="hero-sub">One email per week. The tools worth knowing, the strategies that work, and the noise filtered out. Written for working marketers — not developers.</p>
+
+        <!-- REPLACE with your Beehiiv embed code once your account is set up -->
+        <div class="signup-box">
+          <div class="beehiiv-placeholder">
+            <input type="email" placeholder="Enter your work email" />
+            <button type="button">Get The Buzz — It's Free</button>
+          </div>
+        </div>
+        <p class="signup-note">No spam. Unsubscribe any time. Join marketers staying one step ahead.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT'S INSIDE -->
+  <section class="inside">
+    <div class="container">
+      <p class="section-label">What's Inside</p>
+      <h2 class="section-title">Everything useful. Nothing else.</h2>
+      <p class="section-sub">Each issue of The Buzz is built around four consistent sections — so you always know what you're getting.</p>
+      <div class="inside-grid">
+        <div class="inside-card">
+          <div class="inside-icon">🛠</div>
+          <p class="inside-title">Tool of the Week</p>
+          <p class="inside-desc">One AI tool, honestly reviewed. What it does, what it doesn't, and whether it's worth your time.</p>
+        </div>
+        <div class="inside-card">
+          <div class="inside-icon">⚡</div>
+          <p class="inside-title">Workflow Drop</p>
+          <p class="inside-desc">One practical workflow you can copy. Step-by-step, jargon-free, ready to use the same day.</p>
+        </div>
+        <div class="inside-card">
+          <div class="inside-icon">📰</div>
+          <p class="inside-title">AI News Digest</p>
+          <p class="inside-desc">The three AI marketing stories that actually matter this week — with a marketer's take on each.</p>
+        </div>
+        <div class="inside-card">
+          <div class="inside-icon">🔗</div>
+          <p class="inside-title">Resource Picks</p>
+          <p class="inside-desc">The best article, thread, or resource we found this week. Curated, not aggregated.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PREVIEW -->
+  <section class="preview">
+    <div class="container">
+      <p class="section-label">Sample Issue</p>
+      <h2 class="section-title" style="margin-bottom: 32px;">What a typical issue looks like</h2>
+      <div class="preview-box">
+        <div class="preview-header">
+          <div class="preview-header-left">
+            <span class="preview-from">From: The BuzzRiding Team · the-buzz@buzzriding.com</span>
+            <span class="preview-subject">🛠 This week: The AI tool that actually improved our open rates</span>
+          </div>
+          <span class="preview-badge">Sample Issue</span>
+        </div>
+        <div class="preview-body">
+          <h3>Tool of the Week: Jasper AI for Email</h3>
+          <p>We ran 200 subject lines through Jasper's email assistant over 30 days. Average open rate lift: 11%. Not magic — but consistent. The subject line variant tool is genuinely useful. The long-form body copy still needs a human edit.</p>
+          <div class="preview-highlight">
+            <p>"The best AI tools don't replace your judgment. They give you more options to apply it to."</p>
+          </div>
+          <h3 style="margin-top: 8px;">Workflow Drop: Brief to published in 90 minutes</h3>
+          <p>Step 1: Drop your keyword into Claude and ask for a competitor gap analysis. Step 2: Use the gaps to write a brief — 5 bullets max. Step 3: Draft with AI, rewrite the intro yourself. Step 4: SEO metadata in one Claude prompt. Total active time: 25 minutes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF -->
+  <section class="proof">
+    <div class="container">
+      <p class="section-label">What Readers Say</p>
+      <h2 class="section-title" style="margin-bottom: 40px;">Built for marketers, by marketers</h2>
+      <div class="proof-grid">
+        <div class="proof-card">
+          <div class="proof-stars">★★★★★</div>
+          <p class="proof-quote">"Finally a newsletter that doesn't treat me like I need AI explained from scratch. Practical, fast, actually useful."</p>
+          <div class="proof-meta">
+            <strong>Sarah M.</strong>
+            Content Marketing Manager
+          </div>
+        </div>
+        <div class="proof-card">
+          <div class="proof-stars">★★★★★</div>
+          <p class="proof-quote">"The workflow drops alone are worth subscribing for. I've used three of them in the last month on live client work."</p>
+          <div class="proof-meta">
+            <strong>James K.</strong>
+            Freelance Marketing Consultant
+          </div>
+        </div>
+        <div class="proof-card">
+          <div class="proof-stars">★★★★★</div>
+          <p class="proof-quote">"I was skeptical of another AI newsletter. This one is different — honest about what tools don't work, which is rare."</p>
+          <div class="proof-meta">
+            <strong>Priya T.</strong>
+            Head of Growth, SaaS startup
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTTOM CTA -->
+  <section class="bottom-cta">
+    <div class="container">
+      <h2>Join marketers staying <em>one step ahead.</em></h2>
+      <p>Free. Every Tuesday. Unsubscribe any time.</p>
+      <!-- REPLACE with your Beehiiv embed code -->
+      <div class="bottom-signup">
+        <input type="email" placeholder="your@email.com" />
+        <button class="btn-primary" type="button">Subscribe Free</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-logo">Buzz<span>Riding</span></span>
+        <ul class="footer-links">
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/start-here.html">Start Here</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/newsletter.html">Newsletter</a></li>
+        </ul>
+        <span class="footer-copy">© 2026 BuzzRiding</span>
+        <p class="footer-disclosure">This site contains affiliate links. We may earn a commission if you sign up for a tool — at no extra cost to you. Posts are researched and refined with AI tools.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
