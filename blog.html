@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — BuzzRiding</title>
+  <meta name="description" content="Honest AI tool reviews, practical workflows, and real strategies for marketing professionals. No hype. No jargon." />
+  <meta property="og:title" content="Blog — BuzzRiding" />
+  <meta property="og:description" content="Honest AI tool reviews, practical workflows, and real strategies for marketing professionals." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://buzzriding.github.io/blog.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --midnight:  #141418;
+      --surface:   #1C2128;
+      --teal-deep: #1A7A6E;
+      --teal:      #2AADA0;
+      --offwhite:  #FAFAF7;
+      --grey:      #8A8A8A;
+      --font-head: 'Poppins', sans-serif;
+      --font-body: 'DM Sans', sans-serif;
+      --max-w:     1120px;
+      --radius:    10px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--midnight);
+      color: var(--offwhite);
+      font-family: var(--font-body);
+      font-weight: 300;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    .container { width: 100%; max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(20,20,24,0.85);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(42,173,160,0.12);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .logo { font-family: var(--font-head); font-size: 20px; letter-spacing: -0.02em; }
+    .logo span { color: var(--teal); }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a {
+      font-family: var(--font-head); font-size: 13px; font-weight: 700;
+      letter-spacing: 0.06em; text-transform: uppercase; color: var(--grey);
+      transition: color 0.2s;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--teal); }
+    .nav-cta {
+      font-family: var(--font-head); font-size: 13px; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      background: var(--teal); color: var(--midnight);
+      padding: 10px 20px; border-radius: var(--radius);
+      transition: background 0.2s, transform 0.15s;
+    }
+    .nav-cta:hover { background: #33c8b9; transform: translateY(-1px); }
+
+    /* PAGE HEADER */
+    .page-header {
+      padding: 72px 0 56px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      margin-bottom: 56px;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-header::after {
+      content: '';
+      position: absolute;
+      top: -100px; right: -100px;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(42,173,160,0.08) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .page-header-inner { position: relative; z-index: 1; }
+    .section-label {
+      font-family: var(--font-head); font-size: 11px;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--teal); margin-bottom: 12px;
+    }
+    .page-header h1 {
+      font-family: var(--font-head);
+      font-size: clamp(34px, 5vw, 52px);
+      line-height: 1.1; letter-spacing: -0.02em;
+      color: var(--offwhite); margin-bottom: 16px;
+    }
+    .page-header h1 em { font-style: normal; color: var(--teal); }
+    .page-header p { font-size: 17px; color: var(--grey); max-width: 500px; }
+
+    /* FILTERS */
+    .filters { margin-bottom: 48px; }
+    .filter-row {
+      display: flex; gap: 10px; flex-wrap: wrap;
+    }
+    .filter-btn {
+      font-family: var(--font-head); font-size: 12px; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.1);
+      color: var(--grey);
+      padding: 8px 18px; border-radius: 100px;
+      cursor: pointer; transition: all 0.2s;
+    }
+    .filter-btn:hover { border-color: rgba(42,173,160,0.4); color: var(--teal); }
+    .filter-btn.active {
+      background: rgba(42,173,160,0.12);
+      border-color: var(--teal);
+      color: var(--teal);
+    }
+
+    /* POST GRID */
+    .posts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 24px;
+      margin-bottom: 64px;
+    }
+    .post-card {
+      background: var(--surface);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: var(--radius);
+      padding: 32px;
+      display: flex; flex-direction: column; gap: 16px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .post-card:hover { border-color: rgba(42,173,160,0.3); transform: translateY(-3px); }
+    .post-card.hidden { display: none; }
+    .post-tag {
+      display: inline-block; font-size: 11px;
+      font-family: var(--font-head); letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--teal); background: rgba(42,173,160,0.1);
+      border-radius: 4px; padding: 4px 10px; width: fit-content;
+    }
+    .post-title {
+      font-family: var(--font-head); font-size: 18px;
+      line-height: 1.3; color: var(--offwhite);
+      transition: color 0.2s;
+    }
+    .post-card:hover .post-title { color: var(--teal); }
+    .post-excerpt { font-size: 14px; color: var(--grey); line-height: 1.6; flex: 1; }
+    .post-meta {
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: 12px; color: var(--grey);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding-top: 16px;
+    }
+    .post-read {
+      font-family: var(--font-head); font-size: 12px; font-weight: 700;
+      letter-spacing: 0.06em; text-transform: uppercase; color: var(--teal);
+    }
+
+    /* FEATURED (first card) */
+    .post-card.featured {
+      grid-column: 1 / -1;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 40px;
+      padding: 40px;
+    }
+    .featured-badge {
+      font-family: var(--font-head); font-size: 10px; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      background: var(--teal); color: var(--midnight);
+      border-radius: 4px; padding: 3px 8px;
+      width: fit-content; margin-bottom: 4px;
+    }
+    .featured-content { flex: 1; display: flex; flex-direction: column; gap: 16px; }
+    .featured-content .post-title { font-size: clamp(20px, 2.5vw, 26px); }
+    .featured-content .post-excerpt { font-size: 15px; }
+
+    /* NEWSLETTER STRIP */
+    .newsletter-strip {
+      background: var(--surface);
+      border: 1px solid rgba(42,173,160,0.18);
+      border-radius: var(--radius);
+      padding: 36px 40px;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 32px; flex-wrap: wrap;
+      margin-bottom: 80px;
+    }
+    .strip-text h3 {
+      font-family: var(--font-head); font-size: 20px;
+      color: var(--offwhite); margin-bottom: 6px;
+    }
+    .strip-text p { font-size: 14px; color: var(--grey); }
+    .btn-primary {
+      font-family: var(--font-head); font-size: 13px; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      background: var(--teal); color: var(--midnight);
+      padding: 13px 24px; border-radius: var(--radius);
+      white-space: nowrap;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-primary:hover { background: #33c8b9; transform: translateY(-1px); }
+
+    /* FOOTER */
+    footer { border-top: 1px solid rgba(255,255,255,0.06); padding: 40px 0; }
+    .footer-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 16px;
+    }
+    .footer-logo { font-family: var(--font-head); font-size: 18px; letter-spacing: -0.02em; }
+    .footer-logo span { color: var(--teal); }
+    .footer-links { display: flex; gap: 24px; list-style: none; }
+    .footer-links a { font-size: 13px; color: var(--grey); transition: color 0.2s; }
+    .footer-links a:hover { color: var(--teal); }
+    .footer-copy { font-size: 12px; color: var(--grey); }
+    .footer-disclosure {
+      width: 100%; font-size: 12px; color: var(--grey);
+      border-top: 1px solid rgba(255,255,255,0.04);
+      padding-top: 16px; margin-top: 8px;
+    }
+
+    @media (max-width: 700px) {
+      .nav-links { display: none; }
+      .post-card.featured { flex-direction: column; }
+      .newsletter-strip { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+      <a href="/" class="logo">Buzz<span>Riding</span></a>
+      <ul class="nav-links">
+        <li><a href="/blog.html" class="active">Blog</a></li>
+        <li><a href="/start-here.html">Start Here</a></li>
+        <li><a href="/about.html">About</a></li>
+      </ul>
+      <a href="/newsletter.html" class="nav-cta">Get The Buzz</a>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="container page-header-inner">
+      <p class="section-label">All Articles</p>
+      <h1>AI marketing, <em>no fluff.</em></h1>
+      <p>Practical guides, honest reviews, and real experiments — updated weekly.</p>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- FILTERS -->
+    <div class="filters">
+      <div class="filter-row">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="tool-reviews">🛠 Tool Reviews</button>
+        <button class="filter-btn" data-filter="workflows">⚡ Workflows</button>
+        <button class="filter-btn" data-filter="career">📈 Career & Skills</button>
+        <button class="filter-btn" data-filter="experiments">🔬 Experiments</button>
+        <button class="filter-btn" data-filter="news">📰 News & Trends</button>
+      </div>
+    </div>
+
+    <!-- POSTS -->
+    <div class="posts-grid" id="postsGrid">
+
+      <a href="#" class="post-card featured" data-category="tool-reviews">
+        <div class="featured-content">
+          <span class="featured-badge">Featured</span>
+          <span class="post-tag">🛠 Tool Reviews</span>
+          <p class="post-title">Best AI Tools for Marketing Teams in 2026</p>
+          <p class="post-excerpt">We tested 14 tools across five categories. Here's what actually earns a place in your stack — and what to skip. Includes side-by-side comparisons, pricing breakdowns, and real workflow examples from each tool.</p>
+          <div class="post-meta">
+            <span>8 min read · Published Mar 2026</span>
+            <span class="post-read">Read Article →</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="post-card" data-category="workflows">
+        <span class="post-tag">⚡ Workflows</span>
+        <p class="post-title">How to Use ChatGPT for Content Marketing</p>
+        <p class="post-excerpt">A repeatable 6-step workflow for going from brief to published article — without the output sounding robotic.</p>
+        <div class="post-meta"><span>6 min read</span><span class="post-read">Read →</span></div>
+      </a>
+
+      <a href="#" class="post-card" data-category="career">
+        <span class="post-tag">📈 Career & Skills</span>
+        <p class="post-title">Will AI Replace Marketing Jobs?</p>
+        <p class="post-excerpt">The honest answer, backed by data. Plus the five skills that will make you more valuable as AI takes over the repetitive stuff.</p>
+        <div class="post-meta"><span>7 min read</span><span class="post-read">Read →</span></div>
+      </a>
+
+      <a href="#" class="post-card" data-category="tool-reviews">
+        <span class="post-tag">🛠 Tool Reviews</span>
+        <p class="post-title">AI Email Subject Line Tools Compared</p>
+        <p class="post-excerpt">We ran 200 subject lines through five AI tools and measured open rates. One clear winner emerged — and it's not the most popular one.</p>
+        <div class="post-meta"><span>5 min read</span><span class="post-read">Read →</span></div>
+      </a>
+
+      <a href="#" class="post-card" data-category="workflows">
+        <span class="post-tag">⚡ Workflows</span>
+        <p class="post-title">ChatGPT Prompts for Social Media Marketing</p>
+        <p class="post-excerpt">25 prompts we use every week for LinkedIn, X, and Instagram. Copy, paste, adapt. Each one tested on real brand accounts.</p>
+        <div class="post-meta"><span>6 min read</span><span class="post-read">Read →</span></div>
+      </a>
+
+      <a href="#" class="post-card" data-category="experiments">
+        <span class="post-tag">🔬 Experiments</span>
+        <p class="post-title">I Used AI to Write a Month of Blog Posts — Here's What Happened</p>
+        <p class="post-excerpt">30 days, 12 articles, one AI assistant. Traffic results, quality trade-offs, and whether I'd do it again.</p>
+        <div class="post-meta"><span>9 min read</span><span class="post-read">Read →</span></div>
+      </a>
+
+      <a href="#" class="post-card" data-category="tool-reviews">
+        <span class="post-tag">🛠 Tool Reviews</span>
+        <p class="post-title">Best Free AI Tools for Marketers</p>
+        <p class="post-excerpt">Zero budget, full capability. The free tier tools that actually deliver — and the ones that lock everything useful behind a paywall.</p>
+        <div class="post-meta"><span>5 min read</span><span class="post-read">Read →</span></div>
+      </a>
+
+      <a href="#" class="post-card" data-category="news">
+        <span class="post-tag">📰 News & Trends</span>
+        <p class="post-title">AI Marketing Tools Weekly Roundup</p>
+        <p class="post-excerpt">The launches, updates, and stories worth knowing this week. Curated for marketers, not developers.</p>
+        <div class="post-meta"><span>4 min read</span><span class="post-read">Read →</span></div>
+      </a>
+
+    </div>
+
+    <!-- NEWSLETTER STRIP -->
+    <div class="newsletter-strip">
+      <div class="strip-text">
+        <h3>Get The Buzz every Tuesday 📬</h3>
+        <p>One newsletter. The best AI marketing insights of the week. Free, always.</p>
+      </div>
+      <a href="/newsletter.html" class="btn-primary">Subscribe Free</a>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-logo">Buzz<span>Riding</span></span>
+        <ul class="footer-links">
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/start-here.html">Start Here</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/newsletter.html">Newsletter</a></li>
+        </ul>
+        <span class="footer-copy">© 2026 BuzzRiding</span>
+        <p class="footer-disclosure">This site contains affiliate links. We may earn a commission if you sign up for a tool — at no extra cost to you. Posts are researched and refined with AI tools.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const btns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.post-card');
+    btns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        cards.forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
