@@ -9,11 +9,12 @@
   <meta property="og:description" content="Where curious marketers come to stay one step ahead." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://buzzriding.github.io" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet" />
+  <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
   <style>
-    /* ── TOKENS ─────────────────────────────────────────────── */
     :root {
       --midnight:     #141418;
       --surface:      #1C2128;
@@ -26,8 +27,6 @@
       --max-w:        1120px;
       --radius:       10px;
     }
-
-    /* ── RESET ──────────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
@@ -40,459 +39,163 @@
     }
     a { color: inherit; text-decoration: none; }
     img { display: block; max-width: 100%; }
+    .container { width: 100%; max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
 
-    /* ── LAYOUT HELPERS ─────────────────────────────────────── */
-    .container {
-      width: 100%;
-      max-width: var(--max-w);
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    /* ── NAV ────────────────────────────────────────────────── */
+    /* NAV */
     nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(20, 20, 24, 0.85);
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(20,20,24,0.85);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(42, 173, 160, 0.12);
+      border-bottom: 1px solid rgba(42,173,160,0.12);
     }
-    .nav-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 64px;
-    }
-    .logo {
-      font-family: var(--font-head);
-      font-size: 20px;
-      letter-spacing: -0.02em;
-    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .logo { font-family: var(--font-head); font-size: 20px; letter-spacing: -0.02em; }
     .logo span { color: var(--teal); }
-    .nav-links {
-      display: flex;
-      gap: 32px;
-      list-style: none;
-    }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
     .nav-links a {
-      font-family: var(--font-head);
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--grey);
+      font-family: var(--font-head); font-size: 13px; font-weight: 700;
+      letter-spacing: 0.06em; text-transform: uppercase; color: var(--grey);
       transition: color 0.2s;
     }
     .nav-links a:hover { color: var(--teal); }
     .nav-cta {
-      font-family: var(--font-head);
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      background: var(--teal);
-      color: var(--midnight);
-      padding: 10px 20px;
-      border-radius: var(--radius);
+      font-family: var(--font-head); font-size: 13px; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      background: var(--teal); color: var(--midnight);
+      padding: 10px 20px; border-radius: var(--radius);
       transition: background 0.2s, transform 0.15s;
     }
     .nav-cta:hover { background: #33c8b9; transform: translateY(-1px); }
 
-    /* ── HERO ───────────────────────────────────────────────── */
-    .hero {
-      position: relative;
-      overflow: hidden;
-      padding: 96px 0 80px;
-    }
-    /* subtle grid background */
+    /* HERO */
+    .hero { position: relative; overflow: hidden; padding: 96px 0 80px; }
     .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
+      content: ''; position: absolute; inset: 0;
       background-image:
         linear-gradient(rgba(42,173,160,0.04) 1px, transparent 1px),
         linear-gradient(90deg, rgba(42,173,160,0.04) 1px, transparent 1px);
-      background-size: 48px 48px;
-      pointer-events: none;
+      background-size: 48px 48px; pointer-events: none;
     }
-    /* teal glow top-right */
     .hero::after {
-      content: '';
-      position: absolute;
-      top: -120px;
-      right: -120px;
-      width: 500px;
-      height: 500px;
+      content: ''; position: absolute; top: -120px; right: -120px;
+      width: 500px; height: 500px;
       background: radial-gradient(circle, rgba(42,173,160,0.12) 0%, transparent 65%);
       pointer-events: none;
     }
-    .hero-inner {
-      position: relative;
-      z-index: 1;
-      max-width: 760px;
-    }
+    .hero-inner { position: relative; z-index: 1; max-width: 760px; }
     .hero-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(42,173,160,0.1);
-      border: 1px solid rgba(42,173,160,0.25);
-      border-radius: 100px;
-      padding: 6px 16px;
-      font-size: 12px;
-      font-weight: 400;
-      letter-spacing: 0.04em;
-      color: var(--teal);
-      margin-bottom: 28px;
-      animation: fadeUp 0.6s ease both;
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(42,173,160,0.1); border: 1px solid rgba(42,173,160,0.25);
+      border-radius: 100px; padding: 6px 16px;
+      font-size: 12px; font-weight: 400; letter-spacing: 0.04em; color: var(--teal);
+      margin-bottom: 28px; animation: fadeUp 0.6s ease both;
     }
     .hero-pill::before {
-      content: '';
-      width: 7px;
-      height: 7px;
-      background: var(--teal);
-      border-radius: 50%;
-      animation: pulse 2s infinite;
+      content: ''; width: 7px; height: 7px;
+      background: var(--teal); border-radius: 50%; animation: pulse 2s infinite;
     }
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.3; }
-    }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
     h1 {
-      font-family: var(--font-head);
-      font-size: clamp(38px, 6vw, 62px);
-      line-height: 1.1;
-      letter-spacing: -0.02em;
-      color: var(--offwhite);
-      margin-bottom: 24px;
-      animation: fadeUp 0.6s 0.1s ease both;
+      font-family: var(--font-head); font-size: clamp(38px, 6vw, 62px);
+      line-height: 1.1; letter-spacing: -0.02em; color: var(--offwhite);
+      margin-bottom: 24px; animation: fadeUp 0.6s 0.1s ease both;
     }
-    h1 em {
-      font-style: normal;
-      color: var(--teal);
-    }
+    h1 em { font-style: normal; color: var(--teal); }
     .hero-sub {
-      font-size: clamp(16px, 2vw, 19px);
-      font-weight: 300;
-      color: var(--grey);
-      max-width: 580px;
-      line-height: 1.6;
-      margin-bottom: 40px;
+      font-size: clamp(16px, 2vw, 19px); font-weight: 300; color: var(--grey);
+      max-width: 580px; line-height: 1.6; margin-bottom: 40px;
       animation: fadeUp 0.6s 0.2s ease both;
     }
-    .hero-actions {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      animation: fadeUp 0.6s 0.3s ease both;
-    }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; animation: fadeUp 0.6s 0.3s ease both; }
     .btn-primary {
-      font-family: var(--font-head);
-      font-size: 14px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      background: var(--teal);
-      color: var(--midnight);
-      padding: 14px 28px;
-      border-radius: var(--radius);
+      font-family: var(--font-head); font-size: 14px; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      background: var(--teal); color: var(--midnight);
+      padding: 14px 28px; border-radius: var(--radius);
       transition: background 0.2s, transform 0.15s;
     }
     .btn-primary:hover { background: #33c8b9; transform: translateY(-2px); }
     .btn-secondary {
-      font-family: var(--font-head);
-      font-size: 14px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      border: 1px solid rgba(42,173,160,0.35);
-      color: var(--teal);
-      padding: 14px 28px;
-      border-radius: var(--radius);
+      font-family: var(--font-head); font-size: 14px; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      border: 1px solid rgba(42,173,160,0.35); color: var(--teal);
+      padding: 14px 28px; border-radius: var(--radius);
       transition: border-color 0.2s, background 0.2s, transform 0.15s;
     }
-    .btn-secondary:hover {
-      border-color: var(--teal);
-      background: rgba(42,173,160,0.06);
-      transform: translateY(-2px);
-    }
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(18px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
+    .btn-secondary:hover { border-color: var(--teal); background: rgba(42,173,160,0.06); transform: translateY(-2px); }
+    @keyframes fadeUp { from{opacity:0;transform:translateY(18px)} to{opacity:1;transform:translateY(0)} }
 
-    /* ── STATS BAR ──────────────────────────────────────────── */
-    .stats {
-      border-top: 1px solid rgba(255,255,255,0.06);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-      padding: 28px 0;
-      margin-bottom: 88px;
-    }
-    .stats-inner {
-      display: flex;
-      gap: 48px;
-      flex-wrap: wrap;
-    }
+    /* STATS */
+    .stats { border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 28px 0; margin-bottom: 88px; }
+    .stats-inner { display: flex; gap: 48px; flex-wrap: wrap; }
     .stat-item { display: flex; flex-direction: column; gap: 4px; }
-    .stat-number {
-      font-family: var(--font-head);
-      font-size: 26px;
-      color: var(--teal);
-      line-height: 1;
-    }
-    .stat-label {
-      font-size: 13px;
-      color: var(--grey);
-      font-weight: 300;
-    }
+    .stat-number { font-family: var(--font-head); font-size: 26px; color: var(--teal); line-height: 1; }
+    .stat-label { font-size: 13px; color: var(--grey); font-weight: 300; }
 
-    /* ── SECTION TITLES ─────────────────────────────────────── */
-    .section-label {
-      font-family: var(--font-head);
-      font-size: 11px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--teal);
-      margin-bottom: 12px;
-    }
-    .section-title {
-      font-family: var(--font-head);
-      font-size: clamp(24px, 3.5vw, 34px);
-      line-height: 1.15;
-      letter-spacing: -0.02em;
-      color: var(--offwhite);
-      margin-bottom: 12px;
-    }
-    .section-sub {
-      font-size: 16px;
-      color: var(--grey);
-      max-width: 520px;
-      line-height: 1.6;
-      margin-bottom: 48px;
-    }
+    /* SECTION TITLES */
+    .section-label { font-family: var(--font-head); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal); margin-bottom: 12px; }
+    .section-title { font-family: var(--font-head); font-size: clamp(24px, 3.5vw, 34px); line-height: 1.15; letter-spacing: -0.02em; color: var(--offwhite); margin-bottom: 12px; }
+    .section-sub { font-size: 16px; color: var(--grey); max-width: 520px; line-height: 1.6; margin-bottom: 48px; }
 
-    /* ── PILLARS ────────────────────────────────────────────── */
+    /* PILLARS */
     .pillars { padding: 0 0 96px; }
-    .pillars-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 16px;
-    }
-    .pillar-card {
-      background: var(--surface);
-      border: 1px solid rgba(255,255,255,0.05);
-      border-radius: var(--radius);
-      padding: 28px 24px;
-      transition: border-color 0.2s, transform 0.2s;
-      cursor: default;
-    }
-    .pillar-card:hover {
-      border-color: rgba(42,173,160,0.3);
-      transform: translateY(-3px);
-    }
+    .pillars-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+    .pillar-card { background: var(--surface); border: 1px solid rgba(255,255,255,0.05); border-radius: var(--radius); padding: 28px 24px; transition: border-color 0.2s, transform 0.2s; }
+    .pillar-card:hover { border-color: rgba(42,173,160,0.3); transform: translateY(-3px); }
     .pillar-icon { font-size: 26px; margin-bottom: 14px; }
-    .pillar-name {
-      font-family: var(--font-head);
-      font-size: 15px;
-      color: var(--offwhite);
-      margin-bottom: 8px;
-    }
+    .pillar-name { font-family: var(--font-head); font-size: 15px; color: var(--offwhite); margin-bottom: 8px; }
     .pillar-desc { font-size: 13px; color: var(--grey); line-height: 1.55; }
 
-    /* ── LATEST POSTS ───────────────────────────────────────── */
+    /* POSTS */
     .posts { padding: 0 0 96px; }
-    .posts-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 24px;
-    }
-    .post-card {
-      background: var(--surface);
-      border: 1px solid rgba(255,255,255,0.05);
-      border-radius: var(--radius);
-      padding: 32px;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      transition: border-color 0.2s, transform 0.2s;
-    }
-    .post-card:hover {
-      border-color: rgba(42,173,160,0.3);
-      transform: translateY(-3px);
-    }
-    .post-tag {
-      display: inline-block;
-      font-size: 11px;
-      font-family: var(--font-head);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--teal);
-      background: rgba(42,173,160,0.1);
-      border-radius: 4px;
-      padding: 4px 10px;
-      width: fit-content;
-    }
-    .post-title {
-      font-family: var(--font-head);
-      font-size: 18px;
-      line-height: 1.3;
-      color: var(--offwhite);
-      transition: color 0.2s;
-    }
+    .posts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+    .post-card { background: var(--surface); border: 1px solid rgba(255,255,255,0.05); border-radius: var(--radius); padding: 32px; display: flex; flex-direction: column; gap: 16px; transition: border-color 0.2s, transform 0.2s; }
+    .post-card:hover { border-color: rgba(42,173,160,0.3); transform: translateY(-3px); }
+    .post-tag { display: inline-block; font-size: 11px; font-family: var(--font-head); letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); background: rgba(42,173,160,0.1); border-radius: 4px; padding: 4px 10px; width: fit-content; }
+    .post-title { font-family: var(--font-head); font-size: 18px; line-height: 1.3; color: var(--offwhite); transition: color 0.2s; }
     .post-card:hover .post-title { color: var(--teal); }
     .post-excerpt { font-size: 14px; color: var(--grey); line-height: 1.6; flex: 1; }
-    .post-meta {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      font-size: 12px;
-      color: var(--grey);
-      border-top: 1px solid rgba(255,255,255,0.06);
-      padding-top: 16px;
-    }
-    .post-read {
-      font-family: var(--font-head);
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--teal);
-    }
+    .post-meta { display: flex; align-items: center; justify-content: space-between; font-size: 12px; color: var(--grey); border-top: 1px solid rgba(255,255,255,0.06); padding-top: 16px; }
+    .post-read { font-family: var(--font-head); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--teal); }
     .posts-footer { text-align: center; margin-top: 40px; }
 
-    /* ── NEWSLETTER ─────────────────────────────────────────── */
-    .newsletter {
-      padding: 0 0 96px;
-    }
+    /* NEWSLETTER */
+    .newsletter { padding: 0 0 96px; }
     .newsletter-box {
-      background: var(--surface);
-      border: 1px solid rgba(42,173,160,0.2);
-      border-radius: 16px;
-      padding: 64px 48px;
-      position: relative;
-      overflow: hidden;
+      background: var(--surface); border: 1px solid rgba(42,173,160,0.2);
+      border-radius: 16px; padding: 64px 48px;
+      position: relative; overflow: hidden;
     }
     .newsletter-box::before {
-      content: '';
-      position: absolute;
-      bottom: -80px;
-      right: -80px;
-      width: 320px;
-      height: 320px;
+      content: ''; position: absolute; bottom: -80px; right: -80px;
+      width: 320px; height: 320px;
       background: radial-gradient(circle, rgba(42,173,160,0.1) 0%, transparent 65%);
       pointer-events: none;
     }
-    .newsletter-inner {
-      position: relative;
-      z-index: 1;
-      max-width: 560px;
-    }
+    .newsletter-inner { position: relative; z-index: 1; max-width: 560px; }
     .newsletter-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(42,173,160,0.1);
-      border: 1px solid rgba(42,173,160,0.25);
-      border-radius: 100px;
-      padding: 5px 14px;
-      font-size: 12px;
-      color: var(--teal);
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(42,173,160,0.1); border: 1px solid rgba(42,173,160,0.25);
+      border-radius: 100px; padding: 5px 14px; font-size: 12px; color: var(--teal);
       margin-bottom: 20px;
     }
-    .newsletter-box h2 {
-      font-family: var(--font-head);
-      font-size: clamp(24px, 3vw, 34px);
-      line-height: 1.15;
-      letter-spacing: -0.02em;
-      color: var(--offwhite);
-      margin-bottom: 14px;
-    }
-    .newsletter-box p {
-      font-size: 16px;
-      color: var(--grey);
-      line-height: 1.6;
-      margin-bottom: 32px;
-    }
-    /* Beehiiv embed placeholder — replace with your actual Beehiiv embed code */
-    .beehiiv-placeholder {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-    .beehiiv-placeholder input {
-      flex: 1;
-      min-width: 220px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: var(--radius);
-      padding: 14px 18px;
-      font-family: var(--font-body);
-      font-size: 15px;
-      color: var(--offwhite);
-      outline: none;
-      transition: border-color 0.2s;
-    }
-    .beehiiv-placeholder input::placeholder { color: var(--grey); }
-    .beehiiv-placeholder input:focus { border-color: var(--teal); }
-    .beehiiv-placeholder button {
-      font-family: var(--font-head);
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      background: var(--teal);
-      color: var(--midnight);
-      border: none;
-      border-radius: var(--radius);
-      padding: 14px 24px;
-      cursor: pointer;
-      transition: background 0.2s, transform 0.15s;
-    }
-    .beehiiv-placeholder button:hover { background: #33c8b9; transform: translateY(-1px); }
-    .newsletter-note { font-size: 12px; color: var(--grey); margin-top: 14px; }
+    .newsletter-box h2 { font-family: var(--font-head); font-size: clamp(24px, 3vw, 34px); line-height: 1.15; letter-spacing: -0.02em; color: var(--offwhite); margin-bottom: 14px; }
+    .newsletter-box p { font-size: 16px; color: var(--grey); line-height: 1.6; margin-bottom: 28px; }
+    .beehiiv-wrap { max-width: 520px; }
+    .newsletter-note { font-size: 12px; color: var(--grey); margin-top: 12px; }
 
-    /* ── FOOTER ─────────────────────────────────────────────── */
-    footer {
-      border-top: 1px solid rgba(255,255,255,0.06);
-      padding: 40px 0;
-    }
-    .footer-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-    .footer-logo {
-      font-family: var(--font-head);
-      font-size: 18px;
-      letter-spacing: -0.02em;
-    }
+    /* FOOTER */
+    footer { border-top: 1px solid rgba(255,255,255,0.06); padding: 40px 0; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .footer-logo { font-family: var(--font-head); font-size: 18px; letter-spacing: -0.02em; }
     .footer-logo span { color: var(--teal); }
-    .footer-links {
-      display: flex;
-      gap: 24px;
-      list-style: none;
-    }
-    .footer-links a {
-      font-size: 13px;
-      color: var(--grey);
-      transition: color 0.2s;
-    }
+    .footer-links { display: flex; gap: 24px; list-style: none; }
+    .footer-links a { font-size: 13px; color: var(--grey); transition: color 0.2s; }
     .footer-links a:hover { color: var(--teal); }
     .footer-copy { font-size: 12px; color: var(--grey); }
-    .footer-disclosure {
-      width: 100%;
-      font-size: 12px;
-      color: var(--grey);
-      border-top: 1px solid rgba(255,255,255,0.04);
-      padding-top: 16px;
-      margin-top: 8px;
-    }
+    .footer-disclosure { width: 100%; font-size: 12px; color: var(--grey); border-top: 1px solid rgba(255,255,255,0.04); padding-top: 16px; margin-top: 8px; }
 
-    /* ── MOBILE ─────────────────────────────────────────────── */
     @media (max-width: 640px) {
       .nav-links { display: none; }
       .hero { padding: 64px 0 56px; }
@@ -504,7 +207,6 @@
 </head>
 <body>
 
-  <!-- ── NAV ── -->
   <nav>
     <div class="container nav-inner">
       <a href="/" class="logo">Buzz<span>Riding</span></a>
@@ -517,7 +219,6 @@
     </div>
   </nav>
 
-  <!-- ── HERO ── -->
   <section class="hero">
     <div class="container">
       <div class="hero-inner">
@@ -532,104 +233,56 @@
     </div>
   </section>
 
-  <!-- ── STATS BAR ── -->
   <div class="stats">
     <div class="container">
       <div class="stats-inner">
-        <div class="stat-item">
-          <span class="stat-number">8+</span>
-          <span class="stat-label">In-depth articles</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number">5</span>
-          <span class="stat-label">Content pillars</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number">100%</span>
-          <span class="stat-label">Practitioner-led</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number">Free</span>
-          <span class="stat-label">Weekly newsletter</span>
-        </div>
+        <div class="stat-item"><span class="stat-number">8+</span><span class="stat-label">In-depth articles</span></div>
+        <div class="stat-item"><span class="stat-number">5</span><span class="stat-label">Content pillars</span></div>
+        <div class="stat-item"><span class="stat-number">100%</span><span class="stat-label">Practitioner-led</span></div>
+        <div class="stat-item"><span class="stat-number">Free</span><span class="stat-label">Weekly newsletter</span></div>
       </div>
     </div>
   </div>
 
-  <!-- ── PILLARS ── -->
   <section class="pillars">
     <div class="container">
       <p class="section-label">What We Cover</p>
       <h2 class="section-title">Five pillars. One mission.</h2>
       <p class="section-sub">Every piece of content fits into one of five focused areas — so you always know what you're getting.</p>
       <div class="pillars-grid">
-        <div class="pillar-card">
-          <div class="pillar-icon">🛠</div>
-          <p class="pillar-name">Tool Reviews</p>
-          <p class="pillar-desc">Honest, tested reviews of AI marketing tools. We call out the weak ones.</p>
-        </div>
-        <div class="pillar-card">
-          <div class="pillar-icon">⚡</div>
-          <p class="pillar-name">Workflows</p>
-          <p class="pillar-desc">Step-by-step AI systems for real marketing tasks you can use tomorrow.</p>
-        </div>
-        <div class="pillar-card">
-          <div class="pillar-icon">📈</div>
-          <p class="pillar-name">Career & Skills</p>
-          <p class="pillar-desc">How AI is reshaping marketing careers and what to learn to stay ahead.</p>
-        </div>
-        <div class="pillar-card">
-          <div class="pillar-icon">🔬</div>
-          <p class="pillar-name">Experiments</p>
-          <p class="pillar-desc">Real tests and real results — what worked, what didn't, and why.</p>
-        </div>
-        <div class="pillar-card">
-          <div class="pillar-icon">📰</div>
-          <p class="pillar-name">News & Trends</p>
-          <p class="pillar-desc">Curated AI marketing news with a practitioner's take. Signal, no noise.</p>
-        </div>
+        <div class="pillar-card"><div class="pillar-icon">🛠</div><p class="pillar-name">Tool Reviews</p><p class="pillar-desc">Honest, tested reviews of AI marketing tools. We call out the weak ones.</p></div>
+        <div class="pillar-card"><div class="pillar-icon">⚡</div><p class="pillar-name">Workflows</p><p class="pillar-desc">Step-by-step AI systems for real marketing tasks you can use tomorrow.</p></div>
+        <div class="pillar-card"><div class="pillar-icon">📈</div><p class="pillar-name">Career & Skills</p><p class="pillar-desc">How AI is reshaping marketing careers and what to learn to stay ahead.</p></div>
+        <div class="pillar-card"><div class="pillar-icon">🔬</div><p class="pillar-name">Experiments</p><p class="pillar-desc">Real tests and real results — what worked, what didn't, and why.</p></div>
+        <div class="pillar-card"><div class="pillar-icon">📰</div><p class="pillar-name">News & Trends</p><p class="pillar-desc">Curated AI marketing news with a practitioner's take. Signal, no noise.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- ── LATEST POSTS ── -->
   <section class="posts">
     <div class="container">
       <p class="section-label">Latest Articles</p>
       <h2 class="section-title">What marketers are reading</h2>
       <p class="section-sub">Practical, no-fluff articles on using AI to do your job better.</p>
       <div class="posts-grid">
-
-        <a href="#" class="post-card">
+        <a href="/blog/best-ai-tools-for-marketing-teams-2026.html" class="post-card">
           <span class="post-tag">🛠 Tool Reviews</span>
           <p class="post-title">Best AI Tools for Marketing Teams in 2026</p>
           <p class="post-excerpt">We tested 14 tools across five categories. Here's what actually earns a place in your stack — and what to skip.</p>
-          <div class="post-meta">
-            <span>8 min read</span>
-            <span class="post-read">Read →</span>
-          </div>
+          <div class="post-meta"><span>8 min read</span><span class="post-read">Read →</span></div>
         </a>
-
-        <a href="#" class="post-card">
+        <a href="/blog/how-to-use-chatgpt-for-content-marketing.html" class="post-card">
           <span class="post-tag">⚡ Workflows</span>
           <p class="post-title">How to Use ChatGPT for Content Marketing</p>
           <p class="post-excerpt">A repeatable 6-step workflow for going from brief to published article using ChatGPT — without the output sounding robotic.</p>
-          <div class="post-meta">
-            <span>6 min read</span>
-            <span class="post-read">Read →</span>
-          </div>
+          <div class="post-meta"><span>6 min read</span><span class="post-read">Read →</span></div>
         </a>
-
-        <a href="#" class="post-card">
+        <a href="/blog/will-ai-replace-marketing-jobs.html" class="post-card">
           <span class="post-tag">📈 Career & Skills</span>
           <p class="post-title">Will AI Replace Marketing Jobs?</p>
           <p class="post-excerpt">The honest answer, backed by data. Plus the five skills that will make you more valuable — not less — as AI takes over the repetitive stuff.</p>
-          <div class="post-meta">
-            <span>7 min read</span>
-            <span class="post-read">Read →</span>
-          </div>
+          <div class="post-meta"><span>7 min read</span><span class="post-read">Read →</span></div>
         </a>
-
       </div>
       <div class="posts-footer">
         <a href="/blog.html" class="btn-secondary">View All Articles</a>
@@ -637,7 +290,6 @@
     </div>
   </section>
 
-  <!-- ── NEWSLETTER ── -->
   <section class="newsletter">
     <div class="container">
       <div class="newsletter-box">
@@ -645,13 +297,8 @@
           <div class="newsletter-badge">📬 The Buzz — Weekly Newsletter</div>
           <h2>The best AI marketing insights. Every Tuesday.</h2>
           <p>Join marketers getting one curated newsletter per week — the tools worth knowing, the strategies that work, and the noise filtered out. Free, always.</p>
-          <!-- 
-            REPLACE THIS BLOCK with your actual Beehiiv embed code.
-            In Beehiiv: Settings → Forms → Copy embed code → paste here.
-          -->
-          <div class="beehiiv-placeholder">
-            <input type="email" placeholder="your@email.com" />
-            <button type="button">Subscribe Free</button>
+          <div class="beehiiv-wrap">
+            <iframe src="https://subscribe-forms.beehiiv.com/94bede40-6aee-45ce-8ddc-36b0f283b97d" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width:100%;height:207px;margin:0;border-radius:0px;background-color:transparent;box-shadow:0 0 #0000;max-width:100%;"></iframe>
           </div>
           <p class="newsletter-note">No spam. Unsubscribe any time. Read by marketers at growth-stage companies.</p>
         </div>
@@ -659,7 +306,6 @@
     </div>
   </section>
 
-  <!-- ── FOOTER ── -->
   <footer>
     <div class="container">
       <div class="footer-inner">
