@@ -9,437 +9,269 @@
   <meta property="og:description" content="A curated reading path for marketing professionals getting started with AI." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://buzzriding.github.io/start-here.html" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --midnight:  #141418;
-      --surface:   #1C2128;
-      --teal-deep: #1A7A6E;
-      --teal:      #2AADA0;
-      --offwhite:  #FAFAF7;
-      --grey:      #8A8A8A;
-      --font-head: 'Poppins', sans-serif;
-      --font-body: 'DM Sans', sans-serif;
-      --max-w:     1120px;
-      --radius:    10px;
+      --midnight:#141418;--surface:#1C2128;--teal-deep:#1A7A6E;--teal:#2AADA0;
+      --offwhite:#FAFAF7;--grey:#8A8A8A;--font-head:'Poppins',sans-serif;
+      --font-body:'DM Sans',sans-serif;--max-w:1120px;--radius:10px;
     }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      background: var(--midnight);
-      color: var(--offwhite);
-      font-family: var(--font-body);
-      font-weight: 300;
-      line-height: 1.65;
-      -webkit-font-smoothing: antialiased;
-    }
-    a { color: inherit; text-decoration: none; }
-    .container { width: 100%; max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
-
-    /* NAV */
-    nav {
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(20,20,24,0.85);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(42,173,160,0.12);
-    }
-    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
-    .logo { font-family: var(--font-head); font-size: 20px; letter-spacing: -0.02em; }
-    .logo span { color: var(--teal); }
-    .nav-links { display: flex; gap: 32px; list-style: none; }
-    .nav-links a {
-      font-family: var(--font-head); font-size: 13px; font-weight: 700;
-      letter-spacing: 0.06em; text-transform: uppercase; color: var(--grey);
-      transition: color 0.2s;
-    }
-    .nav-links a:hover, .nav-links a.active { color: var(--teal); }
-    .nav-cta {
-      font-family: var(--font-head); font-size: 13px; font-weight: 700;
-      letter-spacing: 0.1em; text-transform: uppercase;
-      background: var(--teal); color: var(--midnight);
-      padding: 10px 20px; border-radius: var(--radius);
-      transition: background 0.2s, transform 0.15s;
-    }
-    .nav-cta:hover { background: #33c8b9; transform: translateY(-1px); }
-
-    /* PAGE HEADER */
-    .page-header {
-      padding: 72px 0 64px;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-      margin-bottom: 72px;
-      position: relative; overflow: hidden;
-    }
-    .page-header::after {
-      content: '';
-      position: absolute; top: -120px; right: -120px;
-      width: 500px; height: 500px;
-      background: radial-gradient(circle, rgba(42,173,160,0.08) 0%, transparent 65%);
-      pointer-events: none;
-    }
-    .page-header-inner { position: relative; z-index: 1; max-width: 680px; }
-    .section-label {
-      font-family: var(--font-head); font-size: 11px;
-      letter-spacing: 0.14em; text-transform: uppercase;
-      color: var(--teal); margin-bottom: 12px;
-    }
-    .page-header h1 {
-      font-family: var(--font-head);
-      font-size: clamp(34px, 5vw, 52px);
-      line-height: 1.1; letter-spacing: -0.02em;
-      color: var(--offwhite); margin-bottom: 20px;
-    }
-    .page-header h1 em { font-style: normal; color: var(--teal); }
-    .page-header p { font-size: 18px; color: var(--grey); line-height: 1.65; max-width: 540px; }
-
-    /* PATH INTRO */
-    .path-intro {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 20px;
-      margin-bottom: 80px;
-    }
-    .path-step {
-      background: var(--surface);
-      border: 1px solid rgba(255,255,255,0.05);
-      border-radius: var(--radius);
-      padding: 24px;
-      display: flex; gap: 16px; align-items: flex-start;
-    }
-    .step-num {
-      font-family: var(--font-head); font-size: 28px;
-      color: var(--teal); line-height: 1; flex-shrink: 0;
-      opacity: 0.5;
-    }
-    .step-text h3 { font-family: var(--font-head); font-size: 15px; color: var(--offwhite); margin-bottom: 6px; }
-    .step-text p { font-size: 13px; color: var(--grey); line-height: 1.55; }
-
-    /* TRACK */
-    .track { margin-bottom: 80px; }
-    .track-header {
-      display: flex; align-items: center; gap: 16px;
-      margin-bottom: 28px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-    }
-    .track-icon { font-size: 28px; }
-    .track-header-text h2 {
-      font-family: var(--font-head); font-size: 22px;
-      color: var(--offwhite); margin-bottom: 4px;
-    }
-    .track-header-text p { font-size: 14px; color: var(--grey); }
-    .track-cards { display: flex; flex-direction: column; gap: 16px; }
-    .track-card {
-      background: var(--surface);
-      border: 1px solid rgba(255,255,255,0.05);
-      border-radius: var(--radius);
-      padding: 24px 28px;
-      display: flex; align-items: center; gap: 24px;
-      transition: border-color 0.2s, transform 0.2s;
-    }
-    .track-card:hover { border-color: rgba(42,173,160,0.3); transform: translateX(4px); }
-    .card-number {
-      font-family: var(--font-head); font-size: 13px;
-      color: var(--teal); background: rgba(42,173,160,0.1);
-      border-radius: 6px; padding: 6px 10px;
-      min-width: 36px; text-align: center; flex-shrink: 0;
-    }
-    .card-body { flex: 1; }
-    .card-tag {
-      font-family: var(--font-head); font-size: 10px;
-      letter-spacing: 0.1em; text-transform: uppercase;
-      color: var(--teal); margin-bottom: 6px;
-    }
-    .card-title {
-      font-family: var(--font-head); font-size: 16px;
-      color: var(--offwhite); margin-bottom: 6px; line-height: 1.3;
-      transition: color 0.2s;
-    }
-    .track-card:hover .card-title { color: var(--teal); }
-    .card-desc { font-size: 13px; color: var(--grey); line-height: 1.55; }
-    .card-meta { font-size: 12px; color: var(--grey); white-space: nowrap; flex-shrink: 0; }
-
-    /* DIVIDER */
-    .divider { width: 48px; height: 2px; background: var(--teal); border-radius: 2px; margin: 0 0 80px; }
-
-    /* NEWSLETTER BOX */
-    .newsletter-box {
-      background: var(--surface);
-      border: 1px solid rgba(42,173,160,0.2);
-      border-radius: 16px;
-      padding: 56px 48px;
-      position: relative; overflow: hidden;
-      margin-bottom: 80px;
-      display: flex; align-items: center; gap: 48px; flex-wrap: wrap;
-    }
-    .newsletter-box::before {
-      content: '';
-      position: absolute; bottom: -80px; right: -80px;
-      width: 320px; height: 320px;
-      background: radial-gradient(circle, rgba(42,173,160,0.1) 0%, transparent 65%);
-      pointer-events: none;
-    }
-    .nl-text { flex: 1; position: relative; z-index: 1; min-width: 260px; }
-    .nl-badge {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(42,173,160,0.1);
-      border: 1px solid rgba(42,173,160,0.25);
-      border-radius: 100px; padding: 5px 14px;
-      font-size: 12px; color: var(--teal);
-      margin-bottom: 16px;
-    }
-    .nl-text h2 {
-      font-family: var(--font-head); font-size: clamp(22px, 3vw, 30px);
-      color: var(--offwhite); margin-bottom: 10px; line-height: 1.2;
-    }
-    .nl-text p { font-size: 15px; color: var(--grey); line-height: 1.6; }
-    .nl-form { flex-shrink: 0; position: relative; z-index: 1; min-width: 260px; }
-    .nl-form input {
-      width: 100%; background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: var(--radius);
-      padding: 14px 18px; margin-bottom: 10px;
-      font-family: var(--font-body); font-size: 15px;
-      color: var(--offwhite); outline: none;
-      transition: border-color 0.2s;
-    }
-    .nl-form input::placeholder { color: var(--grey); }
-    .nl-form input:focus { border-color: var(--teal); }
-    .nl-form button {
-      width: 100%;
-      font-family: var(--font-head); font-size: 13px; font-weight: 700;
-      letter-spacing: 0.1em; text-transform: uppercase;
-      background: var(--teal); color: var(--midnight);
-      border: none; border-radius: var(--radius);
-      padding: 14px 24px; cursor: pointer;
-      transition: background 0.2s, transform 0.15s;
-    }
-    .nl-form button:hover { background: #33c8b9; transform: translateY(-1px); }
-    .nl-note { font-size: 11px; color: var(--grey); text-align: center; margin-top: 8px; }
-
-    /* FOOTER */
-    footer { border-top: 1px solid rgba(255,255,255,0.06); padding: 40px 0; }
-    .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
-    .footer-logo { font-family: var(--font-head); font-size: 18px; letter-spacing: -0.02em; }
-    .footer-logo span { color: var(--teal); }
-    .footer-links { display: flex; gap: 24px; list-style: none; }
-    .footer-links a { font-size: 13px; color: var(--grey); transition: color 0.2s; }
-    .footer-links a:hover { color: var(--teal); }
-    .footer-copy { font-size: 12px; color: var(--grey); }
-    .footer-disclosure { width: 100%; font-size: 12px; color: var(--grey); border-top: 1px solid rgba(255,255,255,0.04); padding-top: 16px; margin-top: 8px; }
-
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .path-intro { grid-template-columns: 1fr; }
-      .track-card { flex-wrap: wrap; }
-      .newsletter-box { flex-direction: column; padding: 36px 24px; }
-    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--midnight);color:var(--offwhite);font-family:var(--font-body);font-weight:300;line-height:1.65;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    .container{width:100%;max-width:var(--max-w);margin:0 auto;padding:0 24px}
+    nav{position:sticky;top:0;z-index:100;background:rgba(20,20,24,0.85);backdrop-filter:blur(14px);border-bottom:1px solid rgba(42,173,160,0.12)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .logo{font-family:var(--font-head);font-size:20px;letter-spacing:-0.02em}
+    .logo span{color:var(--teal)}
+    .nav-links{display:flex;gap:32px;list-style:none}
+    .nav-links a{font-family:var(--font-head);font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--grey);transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--teal)}
+    .nav-cta{font-family:var(--font-head);font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;background:var(--teal);color:var(--midnight);padding:10px 20px;border-radius:var(--radius);transition:background 0.2s,transform 0.15s}
+    .nav-cta:hover{background:#33c8b9;transform:translateY(-1px)}
+    .page-header{padding:72px 0 64px;border-bottom:1px solid rgba(255,255,255,0.06);margin-bottom:72px;position:relative;overflow:hidden}
+    .page-header::after{content:'';position:absolute;top:-120px;right:-120px;width:500px;height:500px;background:radial-gradient(circle,rgba(42,173,160,0.08) 0%,transparent 65%);pointer-events:none}
+    .page-header-inner{position:relative;z-index:1;max-width:680px}
+    .section-label{font-family:var(--font-head);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--teal);margin-bottom:12px}
+    .page-header h1{font-family:var(--font-head);font-size:clamp(34px,5vw,52px);line-height:1.1;letter-spacing:-0.02em;color:var(--offwhite);margin-bottom:20px}
+    .page-header h1 em{font-style:normal;color:var(--teal)}
+    .page-header p{font-size:18px;color:var(--grey);line-height:1.65;max-width:540px}
+    .path-intro{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-bottom:80px}
+    .path-step{background:var(--surface);border:1px solid rgba(255,255,255,0.05);border-radius:var(--radius);padding:24px;display:flex;gap:16px;align-items:flex-start}
+    .step-num{font-family:var(--font-head);font-size:28px;color:var(--teal);line-height:1;flex-shrink:0;opacity:0.5}
+    .step-text h3{font-family:var(--font-head);font-size:15px;color:var(--offwhite);margin-bottom:6px}
+    .step-text p{font-size:13px;color:var(--grey);line-height:1.55}
+    .track{margin-bottom:80px}
+    .track-header{display:flex;align-items:center;gap:16px;margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,0.06)}
+    .track-icon{font-size:28px}
+    .track-header-text h2{font-family:var(--font-head);font-size:22px;color:var(--offwhite);margin-bottom:4px}
+    .track-header-text p{font-size:14px;color:var(--grey)}
+    .track-cards{display:flex;flex-direction:column;gap:16px}
+    .track-card{background:var(--surface);border:1px solid rgba(255,255,255,0.05);border-radius:var(--radius);padding:24px 28px;display:flex;align-items:center;gap:24px;transition:border-color 0.2s,transform 0.2s}
+    .track-card:hover{border-color:rgba(42,173,160,0.3);transform:translateX(4px)}
+    .card-number{font-family:var(--font-head);font-size:13px;color:var(--teal);background:rgba(42,173,160,0.1);border-radius:6px;padding:6px 10px;min-width:36px;text-align:center;flex-shrink:0}
+    .card-body{flex:1}
+    .card-tag{font-family:var(--font-head);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:6px}
+    .card-title{font-family:var(--font-head);font-size:16px;color:var(--offwhite);margin-bottom:6px;line-height:1.3;transition:color 0.2s}
+    .track-card:hover .card-title{color:var(--teal)}
+    .card-desc{font-size:13px;color:var(--grey);line-height:1.55}
+    .card-meta{font-size:12px;color:var(--grey);white-space:nowrap;flex-shrink:0}
+    .divider{width:48px;height:2px;background:var(--teal);border-radius:2px;margin:0 0 80px}
+    .newsletter-box{background:var(--surface);border:1px solid rgba(42,173,160,0.2);border-radius:16px;padding:56px 48px;position:relative;overflow:hidden;margin-bottom:80px;display:flex;align-items:center;gap:48px;flex-wrap:wrap}
+    .newsletter-box::before{content:'';position:absolute;bottom:-80px;right:-80px;width:320px;height:320px;background:radial-gradient(circle,rgba(42,173,160,0.1) 0%,transparent 65%);pointer-events:none}
+    .nl-text{flex:1;position:relative;z-index:1;min-width:260px}
+    .nl-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(42,173,160,0.1);border:1px solid rgba(42,173,160,0.25);border-radius:100px;padding:5px 14px;font-size:12px;color:var(--teal);margin-bottom:16px}
+    .nl-text h2{font-family:var(--font-head);font-size:clamp(22px,3vw,30px);color:var(--offwhite);margin-bottom:10px;line-height:1.2}
+    .nl-text p{font-size:15px;color:var(--grey);line-height:1.6}
+    .nl-cta{flex-shrink:0;position:relative;z-index:1}
+    .btn-primary{font-family:var(--font-head);font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;background:var(--teal);color:var(--midnight);padding:14px 28px;border-radius:var(--radius);display:inline-block;transition:background 0.2s,transform 0.15s}
+    .btn-primary:hover{background:#33c8b9;transform:translateY(-1px)}
+    footer{border-top:1px solid rgba(255,255,255,0.06);padding:40px 0}
+    .footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+    .footer-logo{font-family:var(--font-head);font-size:18px;letter-spacing:-0.02em}
+    .footer-logo span{color:var(--teal)}
+    .footer-links{display:flex;gap:24px;list-style:none}
+    .footer-links a{font-size:13px;color:var(--grey);transition:color 0.2s}
+    .footer-links a:hover{color:var(--teal)}
+    .footer-copy{font-size:12px;color:var(--grey)}
+    .footer-disclosure{width:100%;font-size:12px;color:var(--grey);border-top:1px solid rgba(255,255,255,0.04);padding-top:16px;margin-top:8px}
+    @media(max-width:768px){.nav-links{display:none}.path-intro{grid-template-columns:1fr}.track-card{flex-wrap:wrap}.newsletter-box{flex-direction:column;padding:36px 24px}}
   </style>
 </head>
 <body>
 
-  <nav>
-    <div class="container nav-inner">
-      <a href="/" class="logo">Buzz<span>Riding</span></a>
-      <ul class="nav-links">
-        <li><a href="/blog.html">Blog</a></li>
-        <li><a href="/start-here.html" class="active">Start Here</a></li>
-        <li><a href="/about.html">About</a></li>
-      </ul>
-      <a href="/newsletter.html" class="nav-cta">Get The Buzz</a>
-    </div>
-  </nav>
+<nav>
+  <div class="container nav-inner">
+    <a href="/" class="logo">Buzz<span>Riding</span></a>
+    <ul class="nav-links">
+      <li><a href="/blog.html">Blog</a></li>
+      <li><a href="/start-here.html" class="active">Start Here</a></li>
+      <li><a href="/about.html">About</a></li>
+    </ul>
+    <a href="/newsletter.html" class="nav-cta">Get The Buzz</a>
+  </div>
+</nav>
 
-  <div class="page-header">
-    <div class="container page-header-inner">
-      <p class="section-label">New Here?</p>
-      <h1>The fastest way to get <em>up to speed.</em></h1>
-      <p>Not sure where to begin? This page is your map. We've organised the best BuzzRiding content into three tracks — pick the one that matches where you are right now.</p>
+<div class="page-header">
+  <div class="container page-header-inner">
+    <p class="section-label">New Here?</p>
+    <h1>The fastest way to get <em>up to speed.</em></h1>
+    <p>Not sure where to begin? This page is your map. We've organised the best BuzzRiding content into three tracks — pick the one that matches where you are right now.</p>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="path-intro">
+    <div class="path-step">
+      <span class="step-num">1</span>
+      <div class="step-text"><h3>Pick your track</h3><p>Choose the path that matches your current situation — just getting started, building workflows, or going deeper.</p></div>
+    </div>
+    <div class="path-step">
+      <span class="step-num">2</span>
+      <div class="step-text"><h3>Read in order</h3><p>Each track is sequenced — earlier articles give you the foundation for the ones that follow.</p></div>
+    </div>
+    <div class="path-step">
+      <span class="step-num">3</span>
+      <div class="step-text"><h3>Apply as you go</h3><p>Every article ends with something actionable. Don't just read — try one thing before moving to the next.</p></div>
     </div>
   </div>
 
+  <!-- TRACK 1 -->
+  <div class="track">
+    <div class="track-header">
+      <span class="track-icon">🟢</span>
+      <div class="track-header-text">
+        <h2>Track 1 — New to AI in Marketing</h2>
+        <p>You understand the basics but haven't built it into your workflow yet. Start here.</p>
+      </div>
+    </div>
+    <div class="track-cards">
+      <a href="/blog/will-ai-replace-marketing-jobs.html" class="track-card">
+        <span class="card-number">01</span>
+        <div class="card-body">
+          <p class="card-tag">📈 Career &amp; Skills</p>
+          <p class="card-title">Will AI Replace Marketing Jobs?</p>
+          <p class="card-desc">The honest answer to the question every marketer is thinking. Sets the right mindset before you go further.</p>
+        </div>
+        <span class="card-meta">7 min read</span>
+      </a>
+      <a href="/blog/best-free-ai-tools-for-marketers.html" class="track-card">
+        <span class="card-number">02</span>
+        <div class="card-body">
+          <p class="card-tag">🛠 Tool Reviews</p>
+          <p class="card-title">Best Free AI Tools for Marketers</p>
+          <p class="card-desc">The tools worth starting with — all free tier, all immediately useful. No paid commitment needed.</p>
+        </div>
+        <span class="card-meta">7 min read</span>
+      </a>
+      <a href="/blog/how-to-use-chatgpt-for-content-marketing.html" class="track-card">
+        <span class="card-number">03</span>
+        <div class="card-body">
+          <p class="card-tag">⚡ Workflows</p>
+          <p class="card-title">How to Use ChatGPT for Content Marketing</p>
+          <p class="card-desc">Your first practical AI workflow. Follow it once and you'll understand why this changes everything.</p>
+        </div>
+        <span class="card-meta">6 min read</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- TRACK 2 -->
+  <div class="track">
+    <div class="track-header">
+      <span class="track-icon">🔵</span>
+      <div class="track-header-text">
+        <h2>Track 2 — Building Your AI Workflow</h2>
+        <p>You've used AI a few times. Now you want a repeatable system. This track gets you there.</p>
+      </div>
+    </div>
+    <div class="track-cards">
+      <a href="/blog/chatgpt-prompts-for-social-media-marketing.html" class="track-card">
+        <span class="card-number">01</span>
+        <div class="card-body">
+          <p class="card-tag">⚡ Workflows</p>
+          <p class="card-title">ChatGPT Prompts for Social Media Marketing</p>
+          <p class="card-desc">25 ready-to-use prompts for LinkedIn, X, and Instagram. Copy, paste, adapt — each one tested on real accounts.</p>
+        </div>
+        <span class="card-meta">8 min read</span>
+      </a>
+      <a href="/blog/ai-email-subject-line-tools-compared.html" class="track-card">
+        <span class="card-number">02</span>
+        <div class="card-body">
+          <p class="card-tag">🛠 Tool Reviews</p>
+          <p class="card-title">AI Email Subject Line Tools Compared</p>
+          <p class="card-desc">We tested five tools on 200 real subject lines. One clear winner — and it might not be the one you're using.</p>
+        </div>
+        <span class="card-meta">5 min read</span>
+      </a>
+      <a href="/blog/i-used-ai-to-write-a-month-of-blog-posts.html" class="track-card">
+        <span class="card-number">03</span>
+        <div class="card-body">
+          <p class="card-tag">🔬 Experiments</p>
+          <p class="card-title">I Used AI to Write a Month of Blog Posts — Here's What Happened</p>
+          <p class="card-desc">Real results from a 30-day test. What the output quality was actually like, and how much editing was really needed.</p>
+        </div>
+        <span class="card-meta">9 min read</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- TRACK 3 -->
+  <div class="track">
+    <div class="track-header">
+      <span class="track-icon">🟣</span>
+      <div class="track-header-text">
+        <h2>Track 3 — Going Deeper</h2>
+        <p>You're already using AI regularly. These articles push further — tools, strategy, and what's coming next.</p>
+      </div>
+    </div>
+    <div class="track-cards">
+      <a href="/blog/best-ai-tools-for-marketing-teams-2026.html" class="track-card">
+        <span class="card-number">01</span>
+        <div class="card-body">
+          <p class="card-tag">🛠 Tool Reviews</p>
+          <p class="card-title">Best AI Tools for Marketing Teams in 2026</p>
+          <p class="card-desc">14 tools tested across 5 categories. The full stack breakdown for teams that are serious about AI adoption.</p>
+        </div>
+        <span class="card-meta">8 min read</span>
+      </a>
+      <a href="/blog/ai-marketing-tools-weekly-roundup.html" class="track-card">
+        <span class="card-number">02</span>
+        <div class="card-body">
+          <p class="card-tag">📰 News &amp; Trends</p>
+          <p class="card-title">AI Marketing Tools Weekly Roundup</p>
+          <p class="card-desc">Stay current. The launches, updates, and stories that matter this week — filtered for marketers, not developers.</p>
+        </div>
+        <span class="card-meta">5 min read</span>
+      </a>
+      <a href="/blog/will-ai-replace-marketing-jobs.html" class="track-card">
+        <span class="card-number">03</span>
+        <div class="card-body">
+          <p class="card-tag">📈 Career &amp; Skills</p>
+          <p class="card-title">Will AI Replace Marketing Jobs? (Re-read)</p>
+          <p class="card-desc">Re-read it after the other articles. The answer hits differently once you've seen what the tools actually do.</p>
+        </div>
+        <span class="card-meta">7 min read</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- NEWSLETTER — placeholder until Beehiiv embed is ready -->
+  <div class="newsletter-box">
+    <div class="nl-text">
+      <div class="nl-badge">📬 The Buzz · Every Tuesday</div>
+      <h2>Keep the momentum going.</h2>
+      <p>Get new articles, tool reviews, and workflows delivered every Tuesday. Free. One email per week — no noise.</p>
+    </div>
+    <div class="nl-cta">
+      <a href="/newsletter.html" class="btn-primary">Subscribe to The Buzz →</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
   <div class="container">
-
-    <!-- HOW TO USE -->
-    <div class="path-intro">
-      <div class="path-step">
-        <span class="step-num">1</span>
-        <div class="step-text">
-          <h3>Pick your track</h3>
-          <p>Choose the path that matches your current situation — just getting started, building workflows, or going deeper.</p>
-        </div>
-      </div>
-      <div class="path-step">
-        <span class="step-num">2</span>
-        <div class="step-text">
-          <h3>Read in order</h3>
-          <p>Each track is sequenced — earlier articles give you the foundation for the ones that follow.</p>
-        </div>
-      </div>
-      <div class="path-step">
-        <span class="step-num">3</span>
-        <div class="step-text">
-          <h3>Apply as you go</h3>
-          <p>Every article ends with something actionable. Don't just read — try one thing before moving to the next.</p>
-        </div>
-      </div>
+    <div class="footer-inner">
+      <span class="footer-logo">Buzz<span>Riding</span></span>
+      <ul class="footer-links">
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/start-here.html">Start Here</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/newsletter.html">Newsletter</a></li>
+      </ul>
+      <span class="footer-copy">© 2026 BuzzRiding</span>
+      <p class="footer-disclosure">This site contains affiliate links. We may earn a commission if you sign up for a tool — at no extra cost to you. Posts are researched and refined with AI tools.</p>
     </div>
-
-    <!-- TRACK 1: NEW TO AI -->
-    <div class="track">
-      <div class="track-header">
-        <span class="track-icon">🟢</span>
-        <div class="track-header-text">
-          <h2>Track 1 — New to AI in Marketing</h2>
-          <p>You understand the basics but haven't built it into your workflow yet. Start here.</p>
-        </div>
-      </div>
-      <div class="track-cards">
-        <a href="#" class="track-card">
-          <span class="card-number">01</span>
-          <div class="card-body">
-            <p class="card-tag">📈 Career & Skills</p>
-            <p class="card-title">Will AI Replace Marketing Jobs?</p>
-            <p class="card-desc">The honest answer to the question every marketer is thinking. Sets the right mindset before you go further.</p>
-          </div>
-          <span class="card-meta">7 min read</span>
-        </a>
-        <a href="#" class="track-card">
-          <span class="card-number">02</span>
-          <div class="card-body">
-            <p class="card-tag">🛠 Tool Reviews</p>
-            <p class="card-title">Best Free AI Tools for Marketers</p>
-            <p class="card-desc">The tools worth starting with — all free tier, all immediately useful. No paid commitment needed.</p>
-          </div>
-          <span class="card-meta">5 min read</span>
-        </a>
-        <a href="#" class="track-card">
-          <span class="card-number">03</span>
-          <div class="card-body">
-            <p class="card-tag">⚡ Workflows</p>
-            <p class="card-title">How to Use ChatGPT for Content Marketing</p>
-            <p class="card-desc">Your first practical AI workflow. Follow it once and you'll understand why this changes everything.</p>
-          </div>
-          <span class="card-meta">6 min read</span>
-        </a>
-      </div>
-    </div>
-
-    <!-- TRACK 2: BUILDING WORKFLOWS -->
-    <div class="track">
-      <div class="track-header">
-        <span class="track-icon">🔵</span>
-        <div class="track-header-text">
-          <h2>Track 2 — Building Your AI Workflow</h2>
-          <p>You've used AI a few times. Now you want a repeatable system. This track gets you there.</p>
-        </div>
-      </div>
-      <div class="track-cards">
-        <a href="#" class="track-card">
-          <span class="card-number">01</span>
-          <div class="card-body">
-            <p class="card-tag">⚡ Workflows</p>
-            <p class="card-title">ChatGPT Prompts for Social Media Marketing</p>
-            <p class="card-desc">25 ready-to-use prompts for LinkedIn, X, and Instagram. Copy, paste, adapt — each one tested on real accounts.</p>
-          </div>
-          <span class="card-meta">6 min read</span>
-        </a>
-        <a href="#" class="track-card">
-          <span class="card-number">02</span>
-          <div class="card-body">
-            <p class="card-tag">🛠 Tool Reviews</p>
-            <p class="card-title">AI Email Subject Line Tools Compared</p>
-            <p class="card-desc">We tested five tools on 200 real subject lines. One clear winner — and it might not be the one you're using.</p>
-          </div>
-          <span class="card-meta">5 min read</span>
-        </a>
-        <a href="#" class="track-card">
-          <span class="card-number">03</span>
-          <div class="card-body">
-            <p class="card-tag">🔬 Experiments</p>
-            <p class="card-title">I Used AI to Write a Month of Blog Posts — Here's What Happened</p>
-            <p class="card-desc">Real results from a 30-day test. What the output quality was actually like, and how much editing was really needed.</p>
-          </div>
-          <span class="card-meta">9 min read</span>
-        </a>
-      </div>
-    </div>
-
-    <!-- TRACK 3: GOING DEEPER -->
-    <div class="track">
-      <div class="track-header">
-        <span class="track-icon">🟣</span>
-        <div class="track-header-text">
-          <h2>Track 3 — Going Deeper</h2>
-          <p>You're already using AI regularly. These articles push further — tools, strategy, and what's coming next.</p>
-        </div>
-      </div>
-      <div class="track-cards">
-        <a href="#" class="track-card">
-          <span class="card-number">01</span>
-          <div class="card-body">
-            <p class="card-tag">🛠 Tool Reviews</p>
-            <p class="card-title">Best AI Tools for Marketing Teams in 2026</p>
-            <p class="card-desc">14 tools tested across 5 categories. The full stack breakdown for teams that are serious about AI adoption.</p>
-          </div>
-          <span class="card-meta">8 min read</span>
-        </a>
-        <a href="#" class="track-card">
-          <span class="card-number">02</span>
-          <div class="card-body">
-            <p class="card-tag">📰 News & Trends</p>
-            <p class="card-title">AI Marketing Tools Weekly Roundup</p>
-            <p class="card-desc">Stay current. The launches, updates, and stories that matter this week — filtered for marketers, not developers.</p>
-          </div>
-          <span class="card-meta">4 min read</span>
-        </a>
-        <a href="#" class="track-card">
-          <span class="card-number">03</span>
-          <div class="card-body">
-            <p class="card-tag">📈 Career & Skills</p>
-            <p class="card-title">Will AI Replace Marketing Jobs?</p>
-            <p class="card-desc">Re-read it after the other articles. The answer hits differently once you've seen what the tools actually do.</p>
-          </div>
-          <span class="card-meta">7 min read</span>
-        </a>
-      </div>
-    </div>
-
-    <div class="divider"></div>
-
-    <!-- NEWSLETTER -->
-    <div class="newsletter-box">
-      <div class="nl-text">
-        <div class="nl-badge">📬 The Buzz · Every Tuesday</div>
-        <h2>Keep the momentum going.</h2>
-        <p>Get new articles, tool reviews, and workflows delivered every Tuesday. Free. One email per week — no noise.</p>
-      </div>
-      <div class="nl-form">
-        <!-- Replace with Beehiiv embed code when ready -->
-        <input type="email" placeholder="your@email.com" />
-        <button type="button">Subscribe Free</button>
-        <p class="nl-note">No spam. Unsubscribe any time.</p>
-      </div>
-    </div>
-
   </div>
-
-  <footer>
-    <div class="container">
-      <div class="footer-inner">
-        <span class="footer-logo">Buzz<span>Riding</span></span>
-        <ul class="footer-links">
-          <li><a href="/blog.html">Blog</a></li>
-          <li><a href="/start-here.html">Start Here</a></li>
-          <li><a href="/about.html">About</a></li>
-          <li><a href="/newsletter.html">Newsletter</a></li>
-        </ul>
-        <span class="footer-copy">© 2026 BuzzRiding</span>
-        <p class="footer-disclosure">This site contains affiliate links. We may earn a commission if you sign up for a tool — at no extra cost to you. Posts are researched and refined with AI tools.</p>
-      </div>
-    </div>
-  </footer>
+</footer>
 
 </body>
 </html>
