@@ -2,219 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMJMLD1Y8L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WMJMLD1Y8L');
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Marketing Tools Weekly Roundup — March 2026 | BuzzRiding</title>
-  <meta name="description" content="The AI marketing tools worth watching this week — new releases, updates, and what actually matters for your workflow. Curated for marketing professionals." />
-  <meta property="og:title" content="AI Marketing Tools Weekly Roundup — March 2026" />
-  <meta property="og:description" content="New AI tool releases, updates, and what actually matters for marketers this week." />
+  <title>AI Marketing Tools Weekly Roundup — BuzzRiding</title>
+  <meta name="description" content="The launches, updates, and stories worth knowing this week. Curated for marketers, not developers." />
+  <meta property="og:title" content="AI Marketing Tools Weekly Roundup — BuzzRiding" />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://buzzriding.github.io/blog/ai-marketing-tools-weekly-roundup.html" />
-  <link rel="canonical" href="https://buzzriding.github.io/blog/ai-marketing-tools-weekly-roundup.html" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "AI Marketing Tools Weekly Roundup — March 2026",
-    "description": "New AI tool releases, updates, and what actually matters for marketers this week.",
-    "publisher": { "@type": "Organization", "name": "BuzzRiding", "url": "https://buzzriding.github.io" },
-    "mainEntityOfPage": "https://buzzriding.github.io/blog/ai-marketing-tools-weekly-roundup.html"
-  }
-  </script>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root { --bg: #141418; --surface: #1C2128; --teal: #2AADA0; --teal-deep: #1A7A6E; --text: #FAFAF7; --grey: #8A8A8A; --max-w: 720px; }
-    html { font-size: 18px; scroll-behavior: smooth; }
-    body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; font-weight: 300; line-height: 1.7; }
-    nav { background: var(--surface); border-bottom: 1px solid #2a2a2e; padding: 0 24px; position: sticky; top: 0; z-index: 100; }
-    .nav-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 60px; }
-    .nav-logo { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.15rem; text-decoration: none; }
-    .nav-logo span:first-child { color: var(--text); } .nav-logo span:last-child { color: var(--teal); }
-    .nav-links { display: flex; gap: 28px; list-style: none; }
-    .nav-links a { color: var(--grey); text-decoration: none; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--teal); }
-    .article-wrap { max-width: var(--max-w); margin: 0 auto; padding: 60px 24px 80px; }
-    .breadcrumb { font-size: 0.78rem; color: var(--grey); margin-bottom: 32px; }
-    .breadcrumb a { color: var(--grey); text-decoration: none; } .breadcrumb a:hover { color: var(--teal); } .breadcrumb span { margin: 0 6px; }
-    .pillar-tag { display: inline-block; background: rgba(42,173,160,0.12); color: var(--teal); font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 12px; border-radius: 4px; margin-bottom: 20px; }
-    h1 { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: clamp(1.8rem, 4vw, 2.4rem); line-height: 1.15; color: var(--text); margin-bottom: 20px; }
-    .meta { display: flex; align-items: center; gap: 16px; font-size: 0.82rem; color: var(--grey); margin-bottom: 40px; flex-wrap: wrap; }
-    .meta-divider { width: 1px; height: 14px; background: #3a3a3e; }
-    .intro { font-size: 1.05rem; border-left: 3px solid var(--teal); padding-left: 20px; margin-bottom: 48px; line-height: 1.75; }
-    .article-body h2 { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.35rem; color: var(--text); margin: 48px 0 16px; }
-    .article-body p { margin-bottom: 20px; }
-    .article-body ul { padding-left: 22px; margin-bottom: 20px; }
-    .article-body li { margin-bottom: 10px; }
-    .article-body a { color: var(--teal); text-decoration: none; border-bottom: 1px solid rgba(42,173,160,0.3); transition: border-color 0.2s; }
-    .article-body a:hover { border-color: var(--teal); }
-    .roundup-item { background: var(--surface); border: 1px solid #2a2a2e; border-radius: 10px; padding: 24px 28px; margin: 20px 0; }
-    .roundup-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; flex-wrap: wrap; }
-    .roundup-num { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 0.75rem; color: var(--teal); background: rgba(42,173,160,0.12); padding: 2px 10px; border-radius: 4px; }
-    .roundup-title { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1rem; color: var(--text); }
-    .roundup-tag { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 0.65rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 2px 8px; border-radius: 4px; background: rgba(138,138,138,0.12); color: var(--grey); }
-    .roundup-body { font-size: 0.95rem; margin-bottom: 12px; }
-    .roundup-verdict { font-size: 0.82rem; color: var(--grey); font-style: italic; }
-    .roundup-verdict strong { color: var(--teal); font-style: normal; font-weight: 400; }
-    .week-label { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 0.72rem; color: var(--grey); letter-spacing: 0.08em; text-transform: uppercase; border-bottom: 1px solid #2a2a2e; padding-bottom: 12px; margin-bottom: 0; }
-    .callout { background: rgba(42,173,160,0.08); border: 1px solid rgba(42,173,160,0.2); border-radius: 8px; padding: 20px 24px; margin: 32px 0; }
-    .callout p { margin: 0; font-size: 0.95rem; }
-    .faq-section { margin-top: 56px; border-top: 1px solid #2a2a2e; padding-top: 40px; }
-    .faq-section h2 { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.35rem; margin-bottom: 28px; }
-    .faq-item { margin-bottom: 28px; }
-    .faq-q { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 0.95rem; margin-bottom: 10px; }
-    .faq-a { font-size: 0.95rem; }
-    .related { margin-top: 64px; border-top: 1px solid #2a2a2e; padding-top: 40px; }
-    .related h2 { font-family: 'Poppins', sans-serif; font-weight: 700; color: var(--grey); letter-spacing: 0.04em; text-transform: uppercase; font-size: 0.8rem; margin-bottom: 24px; }
-    .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
-    .related-card { background: var(--surface); border-radius: 8px; padding: 20px; text-decoration: none; border: 1px solid #2a2a2e; transition: border-color 0.2s; display: block; }
-    .related-card:hover { border-color: var(--teal-deep); }
-    .rc-pillar { font-size: 0.68rem; color: var(--teal); font-family: 'Poppins', sans-serif; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px; }
-    .rc-title { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 0.88rem; color: var(--text); line-height: 1.35; }
-    .newsletter-cta { background: var(--surface); border: 1px solid #2a2a2e; border-radius: 12px; padding: 36px 32px; margin-top: 56px; text-align: center; }
-    .newsletter-cta h3 { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.2rem; margin-bottom: 10px; }
-    .newsletter-cta p { color: var(--grey); font-size: 0.92rem; margin-bottom: 24px; }
-    .cta-btn { display: inline-block; background: var(--teal); color: #141418; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 13px 28px; border-radius: 6px; text-decoration: none; transition: opacity 0.2s; }
-    .cta-btn:hover { opacity: 0.88; }
-    footer { border-top: 1px solid #2a2a2e; padding: 32px 24px; text-align: center; }
-    .footer-inner { max-width: 1100px; margin: 0 auto; }
-    .footer-inner p { font-size: 0.8rem; color: var(--grey); }
-    .footer-inner a { color: var(--grey); text-decoration: none; } .footer-inner a:hover { color: var(--teal); }
-    .footer-disclosure { margin-top: 8px; font-size: 0.75rem; color: #5a5a5a; }
-    @media (max-width: 600px) { .nav-links { display: none; } .article-wrap { padding: 40px 18px 60px; } }
-  </style>
+  <style>:root{--midnight:#141418;--surface:#1C2128;--teal:#2AADA0;--offwhite:#FAFAF7;--grey:#8A8A8A;--font-head:'Poppins',sans-serif;--font-body:'DM Sans',sans-serif;--max-w:1120px;--article-w:720px;--radius:10px}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:var(--midnight);color:var(--offwhite);font-family:var(--font-body);font-weight:300;line-height:1.65;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}.container{width:100%;max-width:var(--max-w);margin:0 auto;padding:0 24px}.article-container{width:100%;max-width:var(--article-w);margin:0 auto;padding:0 24px}nav{position:sticky;top:0;z-index:100;background:rgba(20,20,24,0.85);backdrop-filter:blur(14px);border-bottom:1px solid rgba(42,173,160,0.12)}.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}.logo{font-family:var(--font-head);font-size:20px;letter-spacing:-0.02em}.logo span{color:var(--teal)}.nav-links{display:flex;gap:32px;list-style:none}.nav-links a{font-family:var(--font-head);font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--grey);transition:color 0.2s}.nav-links a:hover{color:var(--teal)}.nav-cta{font-family:var(--font-head);font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;background:var(--teal);color:var(--midnight);padding:10px 20px;border-radius:var(--radius);transition:background 0.2s,transform 0.15s}.nav-cta:hover{background:#33c8b9;transform:translateY(-1px)}.breadcrumb{padding:20px 0 0;font-size:13px;color:var(--grey);display:flex;align-items:center;gap:8px}.breadcrumb a{color:var(--grey)}.breadcrumb span{color:rgba(255,255,255,0.2)}.article-header{padding:32px 0 48px}.post-meta-top{display:flex;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap}.post-tag{display:inline-block;font-size:11px;font-family:var(--font-head);letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);background:rgba(42,173,160,0.1);border-radius:4px;padding:4px 10px}.post-date,.post-read-time{font-size:13px;color:var(--grey)}.post-meta-dot{color:rgba(255,255,255,0.15);font-size:10px}.article-header h1{font-family:var(--font-head);font-size:clamp(28px,4.5vw,46px);line-height:1.15;letter-spacing:-0.02em;color:var(--offwhite);margin-bottom:20px}.article-intro{font-size:19px;color:var(--grey);line-height:1.7;margin-bottom:32px;border-left:3px solid var(--teal);padding-left:20px}.article-byline{display:flex;align-items:center;gap:12px;padding:16px 0;border-top:1px solid rgba(255,255,255,0.06);border-bottom:1px solid rgba(255,255,255,0.06);font-size:13px;color:var(--grey)}.byline-avatar{width:36px;height:36px;border-radius:50%;background:rgba(42,173,160,0.15);border:1px solid rgba(42,173,160,0.25);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}.byline-text strong{color:var(--offwhite);font-weight:400;display:block;margin-bottom:2px}.article-body{padding:48px 0}.article-body h2{font-family:var(--font-head);font-size:clamp(20px,2.5vw,26px);line-height:1.25;color:var(--offwhite);margin:48px 0 20px}.article-body h2:first-child{margin-top:0}.article-body h3{font-family:var(--font-head);font-size:18px;color:var(--offwhite);margin:32px 0 12px}.article-body p{font-size:17px;color:var(--grey);line-height:1.8;margin-bottom:20px}.article-body p strong{color:var(--offwhite);font-weight:400}.article-body ul{margin:0 0 24px 24px;color:var(--grey);font-size:17px;line-height:1.8}.article-body li{margin-bottom:8px}.article-body li::marker{color:var(--teal)}.news-item{background:var(--surface);border:1px solid rgba(255,255,255,0.06);border-radius:var(--radius);padding:24px 28px;margin:20px 0}.news-item-header{display:flex;align-items:center;gap:10px;margin-bottom:12px}.news-tag{font-family:var(--font-head);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;padding:3px 8px;border-radius:3px}.tag-launch{background:rgba(42,173,160,0.12);color:var(--teal)}.tag-update{background:rgba(255,200,50,0.1);color:#ffc832}.tag-research{background:rgba(100,150,255,0.1);color:#8ab4ff}.news-title{font-family:var(--font-head);font-size:16px;color:var(--offwhite);margin-bottom:8px}.news-item p{font-size:15px;color:var(--grey);line-height:1.7;margin:0}.news-item p strong{color:var(--offwhite);font-weight:400}.faq{margin:48px 0}.faq-title{font-family:var(--font-head);font-size:clamp(20px,2.5vw,26px);color:var(--offwhite);margin-bottom:24px}.faq-item{border-bottom:1px solid rgba(255,255,255,0.06);padding:20px 0}.faq-item:last-child{border-bottom:none}.faq-q{font-family:var(--font-head);font-size:16px;color:var(--offwhite);margin-bottom:10px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;user-select:none}.faq-q::after{content:'+';color:var(--teal);font-size:20px;flex-shrink:0;transition:transform 0.2s}.faq-item.open .faq-q::after{transform:rotate(45deg)}.faq-a{font-size:15px;color:var(--grey);line-height:1.7;max-height:0;overflow:hidden;transition:max-height 0.3s ease}.faq-item.open .faq-a{max-height:400px}.article-footer{padding:32px 0 48px;border-top:1px solid rgba(255,255,255,0.06)}.disclosure{font-size:13px;color:var(--grey);background:rgba(255,255,255,0.02);border-radius:var(--radius);padding:16px 20px;margin-bottom:32px}.share-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:40px}.share-label{font-family:var(--font-head);font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--grey)}.share-btn{font-family:var(--font-head);font-size:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;border:1px solid rgba(255,255,255,0.1);color:var(--grey);padding:8px 16px;border-radius:var(--radius);cursor:pointer;background:transparent;transition:border-color 0.2s,color 0.2s}.share-btn:hover{border-color:var(--teal);color:var(--teal)}.related{padding:0 0 80px}.related-title{font-family:var(--font-head);font-size:22px;color:var(--offwhite);margin-bottom:28px}.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}.related-card{background:var(--surface);border:1px solid rgba(255,255,255,0.05);border-radius:var(--radius);padding:24px;transition:border-color 0.2s,transform 0.2s}.related-card:hover{border-color:rgba(42,173,160,0.3);transform:translateY(-2px)}.related-tag{font-family:var(--font-head);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:10px}.related-title-text{font-family:var(--font-head);font-size:15px;color:var(--offwhite);line-height:1.35;margin-bottom:10px;transition:color 0.2s}.related-card:hover .related-title-text{color:var(--teal)}.related-read{font-size:12px;color:var(--grey)}.nl-strip{background:var(--surface);border:1px solid rgba(42,173,160,0.18);border-radius:var(--radius);padding:32px 36px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:80px}.nl-strip h3{font-family:var(--font-head);font-size:18px;color:var(--offwhite);margin-bottom:4px}.nl-strip p{font-size:14px;color:var(--grey)}.btn-primary{font-family:var(--font-head);font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;background:var(--teal);color:var(--midnight);padding:12px 22px;border-radius:var(--radius);white-space:nowrap;transition:background 0.2s,transform 0.15s}.btn-primary:hover{background:#33c8b9;transform:translateY(-1px)}footer{border-top:1px solid rgba(255,255,255,0.06);padding:40px 0}.footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}.footer-logo{font-family:var(--font-head);font-size:18px;letter-spacing:-0.02em}.footer-logo span{color:var(--teal)}.footer-links{display:flex;gap:24px;list-style:none}.footer-links a{font-size:13px;color:var(--grey);transition:color 0.2s}.footer-links a:hover{color:var(--teal)}.footer-copy{font-size:12px;color:var(--grey)}.footer-disclosure{width:100%;font-size:12px;color:var(--grey);border-top:1px solid rgba(255,255,255,0.04);padding-top:16px;margin-top:8px}@media(max-width:640px){.nav-links{display:none}.nl-strip{flex-direction:column;align-items:flex-start}}</style>
 </head>
 <body>
-<nav>
-  <div class="nav-inner">
-    <a href="/" class="nav-logo"><span>Buzz</span><span>Riding</span></a>
-    <ul class="nav-links">
-      <li><a href="/blog.html">Blog</a></li>
-      <li><a href="/start-here.html">Start Here</a></li>
-      <li><a href="/newsletter.html">Newsletter</a></li>
-      <li><a href="/about.html">About</a></li>
-    </ul>
-  </div>
-</nav>
-
-<article class="article-wrap">
-  <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/blog.html">Blog</a><span>›</span>AI Marketing Tools Weekly Roundup</div>
-  <div class="pillar-tag">📰 News & Trends</div>
-  <h1>AI Marketing Tools Weekly Roundup — March 2026</h1>
-  <div class="meta">
-    <span>BuzzRiding Team</span><div class="meta-divider"></div>
-    <span>5 min read</span><div class="meta-divider"></div>
-    <span>March 2026</span>
-  </div>
-  <p class="intro">Every week, something new drops in the AI marketing space. Most of it isn't worth your attention. This roundup filters out the noise — only what's genuinely relevant to marketing professionals making real decisions about tools, workflow, and career strategy.</p>
-
-  <div class="article-body">
-    <p>This is the first edition of the BuzzRiding weekly roundup. Going forward, this format runs every Friday — covering the 5–7 most relevant AI marketing developments from the week, with a short take on what it means for you.</p>
-
-    <div class="week-label">This week · March 2026</div>
-
-    <h2>Tools & Releases</h2>
-
-    <div class="roundup-item">
-      <div class="roundup-header"><span class="roundup-num">01</span><span class="roundup-title">Claude adds extended thinking to more users</span><span class="roundup-tag">AI Writing</span></div>
-      <div class="roundup-body">Anthropic expanded Claude's extended thinking capability — the model's step-by-step reasoning mode — to more users on the API. For marketers building AI workflows, this matters: deeper reasoning produces noticeably better output on complex tasks like strategic briefs, competitor analysis, and content planning.</div>
-      <div class="roundup-verdict"><strong>Verdict:</strong> Relevant if you're on Claude Pro or the API. Free tier users will see limited practical impact for now.</div>
-    </div>
-
-    <div class="roundup-item">
-      <div class="roundup-header"><span class="roundup-num">02</span><span class="roundup-title">HubSpot expands AI content assistant features</span><span class="roundup-tag">CRM · Content</span></div>
-      <div class="roundup-body">HubSpot now covers email subject line generation, blog post drafting, and social caption suggestions natively in the platform. For teams already in the HubSpot ecosystem, this reduces context-switching to external AI tools. Quality is comparable to mid-tier AI writing tools — power users will still supplement with Claude for complex tasks.</div>
-      <div class="roundup-verdict"><strong>Verdict:</strong> If you're paying for HubSpot already, start using these features. Not a reason to switch to HubSpot on its own.</div>
-    </div>
-
-    <div class="roundup-item">
-      <div class="roundup-header"><span class="roundup-num">03</span><span class="roundup-title">Canva's AI image generation gets a quality upgrade</span><span class="roundup-tag">Design · Visuals</span></div>
-      <div class="roundup-body">Canva's text-to-image tool received a significant model update. If you've written off Canva's AI images as generic — worth revisiting. The new model handles brand-consistent illustrations and editorial-style outputs noticeably better. Still limited on the free plan, but the gap to paid tools has narrowed.</div>
-      <div class="roundup-verdict"><strong>Verdict:</strong> Test the updated generator before subscribing to Midjourney or DALL·E. It may cover most marketing visual needs.</div>
-    </div>
-
-    <h2>Industry & Strategy</h2>
-
-    <div class="roundup-item">
-      <div class="roundup-header"><span class="roundup-num">04</span><span class="roundup-title">Google reiterates stance on AI content in Search</span><span class="roundup-tag">SEO</span></div>
-      <div class="roundup-body">Google confirmed its algorithm evaluates content quality, not content origin. Mass-produced, low-value content gets penalised — the same as always. Helpful, accurate, well-structured content ranks regardless of how it was produced. No change to established SEO strategy needed.</div>
-      <div class="roundup-verdict"><strong>Verdict:</strong> Add genuine insight, verify facts, write for your reader. The principle hasn't changed.</div>
-    </div>
-
-    <div class="roundup-item">
-      <div class="roundup-header"><span class="roundup-num">05</span><span class="roundup-title">LinkedIn algorithm update: longer posts performing better</span><span class="roundup-tag">Social Media</span></div>
-      <div class="roundup-body">Multiple LinkedIn analysts have noted that posts in the 400–600 word range are seeing stronger organic reach than the 150–200 word posts that performed well in 2024–25. Current hypothesis: LinkedIn is rewarding dwell time and full reads. Worth testing if you've been writing short-form LinkedIn content.</div>
-      <div class="roundup-verdict"><strong>Verdict:</strong> Run a 3–4 week test. Adjust your <a href="/blog/chatgpt-prompts-for-social-media-marketing.html">LinkedIn prompts</a> to produce longer formats and compare reach data.</div>
-    </div>
-
-    <div class="roundup-item">
-      <div class="roundup-header"><span class="roundup-num">06</span><span class="roundup-title">New data: AI subject lines vs human — who wins?</span><span class="roundup-tag">Email</span></div>
-      <div class="roundup-body">A study of 50,000+ marketing emails found AI-generated subject lines outperformed human-written ones in 58% of A/B tests — but only when the prompt included specific audience context and emotional intent. Generic AI prompts underperformed human writing by 12%. Context-rich prompts win every time.</div>
-      <div class="roundup-verdict"><strong>Verdict:</strong> Use AI for subject lines — with a specific prompt. See our <a href="/blog/ai-email-subject-line-tools-compared.html">subject line tool comparison</a> for where to start.</div>
-    </div>
-
-    <h2>One to Watch</h2>
-    <p><strong>Perplexity for Business.</strong> Perplexity has been positioning its enterprise product as a research tool for knowledge workers — and the marketing use case is increasingly clear. Real-time web research, source citations, and follow-up question chains in one interface. Worth evaluating as a complement to Claude for research-heavy content workflows.</p>
-
-    <div class="callout"><p><strong>Get this roundup every Tuesday:</strong> The Buzz newsletter delivers this weekly roundup plus one deeper-dive and one practical prompt or template. <a href="/newsletter.html">Subscribe free →</a></p></div>
-
-    <div class="faq-section">
-      <h2>Frequently Asked Questions</h2>
-      <div class="faq-item">
-        <div class="faq-q">How often does the BuzzRiding weekly roundup publish?</div>
-        <div class="faq-a">Every Friday on the blog. The same content is included in The Buzz newsletter, which goes out every Tuesday with additional content.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">How do you decide what to include?</div>
-        <div class="faq-a">One question: does this directly affect how a marketing professional uses AI tools day-to-day? Speculative funding news, enterprise-only releases, and hype cycles without practical implications don't make the cut.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Where can I read more about specific tools mentioned?</div>
-        <div class="faq-a">Anything that warrants more depth gets its own full article — linked from the roundup. Check the related posts below and the blog index for detailed tool reviews.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Can I submit a tool for consideration?</div>
-        <div class="faq-a">Yes — reach out via the contact page. We cover tools that are genuinely relevant and useful for marketing professionals. We don't accept paid inclusions.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Is there an archive of previous roundups?</div>
-        <div class="faq-a">Previous roundups are in the News & Trends category on the blog index. This is edition one — the archive grows each week from here.</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="related">
-    <h2>Keep Reading</h2>
-    <div class="related-grid">
-      <a href="/blog/best-ai-tools-for-marketing-teams-2026.html" class="related-card">
-        <div class="rc-pillar">🛠 Tool Reviews</div>
-        <div class="rc-title">Best AI Tools for Marketing Teams 2026</div>
-      </a>
-      <a href="/blog/best-free-ai-tools-for-marketers.html" class="related-card">
-        <div class="rc-pillar">🛠 Tool Reviews</div>
-        <div class="rc-title">Best Free AI Tools for Marketers</div>
-      </a>
-      <a href="/blog/ai-email-subject-line-tools-compared.html" class="related-card">
-        <div class="rc-pillar">🛠 Tool Reviews</div>
-        <div class="rc-title">AI Email Subject Line Tools Compared</div>
-      </a>
-    </div>
-  </div>
-
-  <div class="newsletter-cta">
-    <h3>Get this roundup every Tuesday</h3>
-    <p>The Buzz delivers the week's best AI marketing news plus one practical tool or workflow tip. Free, every week.</p>
-    <a href="/newsletter.html" class="cta-btn">Subscribe to The Buzz</a>
-  </div>
-</article>
-
-<footer>
-  <div class="footer-inner">
-    <p><a href="/">BuzzRiding</a> · <a href="/blog.html">Blog</a> · <a href="/newsletter.html">Newsletter</a> · <a href="/about.html">About</a></p>
-    <p class="footer-disclosure">This post was researched and refined with AI tools.</p>
-  </div>
-</footer>
+<nav><div class="container nav-inner"><a href="/" class="logo">Buzz<span>Riding</span></a><ul class="nav-links"><li><a href="/blog.html">Blog</a></li><li><a href="/start-here.html">Start Here</a></li><li><a href="/about.html">About</a></li></ul><a href="/newsletter.html" class="nav-cta">Get The Buzz</a></div></nav>
+<div class="article-container"><div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/blog.html">Blog</a><span>›</span><span style="color:var(--teal)">📰 News & Trends</span></div></div>
+<header class="article-header"><div class="article-container"><div class="post-meta-top"><span class="post-tag">📰 News & Trends</span><span class="post-meta-dot">•</span><span class="post-date">March 2026</span><span class="post-meta-dot">•</span><span class="post-read-time">5 min read</span></div><h1>AI Marketing Tools Weekly Roundup</h1><p class="article-intro">The launches, updates, and stories worth knowing this week. Curated for marketers — not developers. What matters, what doesn't, and what it means for your work.</p><div class="article-byline"><div class="byline-avatar">BR</div><div class="byline-text"><strong>The BuzzRiding Team</strong>Researched and refined with AI tools</div></div></div></header>
+<article class="article-body"><div class="article-container"><h2>This week in AI marketing</h2><p>The pace of AI tool development in marketing hasn't slowed down. This week brought a significant model update, a notable acquisition in the marketing automation space, and new research on AI content performance that every content marketer should read.</p><h2>Tool launches & updates</h2><div class="news-item"><div class="news-item-header"><span class="news-tag tag-launch">Launch</span></div><p class="news-title">Buffer adds MCP integration for Claude</p><p>Buffer's new API beta includes a direct MCP (Model Context Protocol) integration with Claude, allowing marketers to create and schedule posts using natural language. Available on all Buffer plans. This is a meaningful workflow improvement — writing and scheduling in a single conversation rather than copying between tools.</p><p><strong>What it means for you:</strong> If you're using Claude for content creation and Buffer for scheduling, the workflow just got significantly faster. Worth setting up this week.</p></div><div class="news-item"><div class="news-item-header"><span class="news-tag tag-update">Update</span></div><p class="news-title">Beehiiv expands free tier analytics</p><p>Beehiiv has added click map analytics and subscriber growth trend data to its free tier. Previously these were paid features. For newsletter operators on the free plan, this is a genuine upgrade — understanding which links drive clicks is foundational for improving future issues.</p><p><strong>What it means for you:</strong> Check your Beehiiv dashboard. The new analytics are live on existing accounts without any action required.</p></div><div class="news-item"><div class="news-item-header"><span class="news-tag tag-update">Update</span></div><p class="news-title">Google Search Console adds AI Overview tracking</p><p>Search Console now shows impressions and clicks from AI Overviews separately from standard organic results. For content marketers, this is critical data — it shows whether your content is being featured in Google's AI-generated summaries and driving traffic from that placement.</p><p><strong>What it means for you:</strong> Check your Search Console performance report for the new AI Overviews filter. If your content is appearing in AI Overviews but not driving clicks, the summary may be answering the question so completely that users don't need to visit.</p></div><h2>Research worth reading</h2><div class="news-item"><div class="news-item-header"><span class="news-tag tag-research">Research</span></div><p class="news-title">AI-assisted content outperforms fully AI-generated content by 34%</p><p>A study published this week compared three content production approaches: fully human-written, AI-assisted (human brief + AI draft + human edit), and fully AI-generated. The AI-assisted approach produced the highest engagement metrics across time-on-page, scroll depth, and return visits.</p><p><strong>What it means for you:</strong> The "human review" step in your AI content workflow isn't optional — it's the difference between content that performs and content that doesn't. The 15 minutes you spend editing an AI draft is the highest-ROI time in the entire workflow.</p></div><h2>What to skip this week</h2><p>Several AI writing tools launched "new" features this week that are essentially rebranded versions of existing functionality. If you see announcements about "AI brand voice" or "content personalisation" from tools you don't currently use, don't be distracted. The fundamentals — good prompts, solid briefs, human review — matter more than any single feature launch.</p><div class="faq"><h2 class="faq-title">Frequently Asked Questions</h2><div class="faq-item"><div class="faq-q">How do I stay up to date with AI marketing tools?</div><div class="faq-a">Subscribe to The Buzz — our weekly newsletter covers exactly this. Beyond that, following the official blogs and changelogs of the tools you actually use is more valuable than following general AI news. Most AI news is not directly relevant to marketing practice.</div></div><div class="faq-item"><div class="faq-q">How often do AI marketing tools update?</div><div class="faq-a">Major tools update their models and features roughly quarterly. Minor feature additions happen weekly for most platforms. The most important updates to track are the ones that change what you can do in your daily workflow — not every changelog entry deserves attention.</div></div></div></div></article>
+<div class="article-footer"><div class="article-container"><div class="disclosure">This post was researched and refined with AI tools.</div><div class="share-row"><span class="share-label">Share</span><button class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href),'_blank')">X / Twitter</button><button class="share-btn" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank')">LinkedIn</button><button class="share-btn" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.textContent='Copied!';setTimeout(()=>{this.textContent='Copy Link'},2000)})">Copy Link</button></div></div></div>
+<div class="container"><section class="related"><h2 class="related-title">Keep reading</h2><div class="related-grid"><a href="/blog/best-ai-tools-for-marketing-teams-2026.html" class="related-card"><p class="related-tag">🛠 Tool Reviews</p><p class="related-title-text">Best AI Tools for Marketing Teams in 2026</p><p class="related-read">8 min read →</p></a><a href="/blog/will-ai-replace-marketing-jobs.html" class="related-card"><p class="related-tag">📈 Career & Skills</p><p class="related-title-text">Will AI Replace Marketing Jobs?</p><p class="related-read">7 min read →</p></a><a href="/blog/ai-used-to-write-month-of-blog-posts.html" class="related-card"><p class="related-tag">🔬 Experiments</p><p class="related-title-text">I Used AI to Write a Month of Blog Posts</p><p class="related-read">9 min read →</p></a></div></section><div class="nl-strip"><div><h3>Get The Buzz every Tuesday 📬</h3><p>One newsletter. The best AI marketing insights of the week. Free, always.</p></div><a href="/newsletter.html" class="btn-primary">Subscribe Free</a></div></div>
+<footer><div class="container"><div class="footer-inner"><span class="footer-logo">Buzz<span>Riding</span></span><ul class="footer-links"><li><a href="/blog.html">Blog</a></li><li><a href="/start-here.html">Start Here</a></li><li><a href="/about.html">About</a></li><li><a href="/newsletter.html">Newsletter</a></li></ul><span class="footer-copy">© 2026 BuzzRiding</span><p class="footer-disclosure">This site contains affiliate links. We may earn a commission if you sign up for a tool — at no extra cost to you. Posts are researched and refined with AI tools.</p></div></div></footer>
+<script>document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{const item=q.parentElement;const wasOpen=item.classList.contains('open'));document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!wasOpen)item.classList.add('open');});});</script>
 </body>
 </html>

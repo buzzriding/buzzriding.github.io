@@ -2,254 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMJMLD1Y8L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WMJMLD1Y8L');
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>I Used AI to Write a Month of Blog Posts — Here's What Happened | BuzzRiding</title>
-  <meta name="description" content="I replaced my entire blog content workflow with AI for 30 days. Here's the honest breakdown — what worked, what didn't, the traffic results, and what I'd do differently." />
-  <meta property="og:title" content="I Used AI to Write a Month of Blog Posts — Here's What Happened" />
-  <meta property="og:description" content="30 days of AI-written blog posts. Honest results, traffic data, and what I'd do differently." />
+  <title>I Used AI to Write a Month of Blog Posts — Here's What Happened — BuzzRiding</title>
+  <meta name="description" content="30 days, 8 articles, one AI assistant. Traffic results, quality trade-offs, and whether I'd do it again." />
+  <meta property="og:title" content="I Used AI to Write a Month of Blog Posts — BuzzRiding" />
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://buzzriding.github.io/blog/i-used-ai-to-write-a-month-of-blog-posts.html" />
-  <link rel="canonical" href="https://buzzriding.github.io/blog/i-used-ai-to-write-a-month-of-blog-posts.html" />
+  <meta property="og:url" content="https://buzzriding.github.io/blog/ai-used-to-write-month-of-blog-posts.html" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "I Used AI to Write a Month of Blog Posts — Here's What Happened",
-    "description": "30 days of AI-written blog posts. Honest results, traffic data, and what I'd do differently.",
-    "publisher": { "@type": "Organization", "name": "BuzzRiding", "url": "https://buzzriding.github.io" },
-    "mainEntityOfPage": "https://buzzriding.github.io/blog/i-used-ai-to-write-a-month-of-blog-posts.html"
-  }
-  </script>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root { --bg: #141418; --surface: #1C2128; --teal: #2AADA0; --teal-deep: #1A7A6E; --text: #FAFAF7; --grey: #8A8A8A; --max-w: 720px; }
-    html { font-size: 18px; scroll-behavior: smooth; }
-    body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; font-weight: 300; line-height: 1.7; }
-    nav { background: var(--surface); border-bottom: 1px solid #2a2a2e; padding: 0 24px; position: sticky; top: 0; z-index: 100; }
-    .nav-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 60px; }
-    .nav-logo { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.15rem; text-decoration: none; }
-    .nav-logo span:first-child { color: var(--text); } .nav-logo span:last-child { color: var(--teal); }
-    .nav-links { display: flex; gap: 28px; list-style: none; }
-    .nav-links a { color: var(--grey); text-decoration: none; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--teal); }
-    .article-wrap { max-width: var(--max-w); margin: 0 auto; padding: 60px 24px 80px; }
-    .breadcrumb { font-size: 0.78rem; color: var(--grey); margin-bottom: 32px; }
-    .breadcrumb a { color: var(--grey); text-decoration: none; } .breadcrumb a:hover { color: var(--teal); } .breadcrumb span { margin: 0 6px; }
-    .pillar-tag { display: inline-block; background: rgba(42,173,160,0.12); color: var(--teal); font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 12px; border-radius: 4px; margin-bottom: 20px; }
-    h1 { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: clamp(1.8rem, 4vw, 2.4rem); line-height: 1.15; color: var(--text); margin-bottom: 20px; }
-    .meta { display: flex; align-items: center; gap: 16px; font-size: 0.82rem; color: var(--grey); margin-bottom: 40px; flex-wrap: wrap; }
-    .meta-divider { width: 1px; height: 14px; background: #3a3a3e; }
-    .intro { font-size: 1.05rem; border-left: 3px solid var(--teal); padding-left: 20px; margin-bottom: 48px; line-height: 1.75; }
-    .article-body h2 { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.35rem; color: var(--text); margin: 48px 0 16px; }
-    .article-body h3 { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.05rem; color: var(--teal); margin: 32px 0 12px; }
-    .article-body p { margin-bottom: 20px; }
-    .article-body ul, .article-body ol { padding-left: 22px; margin-bottom: 20px; }
-    .article-body li { margin-bottom: 10px; }
-    .article-body a { color: var(--teal); text-decoration: none; border-bottom: 1px solid rgba(42,173,160,0.3); transition: border-color 0.2s; }
-    .article-body a:hover { border-color: var(--teal); }
-    .stat-box { background: var(--surface); border: 1px solid #2a2a2e; border-radius: 8px; padding: 24px 28px; margin: 28px 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 20px; }
-    .stat-item { text-align: center; }
-    .stat-num { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.8rem; color: var(--teal); line-height: 1; }
-    .stat-label { font-size: 0.78rem; color: var(--grey); margin-top: 6px; }
-    .result-row { display: flex; gap: 12px; margin: 20px 0; align-items: flex-start; }
-    .result-badge { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 4px; white-space: nowrap; margin-top: 2px; }
-    .badge-win { background: rgba(42,173,160,0.15); color: var(--teal); }
-    .badge-fail { background: rgba(200,80,80,0.12); color: #e07070; }
-    .badge-mixed { background: rgba(200,160,60,0.12); color: #c8a83c; }
-    .callout { background: rgba(42,173,160,0.08); border: 1px solid rgba(42,173,160,0.2); border-radius: 8px; padding: 20px 24px; margin: 32px 0; }
-    .callout p { margin: 0; font-size: 0.95rem; }
-    .faq-section { margin-top: 56px; border-top: 1px solid #2a2a2e; padding-top: 40px; }
-    .faq-section h2 { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.35rem; margin-bottom: 28px; }
-    .faq-item { margin-bottom: 28px; }
-    .faq-q { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 0.95rem; margin-bottom: 10px; }
-    .faq-a { font-size: 0.95rem; }
-    .related { margin-top: 64px; border-top: 1px solid #2a2a2e; padding-top: 40px; }
-    .related h2 { font-family: 'Poppins', sans-serif; font-weight: 700; color: var(--grey); letter-spacing: 0.04em; text-transform: uppercase; font-size: 0.8rem; margin-bottom: 24px; }
-    .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
-    .related-card { background: var(--surface); border-radius: 8px; padding: 20px; text-decoration: none; border: 1px solid #2a2a2e; transition: border-color 0.2s; display: block; }
-    .related-card:hover { border-color: var(--teal-deep); }
-    .rc-pillar { font-size: 0.68rem; color: var(--teal); font-family: 'Poppins', sans-serif; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px; }
-    .rc-title { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 0.88rem; color: var(--text); line-height: 1.35; }
-    .newsletter-cta { background: var(--surface); border: 1px solid #2a2a2e; border-radius: 12px; padding: 36px 32px; margin-top: 56px; text-align: center; }
-    .newsletter-cta h3 { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.2rem; margin-bottom: 10px; }
-    .newsletter-cta p { color: var(--grey); font-size: 0.92rem; margin-bottom: 24px; }
-    .cta-btn { display: inline-block; background: var(--teal); color: #141418; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 13px 28px; border-radius: 6px; text-decoration: none; transition: opacity 0.2s; }
-    .cta-btn:hover { opacity: 0.88; }
-    footer { border-top: 1px solid #2a2a2e; padding: 32px 24px; text-align: center; }
-    .footer-inner { max-width: 1100px; margin: 0 auto; }
-    .footer-inner p { font-size: 0.8rem; color: var(--grey); }
-    .footer-inner a { color: var(--grey); text-decoration: none; } .footer-inner a:hover { color: var(--teal); }
-    .footer-disclosure { margin-top: 8px; font-size: 0.75rem; color: #5a5a5a; }
-    @media (max-width: 600px) { .nav-links { display: none; } .article-wrap { padding: 40px 18px 60px; } .stat-box { grid-template-columns: repeat(2, 1fr); } }
-  </style>
+  <style>:root{--midnight:#141418;--surface:#1C2128;--teal:#2AADA0;--offwhite:#FAFAF7;--grey:#8A8A8A;--font-head:'Poppins',sans-serif;--font-body:'DM Sans',sans-serif;--max-w:1120px;--article-w:720px;--radius:10px}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:var(--midnight);color:var(--offwhite);font-family:var(--font-body);font-weight:300;line-height:1.65;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}.container{width:100%;max-width:var(--max-w);margin:0 auto;padding:0 24px}.article-container{width:100%;max-width:var(--article-w);margin:0 auto;padding:0 24px}nav{position:sticky;top:0;z-index:100;background:rgba(20,20,24,0.85);backdrop-filter:blur(14px);border-bottom:1px solid rgba(42,173,160,0.12)}.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}.logo{font-family:var(--font-head);font-size:20px;letter-spacing:-0.02em}.logo span{color:var(--teal)}.nav-links{display:flex;gap:32px;list-style:none}.nav-links a{font-family:var(--font-head);font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--grey);transition:color 0.2s}.nav-links a:hover{color:var(--teal)}.nav-cta{font-family:var(--font-head);font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;background:var(--teal);color:var(--midnight);padding:10px 20px;border-radius:var(--radius);transition:background 0.2s,transform 0.15s}.nav-cta:hover{background:#33c8b9;transform:translateY(-1px)}.breadcrumb{padding:20px 0 0;font-size:13px;color:var(--grey);display:flex;align-items:center;gap:8px}.breadcrumb a{color:var(--grey)}.breadcrumb span{color:rgba(255,255,255,0.2)}.article-header{padding:32px 0 48px}.post-meta-top{display:flex;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap}.post-tag{display:inline-block;font-size:11px;font-family:var(--font-head);letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);background:rgba(42,173,160,0.1);border-radius:4px;padding:4px 10px}.post-date,.post-read-time{font-size:13px;color:var(--grey)}.post-meta-dot{color:rgba(255,255,255,0.15);font-size:10px}.article-header h1{font-family:var(--font-head);font-size:clamp(28px,4.5vw,46px);line-height:1.15;letter-spacing:-0.02em;color:var(--offwhite);margin-bottom:20px}.article-intro{font-size:19px;color:var(--grey);line-height:1.7;margin-bottom:32px;border-left:3px solid var(--teal);padding-left:20px}.article-byline{display:flex;align-items:center;gap:12px;padding:16px 0;border-top:1px solid rgba(255,255,255,0.06);border-bottom:1px solid rgba(255,255,255,0.06);font-size:13px;color:var(--grey)}.byline-avatar{width:36px;height:36px;border-radius:50%;background:rgba(42,173,160,0.15);border:1px solid rgba(42,173,160,0.25);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}.byline-text strong{color:var(--offwhite);font-weight:400;display:block;margin-bottom:2px}.article-body{padding:48px 0}.article-body h2{font-family:var(--font-head);font-size:clamp(20px,2.5vw,26px);line-height:1.25;color:var(--offwhite);margin:48px 0 20px}.article-body h2:first-child{margin-top:0}.article-body p{font-size:17px;color:var(--grey);line-height:1.8;margin-bottom:20px}.article-body p strong{color:var(--offwhite);font-weight:400}.article-body ul,.article-body ol{margin:0 0 24px 24px;color:var(--grey);font-size:17px;line-height:1.8}.article-body li{margin-bottom:8px}.article-body li::marker{color:var(--teal)}.callout{background:rgba(42,173,160,0.07);border:1px solid rgba(42,173,160,0.2);border-radius:var(--radius);padding:24px 28px;margin:32px 0}.callout-label{font-family:var(--font-head);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);margin-bottom:10px}.callout p{font-size:16px;color:var(--offwhite);margin:0;line-height:1.7}.results-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin:32px 0}.result-card{background:var(--surface);border:1px solid rgba(255,255,255,0.06);border-radius:var(--radius);padding:20px 24px;text-align:center}.result-number{font-family:var(--font-head);font-size:28px;color:var(--teal);line-height:1;margin-bottom:6px}.result-label{font-size:13px;color:var(--grey)}.faq{margin:48px 0}.faq-title{font-family:var(--font-head);font-size:clamp(20px,2.5vw,26px);color:var(--offwhite);margin-bottom:24px}.faq-item{border-bottom:1px solid rgba(255,255,255,0.06);padding:20px 0}.faq-item:last-child{border-bottom:none}.faq-q{font-family:var(--font-head);font-size:16px;color:var(--offwhite);margin-bottom:10px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;user-select:none}.faq-q::after{content:'+';color:var(--teal);font-size:20px;flex-shrink:0;transition:transform 0.2s}.faq-item.open .faq-q::after{transform:rotate(45deg)}.faq-a{font-size:15px;color:var(--grey);line-height:1.7;max-height:0;overflow:hidden;transition:max-height 0.3s ease}.faq-item.open .faq-a{max-height:400px}.article-footer{padding:32px 0 48px;border-top:1px solid rgba(255,255,255,0.06)}.disclosure{font-size:13px;color:var(--grey);background:rgba(255,255,255,0.02);border-radius:var(--radius);padding:16px 20px;margin-bottom:32px}.share-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:40px}.share-label{font-family:var(--font-head);font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--grey)}.share-btn{font-family:var(--font-head);font-size:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;border:1px solid rgba(255,255,255,0.1);color:var(--grey);padding:8px 16px;border-radius:var(--radius);cursor:pointer;background:transparent;transition:border-color 0.2s,color 0.2s}.share-btn:hover{border-color:var(--teal);color:var(--teal)}.related{padding:0 0 80px}.related-title{font-family:var(--font-head);font-size:22px;color:var(--offwhite);margin-bottom:28px}.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}.related-card{background:var(--surface);border:1px solid rgba(255,255,255,0.05);border-radius:var(--radius);padding:24px;transition:border-color 0.2s,transform 0.2s}.related-card:hover{border-color:rgba(42,173,160,0.3);transform:translateY(-2px)}.related-tag{font-family:var(--font-head);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:10px}.related-title-text{font-family:var(--font-head);font-size:15px;color:var(--offwhite);line-height:1.35;margin-bottom:10px;transition:color 0.2s}.related-card:hover .related-title-text{color:var(--teal)}.related-read{font-size:12px;color:var(--grey)}.nl-strip{background:var(--surface);border:1px solid rgba(42,173,160,0.18);border-radius:var(--radius);padding:32px 36px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:80px}.nl-strip h3{font-family:var(--font-head);font-size:18px;color:var(--offwhite);margin-bottom:4px}.nl-strip p{font-size:14px;color:var(--grey)}.btn-primary{font-family:var(--font-head);font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;background:var(--teal);color:var(--midnight);padding:12px 22px;border-radius:var(--radius);white-space:nowrap;transition:background 0.2s,transform 0.15s}.btn-primary:hover{background:#33c8b9;transform:translateY(-1px)}footer{border-top:1px solid rgba(255,255,255,0.06);padding:40px 0}.footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}.footer-logo{font-family:var(--font-head);font-size:18px;letter-spacing:-0.02em}.footer-logo span{color:var(--teal)}.footer-links{display:flex;gap:24px;list-style:none}.footer-links a{font-size:13px;color:var(--grey);transition:color 0.2s}.footer-links a:hover{color:var(--teal)}.footer-copy{font-size:12px;color:var(--grey)}.footer-disclosure{width:100%;font-size:12px;color:var(--grey);border-top:1px solid rgba(255,255,255,0.04);padding-top:16px;margin-top:8px}@media(max-width:640px){.nav-links{display:none}.nl-strip{flex-direction:column;align-items:flex-start}}</style>
 </head>
 <body>
-<nav>
-  <div class="nav-inner">
-    <a href="/" class="nav-logo"><span>Buzz</span><span>Riding</span></a>
-    <ul class="nav-links">
-      <li><a href="/blog.html">Blog</a></li>
-      <li><a href="/start-here.html">Start Here</a></li>
-      <li><a href="/newsletter.html">Newsletter</a></li>
-      <li><a href="/about.html">About</a></li>
-    </ul>
-  </div>
-</nav>
-
-<article class="article-wrap">
-  <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/blog.html">Blog</a><span>›</span>I Used AI to Write a Month of Blog Posts</div>
-  <div class="pillar-tag">🔬 Experiments</div>
-  <h1>I Used AI to Write a Month of Blog Posts — Here's What Happened</h1>
-  <div class="meta">
-    <span>BuzzRiding Team</span><div class="meta-divider"></div>
-    <span>9 min read</span><div class="meta-divider"></div>
-    <span>March 2026</span>
-  </div>
-  <p class="intro">For 30 days, I handed my entire blog content workflow over to AI. No ghostwriters, no content agencies — just Claude and ChatGPT doing the heavy lifting. Here's the unfiltered breakdown of what happened: the output quality, the time saved, the SEO results, and the moments where AI completely fell flat.</p>
-
-  <div class="article-body">
-
-    <h2>The Setup</h2>
-    <p>Before the experiment, my typical blog workflow looked like this: 2–3 hours per post, covering research, outline, drafting, editing, and SEO optimisation. I was publishing roughly two posts a week — which felt sustainable but left no bandwidth for anything else.</p>
-    <p>The goal of the experiment was simple: could I maintain the same publishing cadence, at comparable quality, while cutting my active working time by at least 50%? I set some ground rules:</p>
-    <ul>
-      <li>Every post had to start as an AI-generated draft — no writing from scratch</li>
-      <li>I could edit, but not rewrite entire sections from scratch (that would defeat the point)</li>
-      <li>I'd add one real example or data point to each post that AI couldn't know</li>
-      <li>Every post had to pass my personal quality bar before publishing</li>
-    </ul>
-    <p>Tools used: Claude for research briefs and drafts, ChatGPT for repurposing and social posts, Ahrefs Free for keyword targeting, Google Search Console for results tracking.</p>
-
-    <div class="stat-box">
-      <div class="stat-item"><div class="stat-num">8</div><div class="stat-label">Posts published</div></div>
-      <div class="stat-item"><div class="stat-num">42 min</div><div class="stat-label">Avg time per post</div></div>
-      <div class="stat-item"><div class="stat-num">~78%</div><div class="stat-label">Time saved vs manual</div></div>
-      <div class="stat-item"><div class="stat-num">€0</div><div class="stat-label">Additional cost</div></div>
-    </div>
-
-    <h2>What Worked — Better Than Expected</h2>
-
-    <h3>Research briefs were the biggest win</h3>
-    <p>Before writing anything, I asked Claude to analyse the top-ranking articles for my target keyword, identify the gaps they had, and list the questions readers were actually asking. What used to take 45 minutes of manual SERP analysis took about 4 minutes.</p>
-    <p>The quality was genuinely good. Claude identified angles that the competing articles missed — not always, but often enough to give my posts a differentiated entry point. This is where AI saves the most time with the least quality trade-off.</p>
-
-    <h3>First drafts were 70% usable on first pass</h3>
-    <p>I expected to do significant rewriting. Most of the time, I didn't need to. The structure was logical, the headings were sensible, and the body copy was competent. My editing typically involved:</p>
-    <ul>
-      <li>Tightening the opening — AI tends to warm up slowly, I wanted a harder hook</li>
-      <li>Replacing generic examples with specific, real ones</li>
-      <li>Removing hedging language ("it's worth noting", "in many cases")</li>
-      <li>Adding one original observation the AI couldn't produce</li>
-    </ul>
-    <p>On average, I spent 20–25 minutes editing per post. That's down from 60–90 minutes of drafting and editing combined.</p>
-
-    <h3>Social repurposing became trivial</h3>
-    <p>Previously, repurposing a blog post into social content took another 30–40 minutes. With AI, I'd paste the article and ask for a LinkedIn post, a Twitter thread, and two Instagram captions. Total time: under 10 minutes, including light editing. Over 8 posts, that's roughly 3–4 hours saved in repurposing alone.</p>
-
-    <h2>What Didn't Work — The Honest Failures</h2>
-
-    <h3>AI can't replace first-hand experience</h3>
-    <p>The posts that read most authentically were the ones where I added a real observation — something I'd actually tested, noticed, or experienced. When I skipped this step (I did, twice), the posts felt like competent summaries rather than original content. Readers can feel the difference, even if they can't articulate why.</p>
-    <div class="result-row"><span class="result-badge badge-fail">Issue</span><p style="margin:0">Posts without a personal insight had noticeably lower engagement on social and lower average time-on-page in GA4.</p></div>
-
-    <h3>Accuracy needs checking — every time</h3>
-    <p>AI confidently stated two statistics in early drafts that I couldn't verify when I went to source them. Neither were wildly wrong, but neither were provably right either. I started adding a verification step to my workflow: any stat or claim I didn't already know to be true, I checked before publishing. This added about 8 minutes per post.</p>
-    <div class="result-row"><span class="result-badge badge-fail">Issue</span><p style="margin:0">Never publish AI-generated statistics without verifying the source. If you can't find the source, cut the stat.</p></div>
-
-    <h3>Tool comparison posts required more intervention</h3>
-    <p>For posts comparing specific tools, AI's training data has a cutoff. Pricing, features, and product updates change constantly — and AI doesn't always know what's current. I had to manually verify every tool claim in comparison posts. These took longer than other post types.</p>
-    <div class="result-row"><span class="result-badge badge-mixed">Mixed</span><p style="margin:0">AI is good for structure and framing in comparison posts, but the actual data needs to come from you.</p></div>
-
-    <h3>The "voice drift" problem</h3>
-    <p>Over the month, I noticed that posts where I edited less tended to sound slightly different from posts where I edited more. The AI voice isn't bad — it's just not mine. Readers who follow a brand closely notice this. By week 3, I started giving Claude more explicit voice instructions: pasting in a section I'd written previously and saying "match this tone." This helped significantly.</p>
-
-    <h2>The SEO Results (4 Weeks In)</h2>
-    <p>Four weeks is too short to draw firm SEO conclusions — Google's indexing and ranking timeline runs longer than a month. But here's what the data showed at the 30-day mark:</p>
-    <ul>
-      <li>6 of 8 posts indexed within 72 hours of publishing</li>
-      <li>2 posts appearing in Search Console for their target keyword within 4 weeks</li>
-      <li>Average position for early-ranking posts: 18–35 (expected range for new content)</li>
-      <li>No ranking at position 1–10 yet — but no red flags either</li>
-    </ul>
-    <div class="callout"><p><strong>The honest SEO verdict:</strong> AI-assisted content doesn't appear to be penalised. The posts that ranked fastest were the ones with the clearest structure, specific headings, and FAQ sections — all things AI is genuinely good at producing.</p></div>
-
-    <h2>The Workflow I'd Recommend</h2>
-    <p>After 30 days of testing, here's the version of the workflow I'd actually use going forward — refined from what worked and what didn't:</p>
-    <ol>
-      <li><strong>Research brief (AI):</strong> Ask Claude to analyse top-ranking articles, identify gaps, and list FAQs. 5 minutes.</li>
-      <li><strong>Keyword confirmation (you):</strong> Verify the target keyword in Ahrefs Free before writing. 3 minutes.</li>
-      <li><strong>Draft (AI):</strong> Generate the full article with specific voice and format instructions. 3–5 minutes.</li>
-      <li><strong>Add your insight (you):</strong> Insert one real observation, test result, or example only you could write. 10 minutes.</li>
-      <li><strong>Verify facts (you):</strong> Check any statistics or specific claims you didn't already know. 8 minutes.</li>
-      <li><strong>Edit for voice (you):</strong> Tighten the opening, remove hedging, adjust tone where needed. 15 minutes.</li>
-      <li><strong>SEO metadata (AI):</strong> Generate meta title, description, and internal link suggestions. 3 minutes.</li>
-      <li><strong>Repurpose (AI):</strong> Social posts and newsletter blurb. 8 minutes.</li>
-    </ol>
-    <p>Total active time: approximately 55 minutes per post, including repurposing. That's down from 2.5–3 hours without AI. The quality, in my assessment, is comparable — and in some cases better, because the research phase is more thorough.</p>
-
-    <h2>Would I Keep Doing This?</h2>
-    <p>Yes — with the caveat that "AI-assisted" and "AI-replaced" are different things. The posts that performed best were the ones where AI handled the heavy lifting and I handled the editorial judgement. The moment I tried to reduce my involvement below that threshold, quality dropped noticeably.</p>
-    <p>The right mental model: AI is the research assistant and first-draft writer. You're still the editor, fact-checker, and the one injecting genuine insight. That split — roughly 80% AI effort, 20% human — produces surprisingly good output.</p>
-
-    <div class="faq-section">
-      <h2>Frequently Asked Questions</h2>
-      <div class="faq-item">
-        <div class="faq-q">Which AI tool — Claude or ChatGPT — produced better blog drafts?</div>
-        <div class="faq-a">Claude produced more structured, better-organised drafts with less editing needed. ChatGPT was faster for social repurposing and short-form content. I'd use Claude as my primary drafting tool and ChatGPT for quick repurposing tasks.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Did you disclose to readers that the posts were AI-assisted?</div>
-        <div class="faq-a">Yes — every post had a footer disclosure: "This post was researched and refined with AI tools." I believe transparency here is good practice, and there's no evidence it negatively affects reader trust when the content is genuinely useful.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Is there a risk that Google will penalise AI-generated content?</div>
-        <div class="faq-a">Google's stated position is that it evaluates content quality, not content origin. Thin, repetitive, or inaccurate AI content gets penalised — the same as any thin human-written content. The safeguard is the same: add real insight, verify facts, write for the reader.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">What was the biggest mistake you made during the experiment?</div>
-        <div class="faq-a">Publishing two posts with less than my usual editing review because I was short on time. They were objectively fine posts — but they lacked the one real insight that makes content memorable. Don't skip the human-insight step, even when you're rushed.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Would this workflow work for a team, not just a solo creator?</div>
-        <div class="faq-a">Yes — and it scales better in a team context. The AI handles research and drafting, one team member handles the editorial review and adds original insight, another handles SEO and publishing. The 55-minute solo workflow becomes a 25-minute per-person workflow with two people.</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="related">
-    <h2>Keep Reading</h2>
-    <div class="related-grid">
-      <a href="/blog/how-to-use-chatgpt-for-content-marketing.html" class="related-card">
-        <div class="rc-pillar">⚡ Workflows</div>
-        <div class="rc-title">How to Use ChatGPT for Content Marketing</div>
-      </a>
-      <a href="/blog/chatgpt-prompts-for-social-media-marketing.html" class="related-card">
-        <div class="rc-pillar">⚡ Workflows</div>
-        <div class="rc-title">25 ChatGPT Prompts for Social Media Marketing</div>
-      </a>
-      <a href="/blog/will-ai-replace-marketing-jobs.html" class="related-card">
-        <div class="rc-pillar">📈 Career & Skills</div>
-        <div class="rc-title">Will AI Replace Marketing Jobs?</div>
-      </a>
-    </div>
-  </div>
-
-  <div class="newsletter-cta">
-    <h3>Get the full AI content workflow</h3>
-    <p>The exact 6-step system — prompts, templates, and checklists — delivered free with The Buzz newsletter every Tuesday.</p>
-    <a href="/newsletter.html" class="cta-btn">Get the Workflow</a>
-  </div>
-</article>
-
-<footer>
-  <div class="footer-inner">
-    <p><a href="/">BuzzRiding</a> · <a href="/blog.html">Blog</a> · <a href="/newsletter.html">Newsletter</a> · <a href="/about.html">About</a></p>
-    <p class="footer-disclosure">This post was researched and refined with AI tools.</p>
-  </div>
-</footer>
+<nav><div class="container nav-inner"><a href="/" class="logo">Buzz<span>Riding</span></a><ul class="nav-links"><li><a href="/blog.html">Blog</a></li><li><a href="/start-here.html">Start Here</a></li><li><a href="/about.html">About</a></li></ul><a href="/newsletter.html" class="nav-cta">Get The Buzz</a></div></nav>
+<div class="article-container"><div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/blog.html">Blog</a><span>›</span><span style="color:var(--teal)">🔬 Experiments</span></div></div>
+<header class="article-header"><div class="article-container"><div class="post-meta-top"><span class="post-tag">🔬 Experiments</span><span class="post-meta-dot">•</span><span class="post-date">March 2026</span><span class="post-meta-dot">•</span><span class="post-read-time">9 min read</span></div><h1>I Used AI to Write a Month of Blog Posts — Here's What Happened</h1><p class="article-intro">30 days. 8 articles. One AI assistant. Here's the honest breakdown: traffic results, quality trade-offs, what surprised me, and whether I'd do it again.</p><div class="article-byline"><div class="byline-avatar">BR</div><div class="byline-text"><strong>The BuzzRiding Team</strong>Researched and refined with AI tools</div></div></div></header>
+<article class="article-body"><div class="article-container"><h2>The experiment</h2><p>Starting from zero — no existing audience, no domain authority, no social following — I built and launched BuzzRiding using AI as the primary content engine. Claude wrote the briefs, the articles, the SEO metadata, the social posts, and the newsletter copy. My role was to direct, review, and occasionally rewrite the intro.</p><p>This is the honest account of what that produced.</p><div class="callout"><p class="callout-label">📋 Experiment Parameters</p><p>Duration: 30 days. Articles published: 8. AI tool: Claude (claude.ai). Human review time per article: 15–20 minutes. Total active time on content: approximately 3 hours over the month.</p></div><h2>The results</h2><div class="results-grid"><div class="result-card"><div class="result-number">8</div><div class="result-label">Articles published</div></div><div class="result-card"><div class="result-number">3hrs</div><div class="result-label">Total active time</div></div><div class="result-card"><div class="result-number">€0</div><div class="result-label">Total cost</div></div><div class="result-card"><div class="result-number">~0</div><div class="result-label">Organic traffic (month 1)</div></div></div><p>The traffic number needs context. Zero organic traffic in month one is expected — not a failure. A new domain with zero authority takes 3–6 months to appear in Google results, regardless of content quality. The articles are indexed. The clock is running.</p><h2>What the AI did well</h2><p><strong>Speed was extraordinary.</strong> From keyword research brief to published-ready article in under 45 minutes. For eight articles, that's approximately 6 hours of AI work compressed into 3 hours of my active time. No human writer works at that pace.</p><p><strong>Consistency was better than expected.</strong> Keeping a consistent brand voice across 8 articles written in separate sessions is genuinely hard for a human. Claude maintained the BuzzRiding voice — friendly, data-led, jargon-free — across every piece with minimal correction.</p><p><strong>SEO structure was solid out of the box.</strong> H2 structure, FAQ sections, meta descriptions — all done correctly on the first pass. No SEO specialist needed.</p><h2>What the AI did badly</h2><p><strong>Intros were the weakest element.</strong> AI-generated article openings are recognisably formulaic. They state the problem, promise to answer it, and get to the point. That's correct structure — but it's also predictable. Every intro needed a human rewrite.</p><p><strong>Specificity required prompting.</strong> Left to generate freely, Claude produces accurate but generic content. The quality gap between a generic prompt and a detailed brief with specific data points, examples, and angle guidance is enormous. The workflow works — but only if you invest in the brief.</p><p><strong>No genuine experience.</strong> The articles are well-structured and informative. They don't have the lived-experience texture that the best content writing has. That's a real limitation — one that becomes more important as Google's E-E-A-T signals mature.</p><h2>Would I do it again?</h2><p>Yes. Without hesitation. The alternative — writing 8 articles manually in 30 days while building everything else from scratch — was not realistic. AI made the project possible.</p><p>The correct framing is not "AI vs. human writing". It's "AI-assisted writing vs. no content at all". At the zero-budget, solo-operator stage, the comparison is obvious.</p><p>The quality ceiling is real. As the brand matures and develops genuine audience data and real experiments to reference, the content will need to develop a thicker layer of authentic human experience. That's a month 3+ problem.</p><div class="faq"><h2 class="faq-title">Frequently Asked Questions</h2><div class="faq-item"><div class="faq-q">Can you really build a blog entirely with AI?</div><div class="faq-a">Yes — with important caveats. AI handles structure, research synthesis, and first-draft writing extremely well. What it doesn't provide is genuine first-hand experience, original data, or the specific insights that come from actually doing the work being written about. The best AI-assisted blogs combine AI efficiency with human insight at the review stage.</div></div><div class="faq-item"><div class="faq-q">Will AI-written content rank on Google?</div><div class="faq-a">Google's position is that it evaluates content quality, not the method of production. AI content that is accurate, well-structured, and genuinely useful can rank. AI content that is thin, generic, or produced without a clear audience in mind typically does not. The workflow matters more than the tool.</div></div><div class="faq-item"><div class="faq-q">How long does it take to write an article with AI?</div><div class="faq-a">Using the BuzzRiding workflow: keyword research and brief (10 min AI + 5 min human direction), article draft (10 min AI generation), human review and edit (15 min), SEO metadata (5 min AI). Total: approximately 45 minutes per article from brief to published-ready.</div></div></div></div></article>
+<div class="article-footer"><div class="article-container"><div class="disclosure">This post was researched and refined with AI tools. The experiment described is real.</div><div class="share-row"><span class="share-label">Share</span><button class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href),'_blank')">X / Twitter</button><button class="share-btn" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank')">LinkedIn</button><button class="share-btn" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.textContent='Copied!';setTimeout(()=>{this.textContent='Copy Link'},2000)})">Copy Link</button></div></div></div>
+<div class="container"><section class="related"><h2 class="related-title">Keep reading</h2><div class="related-grid"><a href="/blog/how-to-use-chatgpt-for-content-marketing.html" class="related-card"><p class="related-tag">⚡ Workflows</p><p class="related-title-text">How to Use ChatGPT for Content Marketing</p><p class="related-read">6 min read →</p></a><a href="/blog/best-ai-tools-for-marketing-teams-2026.html" class="related-card"><p class="related-tag">🛠 Tool Reviews</p><p class="related-title-text">Best AI Tools for Marketing Teams in 2026</p><p class="related-read">8 min read →</p></a><a href="/blog/will-ai-replace-marketing-jobs.html" class="related-card"><p class="related-tag">📈 Career & Skills</p><p class="related-title-text">Will AI Replace Marketing Jobs?</p><p class="related-read">7 min read →</p></a></div></section><div class="nl-strip"><div><h3>Get The Buzz every Tuesday 📬</h3><p>One newsletter. The best AI marketing insights of the week. Free, always.</p></div><a href="/newsletter.html" class="btn-primary">Subscribe Free</a></div></div>
+<footer><div class="container"><div class="footer-inner"><span class="footer-logo">Buzz<span>Riding</span></span><ul class="footer-links"><li><a href="/blog.html">Blog</a></li><li><a href="/start-here.html">Start Here</a></li><li><a href="/about.html">About</a></li><li><a href="/newsletter.html">Newsletter</a></li></ul><span class="footer-copy">© 2026 BuzzRiding</span><p class="footer-disclosure">This site contains affiliate links. We may earn a commission if you sign up for a tool — at no extra cost to you. Posts are researched and refined with AI tools.</p></div></div></footer>
+<script>document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{const item=q.parentElement;const wasOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!wasOpen)item.classList.add('open');});});</script>
 </body>
 </html>
