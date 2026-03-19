@@ -2,6 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMJMLD1Y8L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WMJMLD1Y8L');
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Buzz Newsletter — BuzzRiding</title>
   <meta name="description" content="One email every Tuesday. The best AI marketing insights of the week — curated for marketing professionals. Free, always." />
@@ -15,11 +23,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet" />
   <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
   <style>
-    :root {
-      --midnight:#141418;--surface:#1C2128;--teal-deep:#1A7A6E;--teal:#2AADA0;
-      --offwhite:#FAFAF7;--grey:#8A8A8A;--font-head:'Poppins',sans-serif;
-      --font-body:'DM Sans',sans-serif;--max-w:1120px;--radius:10px;
-    }
+    :root{--midnight:#141418;--surface:#1C2128;--teal-deep:#1A7A6E;--teal:#2AADA0;--offwhite:#FAFAF7;--grey:#8A8A8A;--font-head:'Poppins',sans-serif;--font-body:'DM Sans',sans-serif;--max-w:1120px;--radius:10px}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
     body{background:var(--midnight);color:var(--offwhite);font-family:var(--font-body);font-weight:300;line-height:1.65;-webkit-font-smoothing:antialiased}
@@ -38,15 +42,15 @@
     .hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(42,173,160,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(42,173,160,0.04) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}
     .hero::after{content:'';position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:600px;height:400px;background:radial-gradient(ellipse,rgba(42,173,160,0.1) 0%,transparent 65%);pointer-events:none}
     .hero-inner{position:relative;z-index:1;text-align:center;max-width:660px;margin:0 auto}
-    .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(42,173,160,0.1);border:1px solid rgba(42,173,160,0.25);border-radius:100px;padding:6px 18px;font-size:12px;color:var(--teal);margin-bottom:28px;animation:fadeUp 0.5s ease both}
+    .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(42,173,160,0.1);border:1px solid rgba(42,173,160,0.25);border-radius:100px;padding:6px 18px;font-size:12px;color:var(--teal);margin-bottom:28px}
     .hero-badge::before{content:'';width:7px;height:7px;background:var(--teal);border-radius:50%;animation:pulse 2s infinite}
     @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
     @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
-    .hero h1{font-family:var(--font-head);font-size:clamp(36px,6vw,58px);line-height:1.1;letter-spacing:-0.02em;color:var(--offwhite);margin-bottom:20px;animation:fadeUp 0.5s 0.1s ease both}
+    .hero h1{font-family:var(--font-head);font-size:clamp(36px,6vw,58px);line-height:1.1;letter-spacing:-0.02em;color:var(--offwhite);margin-bottom:20px}
     .hero h1 em{font-style:normal;color:var(--teal)}
-    .hero-sub{font-size:18px;color:var(--grey);line-height:1.65;margin-bottom:40px;animation:fadeUp 0.5s 0.2s ease both}
-    .signup-box{background:var(--surface);border:1px solid rgba(42,173,160,0.25);border-radius:14px;padding:36px;max-width:520px;margin:0 auto 16px;animation:fadeUp 0.5s 0.3s ease both}
-    .signup-note{text-align:center;font-size:12px;color:var(--grey);animation:fadeUp 0.5s 0.4s ease both}
+    .hero-sub{font-size:18px;color:var(--grey);line-height:1.65;margin-bottom:40px}
+    .signup-box{background:var(--surface);border:1px solid rgba(42,173,160,0.25);border-radius:14px;padding:36px;max-width:520px;margin:0 auto 16px}
+    .signup-note{text-align:center;font-size:12px;color:var(--grey)}
     .inside{padding:88px 0}
     .section-label{font-family:var(--font-head);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--teal);margin-bottom:12px}
     .section-title{font-family:var(--font-head);font-size:clamp(24px,3.5vw,36px);line-height:1.15;letter-spacing:-0.02em;color:var(--offwhite);margin-bottom:12px}
@@ -95,114 +99,12 @@
   </style>
 </head>
 <body>
-
-  <nav>
-    <div class="container nav-inner">
-      <a href="/" class="logo">Buzz<span>Riding</span></a>
-      <ul class="nav-links">
-        <li><a href="/blog.html">Blog</a></li>
-        <li><a href="/start-here.html">Start Here</a></li>
-        <li><a href="/about.html">About</a></li>
-      </ul>
-      <a href="/newsletter.html" class="nav-cta">Get The Buzz</a>
-    </div>
-  </nav>
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-inner">
-        <div class="hero-badge">📬 The Buzz · Every Tuesday</div>
-        <h1>The AI marketing newsletter that <em>respects your time.</em></h1>
-        <p class="hero-sub">One email per week. The tools worth knowing, the strategies that work, and the noise filtered out. Written for working marketers — not developers.</p>
-        <div class="signup-box">
-          <iframe src="https://subscribe-forms.beehiiv.com/94bede40-6aee-45ce-8ddc-36b0f283b97d" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width:100%;height:207px;margin:0;border-radius:0px;background-color:transparent;box-shadow:0 0 #0000;max-width:100%;"></iframe>
-        </div>
-        <p class="signup-note">No spam. Unsubscribe any time. Join marketers staying one step ahead.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHAT'S INSIDE -->
-  <section class="inside">
-    <div class="container">
-      <p class="section-label">What's Inside</p>
-      <h2 class="section-title">Everything useful. Nothing else.</h2>
-      <p class="section-sub">Each issue of The Buzz is built around four consistent sections — so you always know what you're getting.</p>
-      <div class="inside-grid">
-        <div class="inside-card"><div class="inside-icon">🛠</div><p class="inside-title">Tool of the Week</p><p class="inside-desc">One AI tool, honestly reviewed. What it does, what it doesn't, and whether it's worth your time.</p></div>
-        <div class="inside-card"><div class="inside-icon">⚡</div><p class="inside-title">Workflow Drop</p><p class="inside-desc">One practical workflow you can copy. Step-by-step, jargon-free, ready to use the same day.</p></div>
-        <div class="inside-card"><div class="inside-icon">📰</div><p class="inside-title">AI News Digest</p><p class="inside-desc">The three AI marketing stories that actually matter this week — with a marketer's take on each.</p></div>
-        <div class="inside-card"><div class="inside-icon">🔗</div><p class="inside-title">Resource Picks</p><p class="inside-desc">The best article, thread, or resource we found this week. Curated, not aggregated.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PREVIEW -->
-  <section class="preview">
-    <div class="container">
-      <p class="section-label">Sample Issue</p>
-      <h2 class="section-title" style="margin-bottom:32px;">What a typical issue looks like</h2>
-      <div class="preview-box">
-        <div class="preview-header">
-          <div class="preview-header-left">
-            <span class="preview-from">From: The BuzzRiding Team · the-buzz@buzzriding.com</span>
-            <span class="preview-subject">🛠 This week: The AI tool that actually improved our open rates</span>
-          </div>
-          <span class="preview-badge">Sample Issue</span>
-        </div>
-        <div class="preview-body">
-          <h3>Tool of the Week: Jasper AI for Email</h3>
-          <p>We ran 200 subject lines through Jasper's email assistant over 30 days. Average open rate lift: 11%. Not magic — but consistent. The subject line variant tool is genuinely useful. The long-form body copy still needs a human edit.</p>
-          <div class="preview-highlight">
-            <p>"The best AI tools don't replace your judgment. They give you more options to apply it to."</p>
-          </div>
-          <h3 style="margin-top:8px;">Workflow Drop: Brief to published in 90 minutes</h3>
-          <p>Step 1: Drop your keyword into Claude and ask for a competitor gap analysis. Step 2: Use the gaps to write a brief — 5 bullets max. Step 3: Draft with AI, rewrite the intro yourself. Step 4: SEO metadata in one Claude prompt. Total active time: 25 minutes.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SOCIAL PROOF -->
-  <section class="proof">
-    <div class="container">
-      <p class="section-label">What Readers Say</p>
-      <h2 class="section-title" style="margin-bottom:40px;">Built for marketers, by marketers</h2>
-      <div class="proof-grid">
-        <div class="proof-card"><div class="proof-stars">★★★★★</div><p class="proof-quote">"Finally a newsletter that doesn't treat me like I need AI explained from scratch. Practical, fast, actually useful."</p><div class="proof-meta"><strong>Sarah M.</strong>Content Marketing Manager</div></div>
-        <div class="proof-card"><div class="proof-stars">★★★★★</div><p class="proof-quote">"The workflow drops alone are worth subscribing for. I've used three of them in the last month on live client work."</p><div class="proof-meta"><strong>James K.</strong>Freelance Marketing Consultant</div></div>
-        <div class="proof-card"><div class="proof-stars">★★★★★</div><p class="proof-quote">"I was skeptical of another AI newsletter. This one is different — honest about what tools don't work, which is rare."</p><div class="proof-meta"><strong>Priya T.</strong>Head of Growth, SaaS startup</div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- BOTTOM CTA -->
-  <section class="bottom-cta">
-    <div class="container">
-      <h2>Join marketers staying <em>one step ahead.</em></h2>
-      <p>Free. Every Tuesday. Unsubscribe any time.</p>
-      <div class="bottom-embed">
-        <iframe src="https://subscribe-forms.beehiiv.com/94bede40-6aee-45ce-8ddc-36b0f283b97d" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width:100%;height:207px;margin:0;border-radius:0px;background-color:transparent;box-shadow:0 0 #0000;max-width:100%;"></iframe>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <div class="footer-inner">
-        <span class="footer-logo">Buzz<span>Riding</span></span>
-        <ul class="footer-links">
-          <li><a href="/blog.html">Blog</a></li>
-          <li><a href="/start-here.html">Start Here</a></li>
-          <li><a href="/about.html">About</a></li>
-          <li><a href="/newsletter.html">Newsletter</a></li>
-        </ul>
-        <span class="footer-copy">© 2026 BuzzRiding</span>
-        <p class="footer-disclosure">This site contains affiliate links. We may earn a commission if you sign up for a tool — at no extra cost to you. Posts are researched and refined with AI tools.</p>
-      </div>
-    </div>
-  </footer>
-
+  <nav><div class="container nav-inner"><a href="/" class="logo">Buzz<span>Riding</span></a><ul class="nav-links"><li><a href="/blog.html">Blog</a></li><li><a href="/start-here.html">Start Here</a></li><li><a href="/about.html">About</a></li></ul><a href="/newsletter.html" class="nav-cta">Get The Buzz</a></div></nav>
+  <section class="hero"><div class="container"><div class="hero-inner"><div class="hero-badge">📬 The Buzz · Every Tuesday</div><h1>The AI marketing newsletter that <em>respects your time.</em></h1><p class="hero-sub">One email per week. The tools worth knowing, the strategies that work, and the noise filtered out. Written for working marketers — not developers.</p><div class="signup-box"><iframe src="https://subscribe-forms.beehiiv.com/94bede40-6aee-45ce-8ddc-36b0f283b97d" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width:100%;height:207px;margin:0;border-radius:0px;background-color:transparent;box-shadow:0 0 #0000;max-width:100%;"></iframe></div><p class="signup-note">No spam. Unsubscribe any time. Join marketers staying one step ahead.</p></div></div></section>
+  <section class="inside"><div class="container"><p class="section-label">What's Inside</p><h2 class="section-title">Everything useful. Nothing else.</h2><p class="section-sub">Each issue of The Buzz is built around four consistent sections — so you always know what you're getting.</p><div class="inside-grid"><div class="inside-card"><div class="inside-icon">🛠</div><p class="inside-title">Tool of the Week</p><p class="inside-desc">One AI tool, honestly reviewed. What it does, what it doesn't, and whether it's worth your time.</p></div><div class="inside-card"><div class="inside-icon">⚡</div><p class="inside-title">Workflow Drop</p><p class="inside-desc">One practical workflow you can copy. Step-by-step, jargon-free, ready to use the same day.</p></div><div class="inside-card"><div class="inside-icon">📰</div><p class="inside-title">AI News Digest</p><p class="inside-desc">The three AI marketing stories that actually matter this week — with a marketer's take on each.</p></div><div class="inside-card"><div class="inside-icon">🔗</div><p class="inside-title">Resource Picks</p><p class="inside-desc">The best article, thread, or resource we found this week. Curated, not aggregated.</p></div></div></div></section>
+  <section class="preview"><div class="container"><p class="section-label">Sample Issue</p><h2 class="section-title" style="margin-bottom:32px;">What a typical issue looks like</h2><div class="preview-box"><div class="preview-header"><div class="preview-header-left"><span class="preview-from">From: The BuzzRiding Team · the-buzz@buzzriding.com</span><span class="preview-subject">🛠 This week: The AI tool that actually improved our open rates</span></div><span class="preview-badge">Sample Issue</span></div><div class="preview-body"><h3>Tool of the Week: Jasper AI for Email</h3><p>We ran 200 subject lines through Jasper's email assistant over 30 days. Average open rate lift: 11%. Not magic — but consistent. The subject line variant tool is genuinely useful. The long-form body copy still needs a human edit.</p><div class="preview-highlight"><p>"The best AI tools don't replace your judgment. They give you more options to apply it to."</p></div><h3 style="margin-top:8px;">Workflow Drop: Brief to published in 90 minutes</h3><p>Step 1: Drop your keyword into Claude and ask for a competitor gap analysis. Step 2: Use the gaps to write a brief — 5 bullets max. Step 3: Draft with AI, rewrite the intro yourself. Step 4: SEO metadata in one Claude prompt. Total active time: 25 minutes.</p></div></div></div></section>
+  <section class="proof"><div class="container"><p class="section-label">What Readers Say</p><h2 class="section-title" style="margin-bottom:40px;">Built for marketers, by marketers</h2><div class="proof-grid"><div class="proof-card"><div class="proof-stars">★★★★★</div><p class="proof-quote">"Finally a newsletter that doesn't treat me like I need AI explained from scratch. Practical, fast, actually useful."</p><div class="proof-meta"><strong>Sarah M.</strong>Content Marketing Manager</div></div><div class="proof-card"><div class="proof-stars">★★★★★</div><p class="proof-quote">"The workflow drops alone are worth subscribing for. I've used three of them in the last month on live client work."</p><div class="proof-meta"><strong>James K.</strong>Freelance Marketing Consultant</div></div><div class="proof-card"><div class="proof-stars">★★★★★</div><p class="proof-quote">"I was skeptical of another AI newsletter. This one is different — honest about what tools don't work, which is rare."</p><div class="proof-meta"><strong>Priya T.</strong>Head of Growth, SaaS startup</div></div></div></div></section>
+  <section class="bottom-cta"><div class="container"><h2>Join marketers staying <em>one step ahead.</em></h2><p>Free. Every Tuesday. Unsubscribe any time.</p><div class="bottom-embed"><iframe src="https://subscribe-forms.beehiiv.com/94bede40-6aee-45ce-8ddc-36b0f283b97d" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width:100%;height:207px;margin:0;border-radius:0px;background-color:transparent;box-shadow:0 0 #0000;max-width:100%;"></iframe></div></div></section>
+  <footer><div class="container"><div class="footer-inner"><span class="footer-logo">Buzz<span>Riding</span></span><ul class="footer-links"><li><a href="/blog.html">Blog</a></li><li><a href="/start-here.html">Start Here</a></li><li><a href="/about.html">About</a></li><li><a href="/newsletter.html">Newsletter</a></li></ul><span class="footer-copy">© 2026 BuzzRiding</span><p class="footer-disclosure">This site contains affiliate links. We may earn a commission if you sign up for a tool — at no extra cost to you. Posts are researched and refined with AI tools.</p></div></div></footer>
 </body>
 </html>
