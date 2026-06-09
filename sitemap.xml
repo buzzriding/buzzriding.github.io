@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://buzzriding.github.io/</loc><lastmod>2026-03-27</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://buzzriding.github.io/blog.html</loc><lastmod>2026-05-28</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://buzzriding.github.io/blog.html</loc><lastmod>2026-06-09</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>
   <url><loc>https://buzzriding.github.io/start-here.html</loc><lastmod>2026-03-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://buzzriding.github.io/about.html</loc><lastmod>2026-03-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://buzzriding.github.io/newsletter.html</loc><lastmod>2026-05-11</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -34,4 +34,7 @@
   <url><loc>https://buzzriding.github.io/blog/google-marketing-live-2026-what-marketers-need-to-know.html</loc><lastmod>2026-05-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://buzzriding.github.io/blog/ai-social-media-posts-30-day-experiment.html</loc><lastmod>2026-05-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://buzzriding.github.io/blog/ai-content-workflow-that-publishes.html</loc><lastmod>2026-05-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://buzzriding.github.io/blog/ai-email-subject-line-experiment-30-days.html</loc><lastmod>2026-06-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://buzzriding.github.io/blog/ai-marketing-news-june-9-2026.html</loc><lastmod>2026-06-09</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://buzzriding.github.io/blog/ai-marketing-career-skills-2026.html</loc><lastmod>2026-06-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>
