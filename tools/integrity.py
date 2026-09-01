@@ -1,22 +1,28 @@
 #!/usr/bin/env python3
 """
-Content integrity pass.
+Content integrity — self-maintaining.
 
-Three jobs, all driven by tools/integrity.json so the decisions live in data,
-not in code:
+The rule: a post may not claim first-hand testing unless it carries evidence
+(at least one image, or an outbound citation). This script enforces that on
+every CI run, without anyone having to remember it.
 
-  1. RETIRE — remove posts whose central claim could not have happened, take
-     their cards out of blog.html, and turn any internal link pointing at them
-     back into plain text so nothing 404s.
-  2. NOTE — put a visible editorial note at the top of every post that makes a
-     first-person testing claim without evidence behind it.
-  3. CHECK — report every post that still claims first-hand testing while
-     carrying no evidence (no image, no outbound citation). This is the guard
-     that stops the problem recurring; it prints, it does not fail the build.
+  1. RETIRE   — delete posts listed in tools/integrity.json, strip their cards
+                from blog.html, unwrap inbound internal links so nothing 404s.
+  2. LABEL    — a visible editorial note is added to every post that claims
+                first-hand testing with no evidence, and REMOVED automatically
+                the moment that post gains a screenshot or a citation. The
+                label follows the evidence; nobody maintains a list.
+  3. DOCUMENT — writes EVIDENCE.md at the repo root: the current backlog, with
+                each post's offending verbs and what it needs. Committed by CI,
+                so the list is always current and readable on GitHub.
+  4. ENFORCE  — `--enforce` exits non-zero if the number of unevidenced posts
+                has GROWN past the recorded baseline, i.e. a new post shipped a
+                claim it cannot back. That turns the build red.
 
-Run: python3 tools/integrity.py [--check]
+Run: python3 tools/integrity.py [--check] [--enforce]
 """
 
+import datetime as dt
 import glob
 import json
 import os
@@ -29,87 +35,153 @@ CLAIM = re.compile(
     r"i a/b tested|i spent|i tracked)\b",
     re.I,
 )
+PLACEHOLDER = re.compile(r"\[[A-Z_]+_PLACEHOLDER\]")
 
 NOTE_CSS = (
     "background:rgba(223,164,92,0.08);border:1px solid rgba(223,164,92,0.35);"
     "border-radius:10px;padding:18px 22px;margin:0 0 28px;font-size:14.5px;line-height:1.65;"
 )
 NOTE_MARK = "data-editorial-note"
+NOTE_RE = re.compile(rf"<div {NOTE_MARK}.*?</div>", re.S)
+
+IGNORED_HOSTS = ("googletagmanager.com", "googleapis.com", "gstatic.com",
+                 "beehiiv.com", "twitter.com", "linkedin.com")
 
 
 def note_html(text: str) -> str:
     return (
         f'<div {NOTE_MARK} style="{NOTE_CSS}">'
-        '<strong style="display:block;margin-bottom:6px;">Editorial note — September 2026</strong>'
+        '<strong style="display:block;margin-bottom:6px;">Editorial note</strong>'
         f"{text}</div>"
     )
 
 
+def title_of(doc: str) -> str:
+    m = re.search(r"<title>(.*?)</title>", doc, re.S)
+    return m.group(1).split(" — ")[0].strip() if m else "(untitled)"
+
+
 def body_text(doc: str) -> str:
+    doc = NOTE_RE.sub("", doc)
     m = re.search(r'<article[^>]*class="article-body"[^>]*>(.*?)</article>', doc, re.S)
     seg = m.group(1) if m else doc[doc.find("</style>"):]
     seg = re.sub(r"<script.*?</script>", "", seg, flags=re.S)
     return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", seg))
 
 
-def has_evidence(doc: str) -> bool:
+def citations(doc: str) -> list[str]:
     body = doc[doc.find("</style>"):]
-    if re.search(r"<img\b", body):
-        return True
+    out = []
     for m in re.finditer(r'href="(https?://[^"]+)"', body):
         host = m.group(1).split("/")[2]
-        if "buzzriding" in host:
+        if "buzzriding" in host or host.endswith(IGNORED_HOSTS):
             continue
-        if host.endswith(("googletagmanager.com", "googleapis.com", "gstatic.com",
-                          "beehiiv.com", "twitter.com", "linkedin.com")):
-            continue
-        return True
-    return False
+        out.append(m.group(1))
+    return out
 
 
-def load_config(root: str) -> dict:
-    with open(os.path.join(root, "tools", "integrity.json"), encoding="utf-8") as fh:
-        return json.load(fh)
+def has_evidence(doc: str) -> bool:
+    body = doc[doc.find("</style>"):]
+    return bool(re.search(r"<img\b", body)) or bool(citations(doc))
+
+
+def claim_verbs(doc: str) -> list[str]:
+    return sorted({m.group(0).lower() for m in CLAIM.finditer(body_text(doc))})
 
 
 def unlink_retired(doc: str, slugs: set[str]) -> tuple[str, int]:
-    """Turn <a href="/blog/<retired>.html">text</a> into plain text."""
     n = 0
     for slug in slugs:
-        # related-post / listing cards wrap several elements: drop the whole card
         doc, k = re.subn(
             rf'<a href="/blog/{re.escape(slug)}\.html"[^>]*class="[^"]*(?:related-card|post-card)[^"]*"[^>]*>.*?</a>',
-            "", doc, flags=re.S,
-        )
+            "", doc, flags=re.S)
         n += k
-        # inline links become their own anchor text
         doc, k = re.subn(
             rf'<a href="/blog/{re.escape(slug)}\.html"[^>]*>(.*?)</a>',
-            lambda m: m.group(1), doc, flags=re.S,
-        )
+            lambda m: m.group(1), doc, flags=re.S)
         n += k
     return doc, n
 
 
-def strip_card(doc: str, slug: str) -> tuple[str, int]:
-    """Remove a blog.html listing card for a retired post."""
-    return re.subn(
-        rf'<a href="/blog/{re.escape(slug)}\.html"[^>]*class="post-card"[^>]*>.*?</a>',
-        "", doc, flags=re.S,
-    )
+def write_evidence_doc(root: str, flagged: list[dict], no_citations: list[str],
+                       retired: list[dict], total: int) -> None:
+    lines = [
+        "# Evidence backlog",
+        "",
+        "**Generated by `tools/integrity.py` on every CI run — do not edit by hand.**",
+        f"_Last run: {dt.date.today().isoformat()} · {total} live posts_",
+        "",
+        "A post lands on this list when it claims first-hand testing "
+        "(\"we tested\", \"we ran\", \"in our test\"...) but carries no evidence — "
+        "no image, no outbound citation. While it is on this list the live page "
+        "shows an editorial note saying so. **Add a screenshot or a real citation "
+        "and the note disappears by itself on the next run.**",
+        "",
+        f"## Needs evidence — {len(flagged)} post(s)",
+        "",
+        "| Post | Claims | Fix |",
+        "|---|---|---|",
+    ]
+    for f in flagged:
+        verbs = ", ".join(f"`{v}`" for v in f["verbs"])
+        fix = ("re-run it and commit artifacts to `evidence/%s/`"
+               % f["slug"]) if f["experiment"] else "cite the sources, or drop the testing verbs"
+        safe = f["title"].replace("|", "\\|")
+        lines.append(f"| [{safe}](blog/{f['slug']}.html) | {verbs} | {fix} |")
+
+    lines += [
+        "",
+        f"## No outbound citations — {len(no_citations)} post(s)",
+        "",
+        "Not a claim problem, but nothing links out, which is why nothing links back.",
+        "",
+    ]
+    lines += [f"- `{s}`" for s in no_citations] or ["_none_"]
+
+    lines += [
+        "",
+        f"## Retired — {len(retired)} post(s)",
+        "",
+        "Removed because the central claim could not have happened.",
+        "",
+    ]
+    for r in retired:
+        lines.append(f"- **{r['slug']}** — {r['reason']}")
+
+    lines += [
+        "",
+        "---",
+        "",
+        "## How to clear an item",
+        "",
+        "1. Pick one post from the first table.",
+        "2. Either **re-run its comparison for real** — follow `experiments.md` in "
+        "the skills repo, commit screenshots and raw output to `evidence/<slug>/`, "
+        "embed them — or **convert it to a synthesis post**: cite at least two real "
+        "sources and remove every first-person testing verb.",
+        "3. Push. CI removes the editorial note automatically and updates this file.",
+        "4. Lower `expected_flagged` in `tools/integrity.json` to the new count, so "
+        "the build stays red if the number ever climbs again.",
+        "",
+    ]
+    with open(os.path.join(root, "EVIDENCE.md"), "w", encoding="utf-8") as fh:
+        fh.write("\n".join(lines))
 
 
 def main() -> int:
     check = "--check" in sys.argv
+    enforce = "--enforce" in sys.argv
     root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    cfg = load_config(root)
-    retired = {r["slug"]: r["reason"] for r in cfg.get("retire", [])}
+    with open(os.path.join(root, "tools", "integrity.json"), encoding="utf-8") as fh:
+        cfg = json.load(fh)
+
+    retired_cfg = cfg.get("retire", [])
+    retired = {r["slug"] for r in retired_cfg}
     note_text = cfg["note_text"]
-    noted = set(cfg.get("note", []))
+    expected = cfg.get("expected_flagged")
 
     actions = []
 
-    # 1. retire
     for slug in retired:
         path = os.path.join(root, "blog", f"{slug}.html")
         if os.path.exists(path):
@@ -117,53 +189,81 @@ def main() -> int:
             if not check:
                 os.remove(path)
 
-    # 2 + 3. notes, link cleanup, evidence report
-    unevidenced = []
-    pages = sorted(glob.glob(os.path.join(root, "blog", "*.html"))) + [
+    flagged, no_citations, placeholders = [], [], []
+    posts = sorted(glob.glob(os.path.join(root, "blog", "*.html")))
+    pages = posts + [
         os.path.join(root, f) for f in ("index.html", "blog.html", "start-here.html")
         if os.path.exists(os.path.join(root, f))
     ]
+
     for path in pages:
         with open(path, encoding="utf-8") as fh:
             doc = original = fh.read()
         name = os.path.relpath(path, root)
         slug = os.path.basename(path)[:-5]
+        is_post = path in posts
 
-        doc, n = unlink_retired(doc, set(retired))
+        doc, n = unlink_retired(doc, retired)
         if n:
             actions.append(f"UNLINK  {name} ({n} link(s) to retired posts)")
-        if os.path.basename(path) == "blog.html":
-            for s in retired:
-                doc, k = strip_card(doc, s)
-                if k:
-                    actions.append(f"CARD    removed {s} from blog.html")
 
-        if slug in noted and NOTE_MARK not in doc:
-            # two layouts exist: <article><div class="article-container"> and a
-            # bare <article> whose children start straight at <p>
-            m = re.search(
-                r'<article[^>]*class="article-body"[^>]*>(?:\s*<div class="article-container">)?',
-                doc,
-            )
-            if m:
-                doc = doc[: m.end()] + note_html(note_text) + doc[m.end():]
-                actions.append(f"NOTE    {name}")
+        if PLACEHOLDER.search(doc):
+            placeholders.append(slug)
 
-        if "/blog/" in path.replace(os.sep, "/") and slug not in retired:
-            if CLAIM.search(body_text(doc)) and not has_evidence(doc):
-                unevidenced.append(slug)
+        if is_post:
+            verbs = claim_verbs(doc)
+            evidence = has_evidence(doc)
+            needs_note = bool(verbs) and not evidence
+            has_note = NOTE_MARK in doc
+
+            if needs_note and not has_note:
+                m = re.search(
+                    r'<article[^>]*class="article-body"[^>]*>(?:\s*<div class="article-container">)?',
+                    doc)
+                if m:
+                    doc = doc[: m.end()] + note_html(note_text) + doc[m.end():]
+                    actions.append(f"LABEL   {name}")
+            elif has_note and not needs_note:
+                doc = NOTE_RE.sub("", doc, count=1)
+                actions.append(f"UNLABEL {name} (evidence found — note removed)")
+
+            if needs_note:
+                flagged.append({
+                    "slug": slug,
+                    "title": title_of(doc),
+                    "verbs": verbs,
+                    "experiment": any(("test" in v or "ran" in v) for v in verbs),
+                })
+            if not citations(doc):
+                no_citations.append(slug)
 
         if doc != original and not check:
             with open(path, "w", encoding="utf-8") as fh:
                 fh.write(doc)
 
+    if not check:
+        write_evidence_doc(root, flagged, no_citations, retired_cfg, len(posts))
+
     for a in actions:
         print(a)
     print(f"\n{len(actions)} action(s) {'would be ' if check else ''}applied.")
-    print(f"\nEVIDENCE CHECK: {len(unevidenced)} live post(s) claim first-hand testing "
-          f"with no image and no outbound citation.")
-    for s in sorted(unevidenced):
-        print(f"  - {s}")
+    print(f"{len(posts)} live posts · {len(flagged)} unevidenced · "
+          f"{len(no_citations)} with no outbound citation")
+    if placeholders:
+        print(f"PLACEHOLDER TOKENS STILL PRESENT: {', '.join(placeholders)}")
+
+    if enforce:
+        if placeholders:
+            print("\nFAIL: an unfilled placeholder token is live on the site.")
+            return 1
+        if expected is not None and len(flagged) > expected:
+            print(f"\nFAIL: unevidenced posts rose from {expected} to {len(flagged)}. "
+                  "A post shipped a first-hand claim it cannot back — see EVIDENCE.md. "
+                  "Add a screenshot or citation, or remove the testing verbs.")
+            return 1
+        if expected is not None and len(flagged) < expected:
+            print(f"\nPROGRESS: unevidenced posts fell from {expected} to {len(flagged)}. "
+                  "Lower expected_flagged in tools/integrity.json to lock the gain in.")
     return 0
 
 
