@@ -82,3 +82,17 @@ jobs:
             echo "PUSH FAILED — check Settings > Actions > General > Workflow permissions" >> "$GITHUB_STEP_SUMMARY"
             exit 1
           fi
+
+      # The gate. Runs last so the labelling and the docs are already committed,
+      # then turns the build RED if a post shipped a first-hand claim it cannot
+      # back, or if a placeholder token is live. This is what stops a future
+      # session quietly publishing another invented experiment.
+      - name: Evidence gate
+        run: |
+          echo '### evidence gate' >> "$GITHUB_STEP_SUMMARY"
+          if python3 tools/integrity.py --check --enforce | tail -4 >> "$GITHUB_STEP_SUMMARY"; then
+            echo 'gate passed' >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo 'GATE FAILED — see EVIDENCE.md' >> "$GITHUB_STEP_SUMMARY"
+            exit 1
+          fi
