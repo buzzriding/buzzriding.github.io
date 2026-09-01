@@ -139,7 +139,12 @@ def main() -> int:
                     actions.append(f"CARD    removed {s} from blog.html")
 
         if slug in noted and NOTE_MARK not in doc:
-            m = re.search(r'(<article[^>]*class="article-body"[^>]*>\s*<div class="article-container">)', doc)
+            # two layouts exist: <article><div class="article-container"> and a
+            # bare <article> whose children start straight at <p>
+            m = re.search(
+                r'<article[^>]*class="article-body"[^>]*>(?:\s*<div class="article-container">)?',
+                doc,
+            )
             if m:
                 doc = doc[: m.end()] + note_html(note_text) + doc[m.end():]
                 actions.append(f"NOTE    {name}")
