@@ -1,8 +1,8 @@
 name: Site maintenance
 
-# Keeps on-page SEO, the share card and the sitemap correct without anyone
-# remembering to do it. Runs on every push to main that touches site content,
-# and can be run by hand from the Actions tab.
+# Keeps on-page SEO, disclosures, the share card and the sitemap correct without
+# anyone remembering to do it. Runs on every push to main that touches site
+# content, and can be run by hand from the Actions tab.
 #
 # Every step writes to the run summary, which is readable on the run page
 # without signing in — the logs are not.
@@ -50,6 +50,11 @@ jobs:
           echo '### retrofit' >> "$GITHUB_STEP_SUMMARY"
           python3 tools/seo_retrofit.py | tail -5 >> "$GITHUB_STEP_SUMMARY"
 
+      - name: Keep disclosures truthful
+        run: |
+          echo '### disclosures' >> "$GITHUB_STEP_SUMMARY"
+          python3 tools/fix_disclosures.py | tail -3 >> "$GITHUB_STEP_SUMMARY"
+
       - name: Rebuild the sitemap
         run: |
           python3 tools/build_sitemap.py | tee -a "$GITHUB_STEP_SUMMARY"
@@ -65,7 +70,7 @@ jobs:
             exit 0
           fi
           git add -A
-          git commit -q -m "chore: canonical, share card, schema and sitemap upkeep [skip ci]"
+          git commit -q -m "chore: canonical, share card, schema, disclosures and sitemap upkeep [skip ci]"
           if git push 2>> "$GITHUB_STEP_SUMMARY"; then
             echo "pushed OK" >> "$GITHUB_STEP_SUMMARY"
           else
