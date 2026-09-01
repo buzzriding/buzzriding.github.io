@@ -1,8 +1,8 @@
 name: Site maintenance
 
-# Keeps on-page SEO, disclosures, the share card and the sitemap correct without
-# anyone remembering to do it. Runs on every push to main that touches site
-# content, and can be run by hand from the Actions tab.
+# Keeps content integrity, on-page SEO, disclosures, the share card and the
+# sitemap correct without anyone remembering to do it. Runs on every push to
+# main that touches site content, and can be run by hand from the Actions tab.
 #
 # Every step writes to the run summary, which is readable on the run page
 # without signing in — the logs are not.
@@ -45,6 +45,11 @@ jobs:
         run: |
           python3 tools/make_og_card.py | tee -a "$GITHUB_STEP_SUMMARY"
 
+      - name: Content integrity
+        run: |
+          echo '### integrity' >> "$GITHUB_STEP_SUMMARY"
+          python3 tools/integrity.py | tee -a "$GITHUB_STEP_SUMMARY"
+
       - name: Retrofit on-page SEO
         run: |
           echo '### retrofit' >> "$GITHUB_STEP_SUMMARY"
@@ -70,7 +75,7 @@ jobs:
             exit 0
           fi
           git add -A
-          git commit -q -m "chore: canonical, share card, schema, disclosures and sitemap upkeep [skip ci]"
+          git commit -q -m "chore: integrity, canonical, share card, schema, disclosures and sitemap upkeep [skip ci]"
           if git push 2>> "$GITHUB_STEP_SUMMARY"; then
             echo "pushed OK" >> "$GITHUB_STEP_SUMMARY"
           else

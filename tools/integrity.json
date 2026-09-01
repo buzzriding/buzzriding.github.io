@@ -1,0 +1,62 @@
+{
+  "_comment": "Decisions from the 2026-09-01 content audit. 'retire' removes posts whose central claim was impossible given what BuzzRiding actually had. 'note' adds a visible editorial note to posts that describe comparisons they did not run first-hand. Remove a slug from 'note' once the post has been re-run with real evidence.",
+
+  "note_text": "This article was written by an AI system. It describes comparisons and tests it did not run first-hand, and any figures presented as measured results are illustrative rather than observed. We are re-running the tests worth running and will republish those with screenshots and raw data. Nothing here is an affiliate placement — BuzzRiding earns no commission on any tool mentioned.",
+
+  "retire": [
+    {
+      "slug": "ai-email-subject-line-experiment-30-days",
+      "reason": "Describes ~240 sends to ~30 subscribers per variant and reports open-rate results. The Beehiiv list has one subscriber and had none when this was written."
+    },
+    {
+      "slug": "ai-email-subject-line-ab-test-results",
+      "reason": "A 60-day subject-line A/B test on the same non-existent list. Also a near-duplicate of the 30-day post."
+    },
+    {
+      "slug": "ai-email-subject-line-tools-compared",
+      "reason": "States 'we ran 200 subject lines through five AI tools and measured open rates', and reports a 6.1-percentage-point lift. Measuring open rates requires a list that did not exist."
+    },
+    {
+      "slug": "surfer-seo-vs-clearscope-vs-frase-solo-marketers",
+      "reason": "Presents a hands-on test of three tools that are paid-only, with no free tier, against a zero-budget project. Includes a 'How We Tested' section for a test that could not have run."
+    },
+    {
+      "slug": "ai-wrote-my-social-posts-30-day-experiment",
+      "reason": "Promises 'the real reach numbers' for a month of posts on X and LinkedIn. BuzzRiding has never had a LinkedIn account, and the X account had five followers."
+    }
+  ],
+
+  "note": [
+    "ai-content-repurposing-tools-tested-marketers",
+    "ai-writing-tools-compared-real-test",
+    "ai-social-media-posts-30-day-experiment",
+    "vibe-marketing-workflow-experiment-2026",
+    "geo-experiment-results",
+    "ai-ad-copy-generator-tools-compared",
+    "ai-landing-page-builders-compared-marketers",
+    "chatgpt-vs-claude-vs-gemini-marketing",
+    "heygen-vs-synthesia-for-marketers",
+    "midjourney-vs-firefly-vs-ideogram-marketers",
+    "gamma-vs-beautiful-ai-vs-canva-presentation-tools",
+    "gamma-ai-social-graphics-workflow-marketers",
+    "perplexity-comet-vs-chatgpt-atlas-marketers",
+    "notebooklm-workflow-marketers",
+    "best-geo-tracker-tools-2026",
+    "how-to-measure-geo-roi-free-workflow",
+    "geo-trends-2026-marketers",
+    "landingi-review-2026",
+    "unbounce-review-2026-ai-features",
+    "ai-meeting-notetaker-fathom-fireflies-otter",
+    "meta-advantage-plus-real-results-2026",
+    "ai-content-repurposing-workflow-marketers",
+    "free-ai-competitor-content-audit-workflow",
+    "best-ai-tools-for-marketing-teams-2026",
+    "best-free-ai-tools-for-marketers",
+    "free-ai-tools-social-media-marketing",
+    "ai-marketing-tools-weekly-roundup",
+    "claude-projects-marketers-templates",
+    "does-ai-content-rank-google-2026",
+    "ai-content-workflow-that-publishes",
+    "ai-skills-marketers-need-2026"
+  ]
+}
