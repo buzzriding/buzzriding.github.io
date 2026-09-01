@@ -1,8 +1,9 @@
 name: Site maintenance
 
-# Keeps content integrity, on-page SEO, disclosures, the share card and the
-# sitemap correct without anyone remembering to do it. Runs on every push to
-# main that touches site content, and can be run by hand from the Actions tab.
+# Builds posts from content/, then keeps content integrity, on-page SEO,
+# disclosures, the share card and the sitemap correct without anyone
+# remembering to do it. Runs on every push to main that touches site content,
+# and can be run by hand from the Actions tab.
 #
 # Every step writes to the run summary, which is readable on the run page
 # without signing in — the logs are not.
@@ -12,6 +13,7 @@ on:
     branches: [main]
     paths:
       - "blog/**"
+      - "content/**"
       - "*.html"
       - "tools/**"
       - ".github/workflows/site-maintenance.yml"
@@ -40,6 +42,11 @@ jobs:
           python3 -m pip install --quiet --upgrade pip
           python3 -m pip install --quiet Pillow
           echo "### deps installed" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Build posts from content/
+        run: |
+          echo '### build' >> "$GITHUB_STEP_SUMMARY"
+          python3 tools/build_post.py --all | tee -a "$GITHUB_STEP_SUMMARY"
 
       - name: Generate the social share card
         run: |
@@ -75,7 +82,7 @@ jobs:
             exit 0
           fi
           git add -A
-          git commit -q -m "chore: integrity, canonical, share card, schema, disclosures and sitemap upkeep [skip ci]"
+          git commit -q -m "chore: build posts, integrity, SEO, disclosures and sitemap upkeep [skip ci]"
           if git push 2>> "$GITHUB_STEP_SUMMARY"; then
             echo "pushed OK" >> "$GITHUB_STEP_SUMMARY"
           else
@@ -85,8 +92,7 @@ jobs:
 
       # The gate. Runs last, so the labelling and the docs are already committed,
       # then turns the build RED if a post shipped a first-hand claim it cannot
-      # back, or if a placeholder token is live. This is what stops a future
-      # session quietly publishing another invented experiment.
+      # back, or if a placeholder token is live.
       - name: Evidence gate
         run: |
           echo '### evidence gate' >> "$GITHUB_STEP_SUMMARY"
