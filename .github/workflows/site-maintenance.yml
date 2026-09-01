@@ -1,0 +1,57 @@
+name: Site maintenance
+
+# Keeps on-page SEO, the share card and the sitemap correct without anyone
+# remembering to do it. Runs on every push to main that touches site content,
+# and can be run by hand from the Actions tab.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "blog/**"
+      - "*.html"
+      - "tools/**"
+      - ".github/workflows/site-maintenance.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-maintenance
+  cancel-in-progress: false
+
+jobs:
+  maintain:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-actions[bot]'
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install --quiet Pillow
+
+      - name: Generate the social share card
+        run: python3 tools/make_og_card.py
+
+      - name: Retrofit on-page SEO
+        run: python3 tools/seo_retrofit.py
+
+      - name: Rebuild the sitemap
+        run: python3 tools/build_sitemap.py
+
+      - name: Commit any changes
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "Nothing to do — site already consistent."
+            exit 0
+          fi
+          git add -A
+          git commit -m "chore: canonical, share card, schema and sitemap upkeep [skip ci]"
+          git push
