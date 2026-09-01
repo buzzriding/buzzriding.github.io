@@ -2,7 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://buzzriding.github.io/</loc><lastmod>2026-06-29</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://buzzriding.github.io/blog.html</loc><lastmod>2026-08-31</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://buzzriding.github.io/start-here.html</loc><lastmod>2026-09-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://buzzriding.github.io/newsletter.html</loc><lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://buzzriding.github.io/about.html</loc><lastmod>2026-09-01</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://buzzriding.github.io/blog/new-ai-marketing-job-titles-2026.html</loc><lastmod>2026-08-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://buzzriding.github.io/blog/gamma-vs-beautiful-ai-vs-canva-presentation-tools.html</loc><lastmod>2026-08-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://buzzriding.github.io/blog/ai-marketing-news-week-august-25-2026.html</loc><lastmod>2026-08-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -15,8 +17,8 @@
   <url><loc>https://buzzriding.github.io/blog/ai-marketing-interview-questions-2026.html</loc><lastmod>2026-08-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://buzzriding.github.io/blog/ai-marketing-news-august-2026.html</loc><lastmod>2026-08-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://buzzriding.github.io/blog/ai-skills-pay-premium-marketers-2026.html</loc><lastmod>2026-08-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://buzzriding.github.io/blog/gamma-ai-social-graphics-workflow-marketers.html</loc><lastmod>2026-08-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://buzzriding.github.io/blog/ai-vs-human-content-seo-experiment.html</loc><lastmod>2026-08-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://buzzriding.github.io/blog/gamma-ai-social-graphics-workflow-marketers.html</loc><lastmod>2026-08-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://buzzriding.github.io/blog/ai-case-study-workflow-customer-interviews.html</loc><lastmod>2026-07-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://buzzriding.github.io/blog/ai-landing-page-builders-compared-marketers.html</loc><lastmod>2026-07-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://buzzriding.github.io/blog/claude-projects-marketers-templates.html</loc><lastmod>2026-07-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -30,41 +32,41 @@
   <url><loc>https://buzzriding.github.io/blog/best-geo-tracker-tools-2026.html</loc><lastmod>2026-07-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://buzzriding.github.io/blog/heygen-vs-synthesia-for-marketers.html</loc><lastmod>2026-07-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://buzzriding.github.io/blog/free-ai-competitor-content-audit-workflow.html</loc><lastmod>2026-07-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://buzzriding.github.io/blog/brand-voice-guide-for-ai.html</loc><lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://buzzriding.github.io/blog/how-to-write-ai-prompts-for-marketing.html</loc><lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://buzzriding.github.io/blog/free-ai-tools-social-media-marketing.html</loc><lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://buzzriding.github.io/blog/google-marketing-live-2026-what-marketers-need-to-know.html</loc><lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://buzzriding.github.io/blog/ai-email-subject-line-experiment-30-days.html</loc><lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://buzzriding.github.io/blog/ai-marketing-career-skills-2026.html</loc><lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://buzzriding.github.io/blog/best-ai-tools-for-marketing-teams-2026.html</loc><lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://buzzriding.github.io/blog/brand-voice-guide-for-ai.html</loc><lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://buzzriding.github.io/blog/does-ai-content-rank-google-2026.html</loc><lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://buzzriding.github.io/blog/free-ai-tools-social-media-marketing.html</loc><lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://buzzriding.github.io/blog/geo-experiment-results.html</loc><lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://buzzriding.github.io/blog/geo-generative-engine-optimization-marketers.html</loc><lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://buzzriding.github.io/blog/does-ai-content-rank-google-2026.html</loc><lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://buzzriding.github.io/blog/ai-marketing-career-skills-2026.html</loc><lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://buzzriding.github.io/blog/ai-marketing-news-june-9-2026.html</loc><lastmod>2026-06-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://buzzriding.github.io/blog/best-ai-tools-for-marketing-teams-2026.html</loc><lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://buzzriding.github.io/blog/ai-meeting-notetaker-fathom-fireflies-otter.html</loc><lastmod>2026-06-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://buzzriding.github.io/blog/ai-content-workflow-that-publishes.html</loc><lastmod>2026-06-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://buzzriding.github.io/blog/ai-ghost-workforce-marketing-jobs-2026.html</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://buzzriding.github.io/blog/surfer-seo-vs-clearscope-vs-frase-solo-marketers.html</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://buzzriding.github.io/blog/ai-content-repurposing-workflow-marketers.html</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://buzzriding.github.io/blog/ai-marketing-shifts-may-11-2026.html</loc><lastmod>2026-05-11</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://buzzriding.github.io/blog/vibe-marketing-workflow-experiment-2026.html</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://buzzriding.github.io/blog/ai-writing-tools-compared-real-test.html</loc><lastmod>2026-04-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://buzzriding.github.io/blog/ai-upskill-plan-marketers-90-days.html</loc><lastmod>2026-04-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://buzzriding.github.io/blog/ai-email-subject-line-ab-test-results.html</loc><lastmod>2026-03-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://buzzriding.github.io/blog/ai-skills-marketers-need-2026.html</loc><lastmod>2026-03-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://buzzriding.github.io/blog/how-to-use-chatgpt-for-content-marketing.html</loc><lastmod>2026-03-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://buzzriding.github.io/blog/will-ai-replace-marketing-jobs.html</loc><lastmod>2026-03-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://buzzriding.github.io/blog/ai-email-subject-line-tools-compared.html</loc><lastmod>2026-03-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://buzzriding.github.io/blog/chatgpt-prompts-for-social-media-marketing.html</loc><lastmod>2026-03-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://buzzriding.github.io/blog/best-free-ai-tools-for-marketers.html</loc><lastmod>2026-03-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://buzzriding.github.io/blog/ai-skills-marketers-get-hired-2026.html</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://buzzriding.github.io/blog/ai-social-media-posts-30-day-experiment.html</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://buzzriding.github.io/blog/meta-advantage-plus-real-results-2026.html</loc><lastmod>2026-04-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://buzzriding.github.io/blog/ai-marketing-news-may-2026.html</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://buzzriding.github.io/blog/ai-marketing-news-week-april-10-2026.html</loc><lastmod>2026-04-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://buzzriding.github.io/blog/ai-marketing-weekly-march-27-2026.html</loc><lastmod>2026-03-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://buzzriding.github.io/blog/ai-marketing-tools-weekly-roundup.html</loc><lastmod>2026-03-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://buzzriding.github.io/blog/ai-wrote-my-social-posts-30-day-experiment.html</loc><lastmod>2026-03-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://buzzriding.github.io/blog/ai-used-to-write-month-of-blog-posts.html</loc><lastmod>2026-03-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://buzzriding.github.io/blog/ai-content-repurposing-tools-tested-marketers.html</loc><lastmod>2026-06-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://buzzriding.github.io/blog/google-marketing-live-2026-what-marketers-need-to-know.html</loc><lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://buzzriding.github.io/blog/how-to-write-ai-prompts-for-marketing.html</loc><lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://buzzriding.github.io/blog/ai-marketing-news-june-9-2026.html</loc><lastmod>2026-06-09</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://buzzriding.github.io/blog/ai-content-repurposing-tools-tested-marketers.html</loc><lastmod>2026-06-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://buzzriding.github.io/blog/ai-content-workflow-that-publishes.html</loc><lastmod>2026-06-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://buzzriding.github.io/blog/ai-meeting-notetaker-fathom-fireflies-otter.html</loc><lastmod>2026-06-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://buzzriding.github.io/blog/ai-marketing-shifts-may-11-2026.html</loc><lastmod>2026-05-11</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://buzzriding.github.io/blog/ai-content-repurposing-workflow-marketers.html</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://buzzriding.github.io/blog/ai-ghost-workforce-marketing-jobs-2026.html</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://buzzriding.github.io/blog/ai-marketing-news-may-2026.html</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://buzzriding.github.io/blog/ai-skills-marketers-get-hired-2026.html</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://buzzriding.github.io/blog/ai-social-media-posts-30-day-experiment.html</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://buzzriding.github.io/blog/surfer-seo-vs-clearscope-vs-frase-solo-marketers.html</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://buzzriding.github.io/blog/vibe-marketing-workflow-experiment-2026.html</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://buzzriding.github.io/blog/ai-marketing-news-week-april-10-2026.html</loc><lastmod>2026-04-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://buzzriding.github.io/blog/ai-upskill-plan-marketers-90-days.html</loc><lastmod>2026-04-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://buzzriding.github.io/blog/ai-writing-tools-compared-real-test.html</loc><lastmod>2026-04-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://buzzriding.github.io/blog/meta-advantage-plus-real-results-2026.html</loc><lastmod>2026-04-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://buzzriding.github.io/blog/ai-marketing-weekly-march-27-2026.html</loc><lastmod>2026-03-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://buzzriding.github.io/blog/ai-email-subject-line-ab-test-results.html</loc><lastmod>2026-03-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://buzzriding.github.io/blog/ai-email-subject-line-tools-compared.html</loc><lastmod>2026-03-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://buzzriding.github.io/blog/ai-marketing-tools-weekly-roundup.html</loc><lastmod>2026-03-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://buzzriding.github.io/blog/ai-skills-marketers-need-2026.html</loc><lastmod>2026-03-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://buzzriding.github.io/blog/ai-used-to-write-month-of-blog-posts.html</loc><lastmod>2026-03-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://buzzriding.github.io/blog/ai-wrote-my-social-posts-30-day-experiment.html</loc><lastmod>2026-03-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://buzzriding.github.io/blog/best-free-ai-tools-for-marketers.html</loc><lastmod>2026-03-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://buzzriding.github.io/blog/chatgpt-prompts-for-social-media-marketing.html</loc><lastmod>2026-03-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://buzzriding.github.io/blog/how-to-use-chatgpt-for-content-marketing.html</loc><lastmod>2026-03-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://buzzriding.github.io/blog/will-ai-replace-marketing-jobs.html</loc><lastmod>2026-03-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
