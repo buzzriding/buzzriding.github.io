@@ -5,7 +5,7 @@ _Last run: 2026-09-02 · 61 live posts_
 
 A post lands on this list when it claims first-hand testing ("we tested", "we ran", "in our test"...) but carries no evidence — no image, no outbound citation. While it is on this list the live page shows an editorial note saying so. **Add a screenshot or a real citation and the note disappears by itself on the next run.**
 
-## Needs evidence — 18 post(s)
+## Needs evidence — 17 post(s)
 
 | Post | Claims | Fix |
 |---|---|---|
@@ -17,7 +17,6 @@ A post lands on this list when it claims first-hand testing ("we tested", "we ra
 | [AI Skills Marketers Need in 2026 (Ranked) \| BuzzRiding](blog/ai-skills-marketers-need-2026.html) | `we ran`, `we tested` | re-run it and commit artifacts to `evidence/ai-skills-marketers-need-2026/` |
 | [I Tested 3 AI Writing Tools on the Same Brief](blog/ai-writing-tools-compared-real-test.html) | `i ran`, `we used` | re-run it and commit artifacts to `evidence/ai-writing-tools-compared-real-test/` |
 | [Best AI Tools for Marketing Teams in 2026](blog/best-ai-tools-for-marketing-teams-2026.html) | `we ran`, `we tested` | re-run it and commit artifacts to `evidence/best-ai-tools-for-marketing-teams-2026/` |
-| [ChatGPT vs Claude vs Gemini for Marketing (2026) \| BuzzRiding](blog/chatgpt-vs-claude-vs-gemini-marketing.html) | `we compared` | cite the sources, or drop the testing verbs |
 | [5 Claude Projects Every Marketer Should Build (Copy-Paste Templates) \| BuzzRiding](blog/claude-projects-marketers-templates.html) | `we ran` | re-run it and commit artifacts to `evidence/claude-projects-marketers-templates/` |
 | [Does AI Content Rank on Google in 2026? \| BuzzRiding](blog/does-ai-content-rank-google-2026.html) | `we compared` | cite the sources, or drop the testing verbs |
 | [Gamma AI Social Graphics Workflow for Marketers](blog/gamma-ai-social-graphics-workflow-marketers.html) | `in our test`, `we ran`, `we tested` | re-run it and commit artifacts to `evidence/gamma-ai-social-graphics-workflow-marketers/` |
@@ -28,7 +27,7 @@ A post lands on this list when it claims first-hand testing ("we tested", "we ra
 | [NotebookLM for Marketers: The Free Workflow We Tested](blog/notebooklm-workflow-marketers.html) | `we ran`, `we tested` | re-run it and commit artifacts to `evidence/notebooklm-workflow-marketers/` |
 | [Perplexity Comet vs ChatGPT Atlas for Marketers 2026](blog/perplexity-comet-vs-chatgpt-atlas-marketers.html) | `we tested` | re-run it and commit artifacts to `evidence/perplexity-comet-vs-chatgpt-atlas-marketers/` |
 
-## No outbound citations — 59 post(s)
+## No outbound citations — 58 post(s)
 
 Not a claim problem, but nothing links out, which is why nothing links back.
 
@@ -67,7 +66,6 @@ Not a claim problem, but nothing links out, which is why nothing links back.
 - `best-geo-tracker-tools-2026`
 - `brand-voice-guide-for-ai`
 - `chatgpt-prompts-for-social-media-marketing`
-- `chatgpt-vs-claude-vs-gemini-marketing`
 - `claude-projects-marketers-templates`
 - `does-ai-content-rank-google-2026`
 - `free-ai-competitor-content-audit-workflow`
