@@ -10,7 +10,7 @@ A post lands on this list when it claims first-hand testing ("we tested", "we ra
 | Post | Claims | Fix |
 |---|---|---|
 
-## No outbound citations — 22 post(s)
+## No outbound citations — 21 post(s)
 
 Not a claim problem, but nothing links out, which is why nothing links back.
 
@@ -30,7 +30,6 @@ Not a claim problem, but nothing links out, which is why nothing links back.
 - `geo-generative-engine-optimization-marketers`
 - `google-marketing-live-2026-what-marketers-need-to-know`
 - `how-to-use-chatgpt-for-content-marketing`
-- `meta-advantage-plus-real-results-2026`
 - `midjourney-vs-firefly-vs-ideogram-marketers`
 - `new-ai-marketing-job-titles-2026`
 - `unbounce-review-2026-ai-features`
