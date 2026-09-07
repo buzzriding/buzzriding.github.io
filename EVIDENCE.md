@@ -10,11 +10,10 @@ A post lands on this list when it claims first-hand testing ("we tested", "we ra
 | Post | Claims | Fix |
 |---|---|---|
 
-## No outbound citations — 39 post(s)
+## No outbound citations — 38 post(s)
 
 Not a claim problem, but nothing links out, which is why nothing links back.
 
-- `ai-case-study-workflow-customer-interviews`
 - `ai-content-workflow-that-publishes`
 - `ai-customer-persona-workflow-marketers`
 - `ai-ghost-workforce-marketing-jobs-2026`
