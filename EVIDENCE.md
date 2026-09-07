@@ -5,14 +5,13 @@ _Last run: 2026-09-07 · 61 live posts_
 
 A post lands on this list when it claims first-hand testing ("we tested", "we ran", "in our test"...) but carries no evidence — no image, no outbound citation. While it is on this list the live page shows an editorial note saying so. **Add a screenshot or a real citation and the note disappears by itself on the next run.**
 
-## Needs evidence — 10 post(s)
+## Needs evidence — 9 post(s)
 
 | Post | Claims | Fix |
 |---|---|---|
 | [My AI Content Repurposing Workflow: One Article, 10+ Pieces](blog/ai-content-repurposing-workflow-marketers.html) | `i tested`, `we tested` | re-run it and commit artifacts to `evidence/ai-content-repurposing-workflow-marketers/` |
 | [Best AI Skills for Marketers in 2026 \| BuzzRiding](blog/ai-marketing-career-skills-2026.html) | `our experiment` | cite the sources, or drop the testing verbs |
 | [AI Skills Marketers Need in 2026 (Ranked) \| BuzzRiding](blog/ai-skills-marketers-need-2026.html) | `we ran`, `we tested` | re-run it and commit artifacts to `evidence/ai-skills-marketers-need-2026/` |
-| [5 Claude Projects Every Marketer Should Build (Copy-Paste Templates) \| BuzzRiding](blog/claude-projects-marketers-templates.html) | `we ran` | re-run it and commit artifacts to `evidence/claude-projects-marketers-templates/` |
 | [Does AI Content Rank on Google in 2026? \| BuzzRiding](blog/does-ai-content-rank-google-2026.html) | `we compared` | cite the sources, or drop the testing verbs |
 | [Gamma AI Social Graphics Workflow for Marketers](blog/gamma-ai-social-graphics-workflow-marketers.html) | `in our test`, `we ran`, `we tested` | re-run it and commit artifacts to `evidence/gamma-ai-social-graphics-workflow-marketers/` |
 | [I Tested GEO for 4 Weeks on a Real Blog](blog/geo-experiment-results.html) | `i ran` | re-run it and commit artifacts to `evidence/geo-experiment-results/` |
@@ -20,7 +19,7 @@ A post lands on this list when it claims first-hand testing ("we tested", "we ra
 | [NotebookLM for Marketers: The Free Workflow We Tested](blog/notebooklm-workflow-marketers.html) | `we ran`, `we tested` | re-run it and commit artifacts to `evidence/notebooklm-workflow-marketers/` |
 | [Perplexity Comet vs ChatGPT Atlas for Marketers 2026](blog/perplexity-comet-vs-chatgpt-atlas-marketers.html) | `we tested` | re-run it and commit artifacts to `evidence/perplexity-comet-vs-chatgpt-atlas-marketers/` |
 
-## No outbound citations — 51 post(s)
+## No outbound citations — 50 post(s)
 
 Not a claim problem, but nothing links out, which is why nothing links back.
 
@@ -54,7 +53,6 @@ Not a claim problem, but nothing links out, which is why nothing links back.
 - `best-geo-tracker-tools-2026`
 - `brand-voice-guide-for-ai`
 - `chatgpt-prompts-for-social-media-marketing`
-- `claude-projects-marketers-templates`
 - `does-ai-content-rank-google-2026`
 - `free-ai-competitor-content-audit-workflow`
 - `free-ai-tools-social-media-marketing`
