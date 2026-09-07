@@ -10,15 +10,12 @@ A post lands on this list when it claims first-hand testing ("we tested", "we ra
 | Post | Claims | Fix |
 |---|---|---|
 
-## No outbound citations — 14 post(s)
+## No outbound citations — 11 post(s)
 
 Not a claim problem, but nothing links out, which is why nothing links back.
 
-- `ai-marketing-interview-questions-2026`
 - `ai-marketing-news-june-9-2026`
-- `ai-marketing-tools-weekly-roundup`
 - `ai-marketing-weekly-march-27-2026`
-- `ai-vs-human-content-seo-experiment`
 - `best-free-ai-tools-for-marketers`
 - `best-geo-tracker-tools-2026`
 - `geo-generative-engine-optimization-marketers`
