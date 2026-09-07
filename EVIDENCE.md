@@ -10,7 +10,7 @@ A post lands on this list when it claims first-hand testing ("we tested", "we ra
 | Post | Claims | Fix |
 |---|---|---|
 
-## No outbound citations — 34 post(s)
+## No outbound citations — 31 post(s)
 
 Not a claim problem, but nothing links out, which is why nothing links back.
 
@@ -25,14 +25,12 @@ Not a claim problem, but nothing links out, which is why nothing links back.
 - `ai-marketing-shifts-may-11-2026`
 - `ai-marketing-tools-weekly-roundup`
 - `ai-marketing-weekly-march-27-2026`
-- `ai-skills-marketers-get-hired-2026`
 - `ai-skills-pay-premium-marketers-2026`
 - `ai-social-media-posts-30-day-experiment`
 - `ai-upskill-plan-marketers-90-days`
 - `ai-vs-human-content-seo-experiment`
 - `best-free-ai-tools-for-marketers`
 - `best-geo-tracker-tools-2026`
-- `brand-voice-guide-for-ai`
 - `chatgpt-prompts-for-social-media-marketing`
 - `free-ai-competitor-content-audit-workflow`
 - `free-ai-tools-social-media-marketing`
@@ -40,7 +38,6 @@ Not a claim problem, but nothing links out, which is why nothing links back.
 - `geo-generative-engine-optimization-marketers`
 - `google-marketing-live-2026-what-marketers-need-to-know`
 - `how-to-use-chatgpt-for-content-marketing`
-- `how-to-write-ai-prompts-for-marketing`
 - `landingi-review-2026`
 - `meta-advantage-plus-real-results-2026`
 - `midjourney-vs-firefly-vs-ideogram-marketers`
