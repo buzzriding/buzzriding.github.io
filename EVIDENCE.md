@@ -5,11 +5,10 @@ _Last run: 2026-09-07 · 61 live posts_
 
 A post lands on this list when it claims first-hand testing ("we tested", "we ran", "in our test"...) but carries no evidence — no image, no outbound citation. While it is on this list the live page shows an editorial note saying so. **Add a screenshot or a real citation and the note disappears by itself on the next run.**
 
-## Needs evidence — 14 post(s)
+## Needs evidence — 13 post(s)
 
 | Post | Claims | Fix |
 |---|---|---|
-| [Best AI Ad Copy Generators for Marketers in 2026](blog/ai-ad-copy-generator-tools-compared.html) | `in our test`, `we ran`, `we tested`, `we used` | re-run it and commit artifacts to `evidence/ai-ad-copy-generator-tools-compared/` |
 | [5 AI Content Repurposing Tools I Tested on the Same Blog Post](blog/ai-content-repurposing-tools-tested-marketers.html) | `we tested` | re-run it and commit artifacts to `evidence/ai-content-repurposing-tools-tested-marketers/` |
 | [My AI Content Repurposing Workflow: One Article, 10+ Pieces](blog/ai-content-repurposing-workflow-marketers.html) | `i tested`, `we tested` | re-run it and commit artifacts to `evidence/ai-content-repurposing-workflow-marketers/` |
 | [Best AI Skills for Marketers in 2026 \| BuzzRiding](blog/ai-marketing-career-skills-2026.html) | `our experiment` | cite the sources, or drop the testing verbs |
@@ -24,11 +23,10 @@ A post lands on this list when it claims first-hand testing ("we tested", "we ra
 | [NotebookLM for Marketers: The Free Workflow We Tested](blog/notebooklm-workflow-marketers.html) | `we ran`, `we tested` | re-run it and commit artifacts to `evidence/notebooklm-workflow-marketers/` |
 | [Perplexity Comet vs ChatGPT Atlas for Marketers 2026](blog/perplexity-comet-vs-chatgpt-atlas-marketers.html) | `we tested` | re-run it and commit artifacts to `evidence/perplexity-comet-vs-chatgpt-atlas-marketers/` |
 
-## No outbound citations — 55 post(s)
+## No outbound citations — 54 post(s)
 
 Not a claim problem, but nothing links out, which is why nothing links back.
 
-- `ai-ad-copy-generator-tools-compared`
 - `ai-case-study-workflow-customer-interviews`
 - `ai-content-repurposing-tools-tested-marketers`
 - `ai-content-repurposing-workflow-marketers`
