@@ -10,22 +10,19 @@ A post lands on this list when it claims first-hand testing ("we tested", "we ra
 | Post | Claims | Fix |
 |---|---|---|
 
-## No outbound citations — 21 post(s)
+## No outbound citations — 18 post(s)
 
 Not a claim problem, but nothing links out, which is why nothing links back.
 
 - `ai-marketing-certifications-worth-it-2026`
 - `ai-marketing-interview-questions-2026`
 - `ai-marketing-news-june-9-2026`
-- `ai-marketing-portfolio-guide-2026`
 - `ai-marketing-shifts-may-11-2026`
 - `ai-marketing-tools-weekly-roundup`
 - `ai-marketing-weekly-march-27-2026`
-- `ai-upskill-plan-marketers-90-days`
 - `ai-vs-human-content-seo-experiment`
 - `best-free-ai-tools-for-marketers`
 - `best-geo-tracker-tools-2026`
-- `free-ai-tools-social-media-marketing`
 - `gamma-vs-beautiful-ai-vs-canva-presentation-tools`
 - `geo-generative-engine-optimization-marketers`
 - `google-marketing-live-2026-what-marketers-need-to-know`
