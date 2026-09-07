@@ -5,17 +5,16 @@ _Last run: 2026-09-07 · 61 live posts_
 
 A post lands on this list when it claims first-hand testing ("we tested", "we ran", "in our test"...) but carries no evidence — no image, no outbound citation. While it is on this list the live page shows an editorial note saying so. **Add a screenshot or a real citation and the note disappears by itself on the next run.**
 
-## Needs evidence — 5 post(s)
+## Needs evidence — 4 post(s)
 
 | Post | Claims | Fix |
 |---|---|---|
-| [Best AI Skills for Marketers in 2026 \| BuzzRiding](blog/ai-marketing-career-skills-2026.html) | `our experiment` | cite the sources, or drop the testing verbs |
 | [AI Skills Marketers Need in 2026 (Ranked) \| BuzzRiding](blog/ai-skills-marketers-need-2026.html) | `we ran`, `we tested` | re-run it and commit artifacts to `evidence/ai-skills-marketers-need-2026/` |
 | [Gamma AI Social Graphics Workflow for Marketers](blog/gamma-ai-social-graphics-workflow-marketers.html) | `in our test`, `we ran`, `we tested` | re-run it and commit artifacts to `evidence/gamma-ai-social-graphics-workflow-marketers/` |
 | [I Tested GEO for 4 Weeks on a Real Blog](blog/geo-experiment-results.html) | `i ran` | re-run it and commit artifacts to `evidence/geo-experiment-results/` |
 | [Perplexity Comet vs ChatGPT Atlas for Marketers 2026](blog/perplexity-comet-vs-chatgpt-atlas-marketers.html) | `we tested` | re-run it and commit artifacts to `evidence/perplexity-comet-vs-chatgpt-atlas-marketers/` |
 
-## No outbound citations — 46 post(s)
+## No outbound citations — 45 post(s)
 
 Not a claim problem, but nothing links out, which is why nothing links back.
 
@@ -24,7 +23,6 @@ Not a claim problem, but nothing links out, which is why nothing links back.
 - `ai-customer-persona-workflow-marketers`
 - `ai-ghost-workforce-marketing-jobs-2026`
 - `ai-landing-page-copy-workflow`
-- `ai-marketing-career-skills-2026`
 - `ai-marketing-certifications-worth-it-2026`
 - `ai-marketing-interview-questions-2026`
 - `ai-marketing-news-august-2026`
