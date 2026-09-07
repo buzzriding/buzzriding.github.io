@@ -5,13 +5,12 @@ _Last run: 2026-09-07 · 61 live posts_
 
 A post lands on this list when it claims first-hand testing ("we tested", "we ran", "in our test"...) but carries no evidence — no image, no outbound citation. While it is on this list the live page shows an editorial note saying so. **Add a screenshot or a real citation and the note disappears by itself on the next run.**
 
-## Needs evidence — 1 post(s)
+## Needs evidence — 0 post(s)
 
 | Post | Claims | Fix |
 |---|---|---|
-| [Perplexity Comet vs ChatGPT Atlas for Marketers 2026](blog/perplexity-comet-vs-chatgpt-atlas-marketers.html) | `we tested` | re-run it and commit artifacts to `evidence/perplexity-comet-vs-chatgpt-atlas-marketers/` |
 
-## No outbound citations — 42 post(s)
+## No outbound citations — 41 post(s)
 
 Not a claim problem, but nothing links out, which is why nothing links back.
 
@@ -53,7 +52,6 @@ Not a claim problem, but nothing links out, which is why nothing links back.
 - `meta-advantage-plus-real-results-2026`
 - `midjourney-vs-firefly-vs-ideogram-marketers`
 - `new-ai-marketing-job-titles-2026`
-- `perplexity-comet-vs-chatgpt-atlas-marketers`
 - `unbounce-review-2026-ai-features`
 - `vibe-marketing-workflow-experiment-2026`
 - `will-ai-replace-marketing-jobs`
