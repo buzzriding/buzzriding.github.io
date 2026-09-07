@@ -10,11 +10,10 @@ A post lands on this list when it claims first-hand testing ("we tested", "we ra
 | Post | Claims | Fix |
 |---|---|---|
 
-## No outbound citations — 2 post(s)
+## No outbound citations — 1 post(s)
 
 Not a claim problem, but nothing links out, which is why nothing links back.
 
-- `vibe-marketing-workflow-experiment-2026`
 - `will-ai-replace-marketing-jobs`
 
 ## Retired — 5 post(s)
