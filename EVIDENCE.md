@@ -10,7 +10,7 @@ A post lands on this list when it claims first-hand testing ("we tested", "we ra
 | Post | Claims | Fix |
 |---|---|---|
 
-## No outbound citations — 37 post(s)
+## No outbound citations — 36 post(s)
 
 Not a claim problem, but nothing links out, which is why nothing links back.
 
@@ -27,7 +27,6 @@ Not a claim problem, but nothing links out, which is why nothing links back.
 - `ai-marketing-shifts-may-11-2026`
 - `ai-marketing-tools-weekly-roundup`
 - `ai-marketing-weekly-march-27-2026`
-- `ai-meeting-notetaker-fathom-fireflies-otter`
 - `ai-skills-marketers-get-hired-2026`
 - `ai-skills-pay-premium-marketers-2026`
 - `ai-social-media-posts-30-day-experiment`
