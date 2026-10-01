@@ -1,0 +1,8 @@
+metric,value,note
+date_range,2026-09-01 to 2026-09-28,Search type Web
+clicks,14,
+impressions,2.6K,displayed rounded by Search Console
+ctr,0.5%,
+avg_position,36.5,
+queries_listed,135,count shown under the Queries table
+pages_listed,38,count shown under the Pages table
