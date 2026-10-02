@@ -16,6 +16,9 @@ Where did BuzzRiding's September search visibility sit, and which pages and quer
 - Search Console stores top rows only, so not every query is shown.
 - Impressions in the totals are displayed rounded ("2.6K").
 
+## Re-read on 2026-10-02 (rolling window)
+The "28 days" view rolls forward daily, so it is not a fixed month. A second read on 2026-10-02 covered 2–29 September and gave: 14 clicks, 2.62K impressions, average position 36.2, 37 pages listed. Page-level values moved by at most two impressions against the CSVs here (for example the Gamma comparison page: 981 against 979 recorded; job titles: 238 against 237; GEO tracker: 27 against 25; blog index: 6 against 4). All page URLs in `pages-top10-by-clicks.csv` were re-checked against that table and match. The article and CSVs deliberately keep the original 1–28 September read so every figure traces to one window. The derived claims (more than a third of impressions on one page, 14 clicks across nine URLs, zero clicks on the seven comparison queries) hold on both reads.
+
 ## Derived figures in the article
 - "More than a third of impressions": 979 impressions on one page against roughly 2,600 total.
 - "About 1,600 impressions remain" and "near 0.9%": roughly 2,600 minus 979, and 14 clicks divided by that remainder. Approximate because the total is rounded.
