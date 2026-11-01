@@ -56,3 +56,50 @@ A null result — nothing moved since October, BuzzRiding still absent — is a
 publishable outcome under the standing rule for this index. The run is published
 either way, and this note was committed before it was known whether the
 comparison would be interesting.
+
+---
+
+## Measurement notes — appended after collection, 2026-11-01
+
+Observations about how run 3 went. Nothing here changes the method above.
+
+1. **The logged-out re-check on Perplexity and ChatGPT could not be performed
+   this month.** Navigation to `perplexity.ai` was refused by the browser
+   permissions available to this session, so the engine was never reached. This
+   is **not** an observation that it still requires a login — it is a check that
+   did not happen. Both engines remain excluded on run 1's reasoning, and the
+   re-check is still owed. Recorded rather than quietly skipped.
+2. **Run 1's published total does not match run 1's own CSV.** The September
+   post states 55 citations; the `citation_count` column of
+   `citations-2026-09-01.csv` sums to **56**. Run 2's design note inherited the
+   55. Where run 1 is cited for a number in run 3's post, the CSV figure (56) is
+   used and the discrepancy is stated. Run 1's CSV also contains one malformed
+   entry (`visbyblog`, not a domain), so run 1's domain-level data is the least
+   clean of the three.
+3. **Google's own properties were excluded, as in runs 1 and 2.** Two answer-body
+   links pointed at Google surfaces (a Google Search Console link on *how to
+   measure GEO ROI*, a Gemini link on *ChatGPT vs Claude vs Gemini*). Neither is
+   an external citation and neither is recorded. Runs 1 and 2 contain no
+   `google.com` entries either, with one exception: run 2 recorded
+   `ads.google.com` on *what AI skills do marketers need in 2026*. That is an
+   inconsistency in run 2, not a rule change here.
+4. **Enumeration omitted links the DOM showed inside the answer region.** On
+   *best GEO tracker tools 2026* two `youtube.com` links sat between enumerated
+   citations and were not enumerated; on *ChatGPT vs Claude vs Gemini* a fourth
+   `reddit.com` link was likewise not enumerated. Following run 2's rule — the
+   enumerated list, not a count, is what the CSV records — they are excluded.
+   Both answers' YouTube and Reddit presence is therefore recorded at or below
+   the true figure, never above it.
+5. **Answer-body scope, same boundary as run 2.** On *best AI tools for marketing
+   teams 2026* two links were identified as sitting in a related-results section
+   rather than the answer body and were excluded (a second `finance.yahoo.com`
+   and a second `averi.ai`); `onelittleweb.com` appeared only in that section
+   and so is absent from run 3's data entirely, despite being cited twice in run
+   2's answer body for the same prompt.
+6. **Vendor homepages are counted as citations.** Several answer-body links point
+   at a product's own site rather than at editorial coverage of it
+   (`otterly.ai`, `peec.ai`, `radarkit.com`, `heygen.com`, `synthesia.io`,
+   `chatgpt.com`, `make.com`, `n8n.io`, `samsara.com`, `gomotive.com`,
+   `bouncie.com`). Runs 1 and 2 counted these the same way. It means the
+   citation count is not a count of publishers, and a share of the slots in a
+   tool-comparison answer are structurally unavailable to a publisher.
