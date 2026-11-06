@@ -1,1 +1,26 @@
-PLACEHOLDER
+metric,period,value,pulled_on,source
+clicks,2026-09 (1-30 Sep),14,2026-11-06,Search Console Performance report custom date range
+impressions,2026-09 (1-30 Sep),2650,2026-11-06,Search Console Performance report custom date range
+ctr,2026-09 (1-30 Sep),0.5%,2026-11-06,Search Console Performance report custom date range
+avg_position,2026-09 (1-30 Sep),36,2026-11-06,Search Console Performance report custom date range
+clicks,2026-10 (1-31 Oct),6,2026-11-06,Search Console Performance report custom date range
+impressions,2026-10 (1-31 Oct),1820,2026-11-06,Search Console Performance report custom date range
+ctr,2026-10 (1-31 Oct),0.3%,2026-11-06,Search Console Performance report custom date range
+avg_position,2026-10 (1-31 Oct),21.3,2026-11-06,Search Console Performance report custom date range
+clicks,2026-11 (1-5 Nov partial),1,2026-11-06,Search Console Performance report custom date range
+impressions,2026-11 (1-5 Nov partial),390,2026-11-06,Search Console Performance report custom date range
+avg_position,2026-11 (1-5 Nov partial),30.6,2026-11-06,Search Console Performance report custom date range
+indexed_pages,as of 2026-09-30,39,2026-11-06,blog.md cadence table (Jun-Sep)
+indexed_pages,snapshot dated 2026-10-23,42,2026-11-06,Search Console Page indexing report
+not_indexed_pages,snapshot dated 2026-10-23,3,2026-11-06,Search Console Page indexing report
+not_indexed_reason,Crawled - currently not indexed,2,2026-11-06,Search Console Page indexing report drilldown
+not_indexed_reason,Duplicate without user-selected canonical,1,2026-11-06,Search Console Page indexing report drilldown
+articles_published,2026-09,4,2026-11-06,buzzriding.github.io git commit history (content/ path)
+articles_published,2026-10 (full month),14,2026-11-06,buzzriding.github.io git commit history (content/ path)
+articles_published,2026-10-01 to 2026-10-23,11,2026-11-06,buzzriding.github.io git commit history (content/ path)
+
+# Live URL Inspection spot-check, 2026-11-06, of the two "Crawled - currently not indexed" URLs
+# from the 2026-10-23 Pages report snapshot:
+url,dashboard_status_2026-10-23,live_status_2026-11-06
+https://buzzriding.github.io/blog/geo-generative-engine-optimization-marketers.html,Crawled - currently not indexed,URL is on Google / Page is indexed
+https://buzzriding.github.io/newsletter.html,Crawled - currently not indexed,URL is on Google / Page is indexed
